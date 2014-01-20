@@ -33,7 +33,33 @@ class UsuarioController extends PageController {
             $this->em->flush();
 
             echo "Salvou o usuário";
+            //TODO: colocar mensagem bonita
         }
+    }
+
+    public function AlterarDados()
+    {
+        $userInfo = \Framework\LoginService::GetUserSessionInfo();
+        $usuario = $this->em->find("\Model\Usuario",$userInfo["id"]);
+
+        if($this->isPostBack())
+        {
+            $usuario->setNome($_POST["nome"]);
+            $usuario->setEmail($_POST["email"]);
+            $usuario->setDataNascimento(new \DateTime($_POST["dataNascimento"]));
+            $usuario->setSexo($_POST["sexo"]);
+            $usuario->setCidade($_POST["cidade"]);
+            $usuario->setUf($_POST["uf"]);
+            $usuario->setPais($_POST["pais"]);
+
+
+            $this->em->persist($usuario);
+            $this->em->flush();
+
+            echo "Salvou o usuário";
+            //TODO: colocar mensagem bonita
+        }
+        $this->set("usuario",$usuario);
     }
 
     public function Login()

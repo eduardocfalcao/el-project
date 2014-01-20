@@ -124,7 +124,7 @@ abstract class PageController
         {
             $userInfo = \Framework\LoginService::GetUserSessionInfo();
             $this->set("usuarioLogado",true);
-            $this->set("usuario", $userInfo);
+            $this->set("userInfo", $userInfo);
         }
         else
         {
