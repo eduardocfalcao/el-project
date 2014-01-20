@@ -27,7 +27,7 @@ class UsuarioController extends PageController {
             $usuario->setPais($_POST["pais"]);
             $usuario->setLogin($_POST["login"]);
             $usuario->setSenha($_POST["senha"]);
-
+			$usuario->setPerfil(1);
 
             $this->em->persist($usuario);
             $this->em->flush();
