@@ -4,7 +4,7 @@ namespace Controller;
 
 abstract class PageController
 {
-    protected $url = "/criancapequenaemfoco/";
+    protected $url = "/el-project/";
     protected $img;
     protected $jspath;
     protected $smarty;
@@ -108,6 +108,8 @@ abstract class PageController
 		$this->set('css',$this->css);
 		$this->set('js',$this->javascript);
 		$this->set('message',$this->msg);
+
+        $this->setCurrentUser();
 		
 		$this->xajax->debugOff();
 		$this->xajax->processRequests();
@@ -115,10 +117,22 @@ abstract class PageController
 		$this->set('xajax',$this->xajax_js);
 		$this->smarty->display($this->path."/".$this->view.".tpl");
 	}
-	
-	//protected functions
-	
 
+    private function setCurrentUser()
+    {
+        if(\Framework\LoginService::IsUserAuthenticate())
+        {
+            $userInfo = \Framework\LoginService::GetUserSessionInfo();
+            $this->set("usuarioLogado",true);
+            $this->set("usuario", $userInfo);
+        }
+        else
+        {
+            $this->set("usuarioLogado",false);
+        }
+    }
+
+    //protected functions
 	
 	/*
 	* Redireciona para outra rota

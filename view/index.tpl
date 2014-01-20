@@ -23,7 +23,12 @@
 				<ul>
 					<li>
 						<a href="{$url}">Home</a>
-                        <a href ="{$url}/Conta/Login">Login</a>
+                        {if $usuarioLogado eq false}
+                            <a href ="{$url}Usuario/Login">Login</a>
+                        {else}
+                            <a href ="{$url}Usuario/Logout">Sair</a>
+                        {/if}
+
 					</li>
 				</ul>
 			</div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-19 21:53:11
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-20 21:17:39
          compiled from "view\home\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:813052dc3b372ced16-52369095%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
     array (
       0 => 'view\\index.tpl',
-      1 => 1390164537,
+      1 => 1390249056,
       2 => 'file',
     ),
   ),
@@ -21,14 +21,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_52dc3b37339836_74942941',
   'variables' => 
   array (
     'url' => 0,
     'message' => 0,
+    'usuarioLogado' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_52dc3b37339836_74942941',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52dc3b37339836_74942941')) {function content_52dc3b37339836_74942941($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
@@ -59,8 +60,14 @@ css/style.css" type="text/css" media="screen" /> -->
 					<li>
 						<a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
 ">Home</a>
-                        <a href ="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-/Conta/Login">Login</a>
+                        <?php if ($_smarty_tpl->tpl_vars['usuarioLogado']->value==false){?>
+                            <a href ="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Login">Login</a>
+                        <?php }else{ ?>
+                            <a href ="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Logout">Sair</a>
+                        <?php }?>
+
 					</li>
 				</ul>
 			</div>

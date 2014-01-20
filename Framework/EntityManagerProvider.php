@@ -78,8 +78,6 @@ class EntityManagerProvider
 	{
 		return $this->em;
 	}
-
-
 }
 
 ?>
