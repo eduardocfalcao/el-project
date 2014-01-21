@@ -4,35 +4,51 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
     <title>Site bla bla bla </title>
 
-    <!-- <link rel="stylesheet" href="{$url}css/style.css" type="text/css" media="screen" /> -->
+    <link rel="stylesheet" href="{$url}css/style.css" type="text/css" media="screen" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-	<script src="/js/jquery.js" type="text/javascript"></script>
+	<script src="{$url}js/jquery.js" type="text/javascript"></script>
 
 	{block name=head}{/block}
 </head>
-<body>
-	{if $message neq ""}
-		<div id="mensagem" class="resultado {$message.tipo}">{$message.msg}<span id="closeMsg">[X]</span></div>
-	{else}
-		<div id="mensagem" class="resultado"><span id="closeMsg">[X]</span></div>
-	{/if}
-	<div id="container">
-		<div id="header">
-			<div id="logo"></div>
-			<div id="menu">
-				<ul>
-					<li>
-						<a href="{$url}">Home</a>
-                        {if $usuarioLogado eq false}
-                            <a href ="{$url}Usuario/Login">Login</a>
-                        {else}
-                            <a href ="{$url}Usuario/Logout">Sair</a>
-                        {/if}
+<body>    
+    <div id="header">
+        {if $message neq ""}
+            <div id="mensagem" class="resultado {$message.tipo}">{$message.msg}<span id="closeMsg">[X]</span></div>
+        {else}
+            <div id="mensagem" class="resultado"><span id="closeMsg">[X]</span></div>
+        {/if}
+        
+        <div id="login">
+            <ul>
+                <li>
+                    <a href="{$url}">Home</a>
+                    {if $usuarioLogado eq false}
+                        <a href ="{$url}Usuario/Login">Login</a>
+                    {else}
+                        <a href ="{$url}Usuario/Logout">Sair</a>
+                    {/if}
 
-					</li>
-				</ul>
-			</div>
-		</div>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="menu">
+            <ul>
+                <li><a href="#">inicio</a></li>
+                <li><a href="#">premio</a></li>
+                <li><a href="#">parceiros</a></li>
+                <li><a href="#">edital</a></li>
+                <li><a href="#">participacao</a></li>
+                <li><a href="#">como se escrever</a></li>
+                <li><a href="#">contato</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+	<div class="container">
 		<div id="body">
 			{block name=body}{/block}
 		</div>

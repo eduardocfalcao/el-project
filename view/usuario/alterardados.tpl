@@ -1,3 +1,7 @@
+{extends 'index.tpl'}
+
+
+
 {block name=body}
 
     <form name="formUsuario" id="formUsuario" method="post">
