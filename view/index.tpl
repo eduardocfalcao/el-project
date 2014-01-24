@@ -8,31 +8,34 @@
     
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-	<script src="{$url}js/jquery.js" type="text/javascript"></script>
+	<!---<script src="{$url}js/jquery.js" type="text/javascript"></script>---->
 
 	{block name=head}{/block}
 </head>
 <body>    
+	<div class="container">
     <div id="header">
-        {if $message neq ""}
-            <div id="mensagem" class="resultado {$message.tipo}">{$message.msg}<span id="closeMsg">[X]</span></div>
-        {else}
-            <div id="mensagem" class="resultado"><span id="closeMsg">[X]</span></div>
-        {/if}
-        
-        <div id="login">
-            <ul>
-                <li>
-                    <a href="{$url}">Home</a>
-                    {if $usuarioLogado eq false}
-                        <a href ="{$url}Usuario/Login">Login</a>
-                    {else}
-                        <a href ="{$url}Usuario/Logout">Sair</a>
-                    {/if}
+    	<div class="arealogin">
+            {if $message neq ""}
+                <div id="mensagem" class="resultado {$message.tipo}">{$message.msg}<span id="closeMsg">Sair</span></div>
+            {else}
+                <div id="mensagem" class="resultado"><span id="closeMsg">Sair</span></div>
+            {/if}
 
-                </li>
+        <div class="login">
+            <ul>
+                <li><a href="{$url}">Home</a> <strong>|</strong> </li>
+                    {if $usuarioLogado eq false}
+                <li><a href ="{$url}Usuario/Login">Login</a> <strong>|</strong> </li>
+                    {else}
+                <li><a href ="{$url}Usuario/Logout">Sair</a></li>
+                    {/if}
             </ul>
         </div>
+        
+        </div></div>
+        
+        <div class="container">
         
         <div id="menu">
             <ul>
@@ -46,6 +49,7 @@
             </ul>
         </div>
         
+    </div>
     </div>
     
 	<div class="container">
