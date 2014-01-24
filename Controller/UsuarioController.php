@@ -37,10 +37,17 @@ class UsuarioController extends PageController {
         }
     }
 
+    public function MinhaConta()
+    {
+
+    }
+
     public function AlterarDados()
     {
+        $this->verificaUsuarioLogado();
+
         $userInfo = \Framework\LoginService::GetUserSessionInfo();
-        $usuario = $this->em->find("\Model\Usuario",$userInfo["id"]);
+        $usuario = $this->em->find("\\Model\\Usuario",$userInfo["id"]);
 
         if($this->isPostBack())
         {
@@ -56,17 +63,47 @@ class UsuarioController extends PageController {
             $this->em->persist($usuario);
             $this->em->flush();
 
-            echo "Salvou o usuário";
-            //TODO: colocar mensagem bonita
+            $this->SetViewMessage("Os dados foram alterados.", "sucesso");
         }
         $this->set("usuario",$usuario);
+    }
+
+    public function AlterarSenha()
+    {
+        $this->verificaUsuarioLogado();
+
+        if($this->isPostBack())
+        {
+            $userInfo = \Framework\LoginService::GetUserSessionInfo();
+            $usuario = $this->em->find("\\Model\\Usuario",$userInfo["id"]);
+            if(\Model\Usuario::Encrypt($_POST["senhaAtual"]) == $usuario->getSenha())
+            {
+                if($_POST["novaSenha"] == $_POST["repetirSenha"])
+                {
+                    $usuario->setSenha(\Model\Usuario::Encrypt($_POST["novaSenha"]));
+                    $this->em->persist($usuario);
+                    $this->em->flush();
+
+                    $this->SetViewMessage("A senha foi alterada.", "sucesso");
+                }
+                else
+                {
+                    $this->SetViewMessage("A senha atual est&aacute; incorreta.","erro");
+                }
+            }
+            else
+            {
+                $this->SetViewMessage("Os campos da nova senha n&aacute;o conferem.","erro");
+            }
+        }
+
     }
 
     public function Login()
     {
         if(\Framework\LoginService::IsUserAuthenticate())
         {
-            $this->redirect("Home/Index");
+            $this->redirect("Usuario/MinhaConta");
         }
 
         if($this->isPostBack())
@@ -84,8 +121,8 @@ class UsuarioController extends PageController {
 
             if($usuario != null)
             {
-                LoginService::UserServiceLogOn($usuario->getId(), $usuario->getNome(), $usuario->IsAdmin());
-                $this->redirect("Home/Index");
+                LoginService::UserServiceLogOn($usuario->getId(), $usuario->getLogin(), $usuario->IsAdmin());
+                $this->redirect("Usuario/MinhaConta");
             }
             else
             {
@@ -102,5 +139,13 @@ class UsuarioController extends PageController {
             $this->redirect("Home/Index");
         }
         $this->redirect("Home/Index");
+    }
+
+    private function verificaUsuarioLogado()
+    {
+        if(\Framework\LoginService::IsUserAuthenticate() == false)
+        {
+            $this->redirect("Usuario/Login");
+        }
     }
 } 

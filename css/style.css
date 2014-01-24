@@ -58,6 +58,9 @@ form input[type='text'], input[type='password']{
 	margin: 10px 0;
 }
 
+#mensagem{
+    display: none;
+}
 
 
 
@@ -84,12 +87,14 @@ form input[type='text'], input[type='password']{
 	color: #f06c6d;
 	font-weight: normal;
 }
-
+.login ul{
+    float: right;
+}
 .login ul li, span{
 	list-style: none;
-	float: right;
 	padding: 0 10px;
 	margin-right: -10px;
+    float: left;
 }
 
 .resultado{
@@ -160,9 +165,5 @@ form input[type='text'], input[type='password']{
 	font-size: 1px;
 	line-height: 0px;
 }
-
-
-
-<!------------FORM------------>
 
 

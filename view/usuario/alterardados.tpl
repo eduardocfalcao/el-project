@@ -1,8 +1,6 @@
-{extends 'index.tpl'}
+{extends 'usuario/minhacontatemplate.tpl'}
 
-
-
-{block name=body}
+{block name=minhaContaBody}
 
     <form name="formUsuario" id="formUsuario" method="post">
 
@@ -11,12 +9,6 @@
         <label for="nome">Nome:</label>
 
         <input value="{$usuario->getNome()}" type="text"   name="nome" id="nome" maxlength="1000">
-
-        <br />
-
-        <label for="email">E-mail:</label>
-
-        <input value="{$usuario->getEmail()}" type="email" name="email" id="email" maxlength="150" />
 
         <br />
 

@@ -8,48 +8,50 @@
     
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-	<!---<script src="{$url}js/jquery.js" type="text/javascript"></script>---->
+	<script src="{$url}js/jquery-1.10.2.min.js" type="text/javascript"></script>
 
 	{block name=head}{/block}
 </head>
 <body>    
 	<div class="container">
-    <div id="header">
-    	<div class="arealogin">
-            {if $message neq ""}
-                <div id="mensagem" class="resultado {$message.tipo}">{$message.msg}<span id="closeMsg">Sair</span></div>
-            {else}
-                <div id="mensagem" class="resultado"><span id="closeMsg">Sair</span></div>
-            {/if}
+        {if $message neq ""}
+            <div id="mensagem" class="resultado {$message.tipo}">{$message.msg}<span id="closeMsg">Sair</span></div>
+        {else}
+            <div id="mensagem" class="resultado"><span id="closeMsg">Sair</span></div>
+        {/if}
+        <div id="header">
+            <div class="arealogin">
+                <div class="login">
+                    <ul>
+                        {if $usuarioLogado eq false}
+                            <li><a href ="{$url}Usuario/Cadastro">Cadastre-se</a> <strong>|</strong> </li>
 
-        <div class="login">
-            <ul>
-                <li><a href="{$url}">Home</a> <strong>|</strong> </li>
-                    {if $usuarioLogado eq false}
-                <li><a href ="{$url}Usuario/Login">Login</a> <strong>|</strong> </li>
-                    {else}
-                <li><a href ="{$url}Usuario/Logout">Sair</a></li>
-                    {/if}
-            </ul>
+                            <li><a href ="{$url}Usuario/Login">Login</a>
+                        {else}
+                            <li>Bem vindo <strong>{$userInfo.nome}</strong> <strong>|</strong></li>
+                            <li><a href ="{$url}Usuario/MinhaConta">Minha Conta</a> <strong>|</strong></li>
+                            <li><a href ="{$url}Usuario/Logout">Sair</a></li>
+                        {/if}
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        </div></div>
         
         <div class="container">
-        
-        <div id="menu">
-            <ul>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">premio</a></li>
-                <li><a href="#">parceiros</a></li>
-                <li><a href="#">edital</a></li>
-                <li><a href="#">participacao</a></li>
-                <li><a href="#">como se escrever</a></li>
-                <li><a href="#">contato</a></li>
-            </ul>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="#">inicio</a></li>
+                    <li><a href="#">premio</a></li>
+                    <li><a href="#">parceiros</a></li>
+                    <li><a href="#">edital</a></li>
+                    <li><a href="#">participacao</a></li>
+                    <li><a href="#">como se escrever</a></li>
+                    <li><a href="#">contato</a></li>
+                </ul>
+            </div>
+
         </div>
-        
-    </div>
     </div>
     
 	<div class="container">

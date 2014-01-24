@@ -7,7 +7,7 @@
     <form method="post">
         <input type="hidden" name="postback" value="true" /><br />
         <label for="login">- Nome de Usu&aacute;rio:</label><br />
-        <input type="text" name="login" id="login" placeholder="Search here"/>
+        <input type="text" name="login" id="login" />
        
         <br /><br />
 
