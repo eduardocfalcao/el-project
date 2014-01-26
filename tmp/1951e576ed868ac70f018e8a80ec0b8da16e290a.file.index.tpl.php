@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-26 23:00:25
-         compiled from "view\usuario\login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:552052e41df410e0f4-74921326%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-26 22:59:59
+         compiled from "view\home\index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1571452e41e277ab036-49826667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '56ea829e8c9a9f3e382dc974d3605a3e577be0f4' => 
+    '1951e576ed868ac70f018e8a80ec0b8da16e290a' => 
     array (
-      0 => 'view\\usuario\\login.tpl',
-      1 => 1390767768,
+      0 => 'view\\home\\index.tpl',
+      1 => 1390663324,
       2 => 'file',
     ),
     '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
@@ -17,12 +17,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '552052e41df410e0f4-74921326',
+  'nocache_hash' => '1571452e41e277ab036-49826667',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_52e41df4455980_95779636',
+  'unifunc' => 'content_52e41e278d38d0_23597201',
   'variables' => 
   array (
     'url' => 0,
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52e41df4455980_95779636')) {function content_52e41df4455980_95779636($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52e41e278d38d0_23597201')) {function content_52e41e278d38d0_23597201($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
@@ -101,31 +101,12 @@ Usuario/Logout">Sair</a></li>
 		<div id="body">
         <div class="container">
 			
-
-<div class="box01">
-
-<h4>Login</h4>
-
-    <form method="post">
-        <input type="hidden" name="postback" value="true" /><br />
-        <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
-        <input type="text" name="login" id="login" />
-       
-        <br /><br />
-
-        <label for="senha">&bull; Senha:</label><br />
-        <input type="password" name="senha" id="senha" />
-        
-        <br /><br />
-
-		<a href="">Esqueci minha senha</a>
-
-        <button>Acesse sua conta</button>
-    </form>
-</div>   
-
-<div class="line"></div> 
-
+   <div class="container">
+   		<img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+img/logo.png" style="display: block;margin: 0 auto; width: 400px;">
+        <h2>Inscricoes Abertas</h2>
+       	<h3>ate o dia 31/03/2014 as 00 horas</h3>
+   </div>
 
 		</div>
 		</div>

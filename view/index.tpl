@@ -56,13 +56,14 @@
     
 	<div class="container">
 		<div id="body">
+        <div class="container">
 			{block name=body}{/block}
 		</div>
-		<div id="footer">
-			<div>
-			
-			</div>
 		</div>
+	</div>
+    
+    <div class="footer">
+
 	</div>
 </body>
 </html>

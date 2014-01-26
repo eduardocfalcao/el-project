@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-26 23:00:25
-         compiled from "view\usuario\login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:552052e41df410e0f4-74921326%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-26 22:59:39
+         compiled from "view\usuario\cadastro.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1854252e527f4657a99-39052618%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '56ea829e8c9a9f3e382dc974d3605a3e577be0f4' => 
+    '82238a798f5d428662a9af848a2d83e84e38162c' => 
     array (
-      0 => 'view\\usuario\\login.tpl',
-      1 => 1390767768,
+      0 => 'view\\usuario\\cadastro.tpl',
+      1 => 1390773185,
       2 => 'file',
     ),
     '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
@@ -17,12 +17,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '552052e41df410e0f4-74921326',
+  'nocache_hash' => '1854252e527f4657a99-39052618',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_52e41df4455980_95779636',
+  'unifunc' => 'content_52e527f48a16b7_15337032',
   'variables' => 
   array (
     'url' => 0,
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52e41df4455980_95779636')) {function content_52e41df4455980_95779636($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52e527f48a16b7_15337032')) {function content_52e527f48a16b7_15337032($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
@@ -102,29 +102,79 @@ Usuario/Logout">Sair</a></li>
         <div class="container">
 			
 
-<div class="box01">
+<div class="box02">
 
-<h4>Login</h4>
+<h4>Cadastre-se</h4>
 
-    <form method="post">
-        <input type="hidden" name="postback" value="true" /><br />
-        <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
-        <input type="text" name="login" id="login" />
-       
-        <br /><br />
+<form name="formUsuario" id="formUsuario" method="post">
 
-        <label for="senha">&bull; Senha:</label><br />
-        <input type="password" name="senha" id="senha" />
-        
-        <br /><br />
+    <input type="hidden" name="postback" value="true" />
 
-		<a href="">Esqueci minha senha</a>
+    <div class="lar-01">
+    <label for="nome">&bull; Nome:</label><br />
 
-        <button>Acesse sua conta</button>
-    </form>
-</div>   
+    <input type="text" name="nome" id="nome" maxlength="1000" />
+    </div>
+    
+    <div class="lar-02 margem-01">
+    <label for="dataNascimento">&bull; Sexo:</label><br />
 
-<div class="line"></div> 
+    <div class="radius margem-03"><input type="radio" name="sexo" value="1" checked text=""> Masculino</div>
+    <div class="radius margem-04"><input type="radio" name="sexo" value="2"> Feminino</div>
+    </div>
+    
+	<div class="lar-02">
+    <label for="dataNascimento">&bull; Data Nascimento:</label><br />
+
+    <input name="dataNascimento" id="dataNascimento"/>
+    </div>
+    
+	<div class="lar-02">
+    <label for="cidade">&bull; Cidade:</label><br />
+
+    <input name="cidade" id="cidade" />
+    </div>
+    
+	<div class="lar-05 margem-02">
+    <label for="uf">&bull; UF:</label><br />
+
+    <input name="uf" id="uf" maxlength="4"/>
+    </div>
+    
+	<div class="lar-03">
+    <label for="pais">&bull; Pa&iacute;s:</label><br />
+
+    <input name="pais" id="pais"/>
+    </div>
+    
+	<div class="lar-02 margem-01">
+    <label for="email">&bull; E-mail:</label><br />
+
+    <input type="email" name="email" id="email" maxlength="150" />
+    </div>
+    
+	<div class="lar-02">
+    <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
+
+    <input name="login" class="lar-02"/>
+    </div>
+    
+	<div class="lar-02 margem-01">
+    <label for="senha">&bull; Senha:</label><br />
+
+    <input type="passoword" name="senha" id="senha"/>
+    </div>
+    
+	<div class="lar-02">
+    <label for="confirmarSenha">&bull; Confirmar Senha:</label><br />
+
+    <input type="passoword" name="confirmarSenha" id="confirmarSenha"/>
+	</div>
+    
+    <button>Finalizar Cadastro</button>
+</form>
+
+</div>
 
 
 		</div>
