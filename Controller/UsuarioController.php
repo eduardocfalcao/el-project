@@ -42,6 +42,24 @@ class UsuarioController extends PageController {
 
     }
 
+    public function Instituicao()
+    {
+        //carrega dados e poe na tela
+        if($this->isPostBack())
+        {
+
+        }
+    }
+
+    public function Projeto()
+    {
+        //carrega dados e poe na tela
+        if($this->isPostBack())
+        {
+
+        }
+    }
+
     public function AlterarDados()
     {
         $this->verificaUsuarioLogado();
@@ -88,12 +106,12 @@ class UsuarioController extends PageController {
                 }
                 else
                 {
-                    $this->SetViewMessage("A senha atual est&aacute; incorreta.","erro");
+                    $this->SetViewMessage("Os campos da nova senha n&atilde;o conferem.","erro");
                 }
             }
             else
             {
-                $this->SetViewMessage("Os campos da nova senha n&aacute;o conferem.","erro");
+                $this->SetViewMessage("A senha atual est&aacute; incorreta.","erro");
             }
         }
 
