@@ -44,7 +44,7 @@
         <input value="{$usuario->getPais()}" name="pais" id="pais" />
         </div>
 
-        <button>Atualizar</button>
+        <button class="botao01">Atualizar</button>
     </form>
 
 

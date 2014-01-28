@@ -228,14 +228,14 @@ button{
 }
 
 .box03{
-	width: 460px;
+	width: 300px;
 	min-height: 100px;
 	float: left;
 	margin: 0 10px 0 0px;
 }
 
 .box04{
-	width: 705px;
+	width: 865px;
 	min-height: 100px;
 	float: left;
 	margin: 0 0 0 10px;
@@ -373,6 +373,9 @@ button{
 	height: 35px;
 }
 
+.botao01{
+	float:left;
+}
 
 /******* ITENS ******/
 

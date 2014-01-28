@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 01:28:17
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 02:25:46
          compiled from "view\usuario\alterarsenha.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3241052e6eda1e425f2-99491770%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '96f3e14006400fea89b4c60ba3af13e7e68001d1' => 
     array (
       0 => 'view\\usuario\\alterarsenha.tpl',
-      1 => 1390868883,
+      1 => 1390872345,
       2 => 'file',
     ),
     '57ebd120ac442f2b59812c145e1b013c6ef75667' => 
@@ -143,26 +143,26 @@ Usuario/Logout"><strong>Sair</strong></a>
 
     <form name="formUsuario" id="formUsuario" method="post">
 
-        <div class="lar-01"><input type="hidden" name="postback" value="true" />
+        <div class="lar-03"><input type="hidden" name="postback" value="true" />
 
         <label for="senhaAtual">Senha Atual:</label>
 
         <input value="" type="password" name="senhaAtual" id="senhaAtual" maxlength="1000">
         </div>
 
-		<div class="lar-02 margem-01">
+		<div class="lar-03 margem-02">
         <label for="novaSenha">Nova Senha:</label>
 
         <input value="" type="password" name="novaSenha" id="novaSenha" />
         </div>
 
-		<div class="lar-02">
+		<div class="lar-03">
         <label for="repetirSenha">Repetir Senha:</label>
 
         <input value="" type="password" name="repetirSenha" id="repetirSenha" />
 		</div>
 
-        <button>Alterar Senha</button>
+        <button class="botao01">Alterar Senha</button>
     </form>
 
 

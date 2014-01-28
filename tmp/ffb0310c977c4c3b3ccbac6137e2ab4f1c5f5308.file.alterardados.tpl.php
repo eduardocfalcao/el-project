@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 01:28:21
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 02:40:12
          compiled from "view\usuario\alterardados.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:596652e58a4715d722-89696360%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ffb0310c977c4c3b3ccbac6137e2ab4f1c5f5308' => 
     array (
       0 => 'view\\usuario\\alterardados.tpl',
-      1 => 1390868895,
+      1 => 1390873210,
       2 => 'file',
     ),
     '57ebd120ac442f2b59812c145e1b013c6ef75667' => 
@@ -186,7 +186,7 @@ Usuario/Logout"><strong>Sair</strong></a>
 " name="pais" id="pais" />
         </div>
 
-        <button>Atualizar</button>
+        <button class="botao01">Atualizar</button>
     </form>
 
 
