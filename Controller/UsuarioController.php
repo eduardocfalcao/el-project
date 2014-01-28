@@ -44,11 +44,39 @@ class UsuarioController extends PageController {
 
     public function Instituicao()
     {
-        //carrega dados e poe na tela
+        $usuario = $this->getLoggedUser();
+        $instituicao = $usuario->getInstituicao();
+
+        if($instituicao == null)
+        {
+            $instituicao = new \Model\Instituicao();
+        }
+
         if($this->isPostBack())
         {
+            $instituicao->setNome($_POST["nomeInstituicao"]);
+            $instituicao->setEmail($_POST["email"]);
+            $instituicao->setTelefone($_POST["telefone"]);
+            $instituicao->setTelefoneAlternativo($_POST["telefoneOpcional"]);
+            $instituicao->setSite($_POST["site"]);
+            $instituicao->setFacebook($_POST["facebook"]);
+            $instituicao->setCidade($_POST["cidade"]);
+            $instituicao->setUf($_POST["uf"]);
+            $instituicao->setPais($_POST["pais"]);
+            $instituicao->setCep($_POST["cep"]);
+            $instituicao->setEndereco($_POST["endereco"]);
+            $instituicao->setOutrasInformacoes($_POST["outrasInformacoes"]);
 
+            $usuario->setInstituicao($instituicao);
+
+            $this->em->persist($usuario);
+            $this->em->persist($instituicao);
+            $this->em->flush();
+
+            $this->SetViewMessage("Os dados foram salvos.", "sucesso");
         }
+
+        $this->set("instituicao",$instituicao);
     }
 
     public function Projeto()

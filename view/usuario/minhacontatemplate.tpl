@@ -8,7 +8,7 @@
         <div class="menuMinhaConta">
             <ul>
                 <li>
-                    <a href="#">&bull; Minha Inscri&ccedil;&atilde;o</a>
+                    <a href="{$url}Usuario/Instituicao">&bull; Minha Inscri&ccedil;&atilde;o</a>
                 </li>
                 <li>
                     <a href="{$url}Usuario/AlterarDados">&bull; Alterar dados</a>

@@ -132,6 +132,7 @@ abstract class PageController
         }
     }
 
+
     //protected functions
 	
 	/*
@@ -149,8 +150,19 @@ abstract class PageController
 		$mk= mktime(0, 0, 0, $m, $d, $y);
 		$data = strftime('%Y-%m-%d',$mk);
 		return $data;
-	}	
-	
+	}
+
+    protected function getLoggedUser()
+    {
+        $usuario = null;
+        if(\Framework\LoginService::IsUserAuthenticate())
+        {
+            $userInfo = \Framework\LoginService::GetUserSessionInfo();
+            $usuario = $this->em->find("\\Model\\Usuario",$userInfo["id"]);
+        }
+        return $usuario;
+    }
+
 	/*
 	* 
 	*/
