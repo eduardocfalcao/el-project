@@ -32,6 +32,7 @@ h3{
 
 h4{
 	font-size: 27px;
+	margin: 0 0 30px 0;
 }
 
 a img {
@@ -131,6 +132,7 @@ button{
 	width: 209px;
 	height: 35px;
 	float: right;
+	cursor: pointer;
 }
 
 /*************LARGURA FORM*************/
@@ -209,19 +211,56 @@ button{
 
 
 
-/*************CSS das Páginas Internas*************/
+/*******BOX / CONTAINERS / CONTENT******/
 
+.box01{
+	width: 436px;
+	min-height: 100px;
+	float: left;
+	margin: 0 20px 0 0;
+}
 
-#mensagem{
-    display: none;
+.box02{
+	width: 710px;
+	min-height: 100px;
+	float: left;
+	margin: 0 0 0 15px;
+}
+
+.box03{
+	width: 460px;
+	min-height: 100px;
+	float: left;
+	margin: 0 10px 0 0px;
+}
+
+.box04{
+	width: 705px;
+	min-height: 100px;
+	float: left;
+	margin: 0 0 0 10px;
 }
 
 .container {
 	width: 1190px;
 	margin: 0 auto;
-    overflow: hidden;
 }
 
+.over{
+	overflow: hidden;
+}
+
+.content {
+	padding: 10px 0;
+}
+
+
+/******* HEADER ******/
+
+
+#mensagem{
+    display: none;
+}
 
 #header {
 	background-color: #fff;
@@ -249,10 +288,16 @@ button{
     float: left;
 }
 
+.login ul li a:hover{
+	color: #f06c6d;
+}
+
 .resultado{
 	width: auto;
 	float: right;
 }
+
+/******* MENU ******/
 
 #menu{
 	width: 1190px;
@@ -292,24 +337,45 @@ button{
 	background-color: #ee5758;
 }
 
-.content {
-	padding: 10px 0;
+
+
+/*************CSS das Páginas Internas*************/
+
+
+.menuMinhaConta ul li{
+	height: 35px;
+	line-height: 35px;
+	list-style-type: none;
+	border-bottom: rgb(240, 108, 109) dotted 1px;
+}
+
+.menuMinhaConta ul li a{
+	height: 35px;
+	line-height: 35px;
+}
+
+.menuMinhaConta ul li a:hover, .menuMinhaConta ul li a:active{
+	color: #f06c6d;
+	height: 35px;
+	line-height: 35px;
+	width: 100%;
+	background-color: #ffeeee;
+	display: block;
+}
+
+.menuMinhaConta ul li.sair {
+	border: none !important
+}
+
+.menuMinhaConta ul li.sair a, .menuMinhaConta ul li.sair a:hover {
+	background-color: transparent;
+	width: 30px;
+	height: 35px;
 }
 
 
-.box01{
-	width: 436px;
-	min-height: 100px;
-	float: left;
-	margin: 0 25px 0 0;
-}
+/******* ITENS ******/
 
-.box02{
-	width: 705px;
-	min-height: 100px;
-	float: left;
-	margin: 0 0 0 20px;
-}
 
 .line{
 	background-image: url(img/line.png);
@@ -317,12 +383,24 @@ button{
 	width: 3px;
 	height: 620px;
 	float: left;
+	background-position-x: -3px;
 }
+
+.line02{
+	background-image: url(img/line.png);
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 9px;
+	float: left;
+}
+
+
+/******* FOOTER ******/
 
 
 .footer {
 	background-color: transparent;
-	height: 200px;
+	height: 100px;
 }
 
 

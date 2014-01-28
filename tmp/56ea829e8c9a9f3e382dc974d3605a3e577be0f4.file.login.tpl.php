@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-27 01:12:24
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 00:40:02
          compiled from "view\usuario\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:552052e41df410e0f4-74921326%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '56ea829e8c9a9f3e382dc974d3605a3e577be0f4' => 
     array (
       0 => 'view\\usuario\\login.tpl',
-      1 => 1390779297,
+      1 => 1390863362,
       2 => 'file',
     ),
     '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
     array (
       0 => 'view\\index.tpl',
-      1 => 1390775335,
+      1 => 1390865362,
       2 => 'file',
     ),
     'f92d8e95121bb43f61dd33e5c7e86ba9fb9bacf4' => 
     array (
       0 => 'view\\usuario\\formlogincadasto.tpl',
-      1 => 1390779579,
+      1 => 1390863846,
       2 => 'file',
     ),
   ),
@@ -103,19 +103,19 @@ Usuario/Logout">Sair</a></li>
         </div>
     </div>
     
-	<div class="container">
+	<div class="container over">
 		<div id="body">
-        <div class="container">
+
 			
 
 <?php /*  Call merged included template "usuario/formlogincadasto.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("usuario/formlogincadasto.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '552052e41df410e0f4-74921326');
-content_52e5a4685cd868_44797488($_smarty_tpl);
+content_52e6ee52145280_81589988($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "usuario/formlogincadasto.tpl" */?>
 
 
-		</div>
+            
 		</div>
 	</div>
     
@@ -124,9 +124,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "usuario/for
 	</div>
 </body>
 </html>
-<?php }} ?><?php /* Smarty version Smarty-3.1.8, created on 2014-01-27 01:12:24
+<?php }} ?><?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 00:40:02
          compiled from "view\usuario\formlogincadasto.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_52e5a4685cd868_44797488')) {function content_52e5a4685cd868_44797488($_smarty_tpl) {?><div class="box01">
+<?php if ($_valid && !is_callable('content_52e6ee52145280_81589988')) {function content_52e6ee52145280_81589988($_smarty_tpl) {?><div class="box01">
 
     <h4>Login</h4>
 
@@ -207,7 +207,7 @@ Usuario/Cadastro">
         <div class="lar-02">
             <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
 
-            <input name="login" class="lar-02"/>
+            <input name="login"/>
         </div>
 
         <div class="lar-02 margem-01">

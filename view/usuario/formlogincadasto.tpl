@@ -77,7 +77,7 @@
         <div class="lar-02">
             <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
 
-            <input name="login" class="lar-02"/>
+            <input name="login"/>
         </div>
 
         <div class="lar-02 margem-01">

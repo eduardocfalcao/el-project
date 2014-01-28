@@ -1,13 +1,19 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 00:39:51
-         compiled from "view\home\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1571452e41e277ab036-49826667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 01:28:17
+         compiled from "view\usuario\alterarsenha.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3241052e6eda1e425f2-99491770%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '1951e576ed868ac70f018e8a80ec0b8da16e290a' => 
+    '96f3e14006400fea89b4c60ba3af13e7e68001d1' => 
     array (
-      0 => 'view\\home\\index.tpl',
-      1 => 1390663324,
+      0 => 'view\\usuario\\alterarsenha.tpl',
+      1 => 1390868883,
+      2 => 'file',
+    ),
+    '57ebd120ac442f2b59812c145e1b013c6ef75667' => 
+    array (
+      0 => 'view\\usuario\\minhacontatemplate.tpl',
+      1 => 1390868222,
       2 => 'file',
     ),
     '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
@@ -17,12 +23,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1571452e41e277ab036-49826667',
+  'nocache_hash' => '3241052e6eda1e425f2-99491770',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_52e41e278d38d0_23597201',
+  'unifunc' => 'content_52e6eda20aebe8_23953168',
   'variables' => 
   array (
     'url' => 0,
@@ -32,7 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52e41e278d38d0_23597201')) {function content_52e41e278d38d0_23597201($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52e6eda20aebe8_23953168')) {function content_52e6eda20aebe8_23953168($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
@@ -101,12 +107,68 @@ Usuario/Logout">Sair</a></li>
 		<div id="body">
 
 			
-   <div class="container">
-   		<img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-img/logo.png" style="display: block;margin: 0 auto; width: 400px;">
-        <h2>Inscricoes Abertas</h2>
-       	<h3>ate o dia 31/03/2014 as 00 horas</h3>
+
+    <div class="box03">
+    <h4>MINHA CONTA</h4>
+    
+        <div class="menuMinhaConta">
+            <ul>
+                <li>
+                    <a href="#">&bull; Minha Inscri&ccedil;&atilde;o</a>
+                </li>
+                <li>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/AlterarDados">&bull; Alterar dados</a>
+                </li>
+                <li>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/AlterarSenha">&bull; Alterar senha</a>
+                </li>
+                <li class="sair">
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Logout"><strong>Sair</strong></a>
+                </li>
+            </ul>
+            
+        </div>
+ 
    </div>
+   
+   <div class="line"></div>
+   
+    <div class="box04">
+        
+
+	<h4>ALTERAR SENHA</h4>
+
+    <form name="formUsuario" id="formUsuario" method="post">
+
+        <div class="lar-01"><input type="hidden" name="postback" value="true" />
+
+        <label for="senhaAtual">Senha Atual:</label>
+
+        <input value="" type="password" name="senhaAtual" id="senhaAtual" maxlength="1000">
+        </div>
+
+		<div class="lar-02 margem-01">
+        <label for="novaSenha">Nova Senha:</label>
+
+        <input value="" type="password" name="novaSenha" id="novaSenha" />
+        </div>
+
+		<div class="lar-02">
+        <label for="repetirSenha">Repetir Senha:</label>
+
+        <input value="" type="password" name="repetirSenha" id="repetirSenha" />
+		</div>
+
+        <button>Alterar Senha</button>
+    </form>
+
+
+
+    </div>
+
 
             
 		</div>

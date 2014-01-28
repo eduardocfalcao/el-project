@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-26 23:29:37
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 00:39:54
          compiled from "view\usuario\cadastro.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1854252e527f4657a99-39052618%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,13 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '82238a798f5d428662a9af848a2d83e84e38162c' => 
     array (
       0 => 'view\\usuario\\cadastro.tpl',
-      1 => 1390775335,
+      1 => 1390863362,
       2 => 'file',
     ),
     '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
     array (
       0 => 'view\\index.tpl',
-      1 => 1390775335,
+      1 => 1390865362,
+      2 => 'file',
+    ),
+    'f92d8e95121bb43f61dd33e5c7e86ba9fb9bacf4' => 
+    array (
+      0 => 'view\\usuario\\formlogincadasto.tpl',
+      1 => 1390863846,
       2 => 'file',
     ),
   ),
@@ -97,87 +103,19 @@ Usuario/Logout">Sair</a></li>
         </div>
     </div>
     
-	<div class="container">
+	<div class="container over">
 		<div id="body">
-        <div class="container">
+
 			
 
-<div class="box02">
-
-<h4>Cadastre-se</h4>
-
-<form name="formUsuario" id="formUsuario" method="post">
-
-    <input type="hidden" name="postback" value="true" />
-
-    <div class="lar-01">
-    <label for="nome">&bull; Nome:</label><br />
-
-    <input type="text" name="nome" id="nome" maxlength="1000" />
-    </div>
-    
-    <div class="lar-02 margem-01">
-    <label for="dataNascimento">&bull; Sexo:</label><br />
-
-    <div class="radius margem-03"><input type="radio" name="sexo" value="1" checked text=""> Masculino</div>
-    <div class="radius margem-04"><input type="radio" name="sexo" value="2"> Feminino</div>
-    </div>
-    
-	<div class="lar-02">
-    <label for="dataNascimento">&bull; Data Nascimento:</label><br />
-
-    <input name="dataNascimento" id="dataNascimento"/>
-    </div>
-    
-	<div class="lar-02">
-    <label for="cidade">&bull; Cidade:</label><br />
-
-    <input name="cidade" id="cidade" />
-    </div>
-    
-	<div class="lar-05 margem-02">
-    <label for="uf">&bull; UF:</label><br />
-
-    <input name="uf" id="uf" maxlength="4"/>
-    </div>
-    
-	<div class="lar-03">
-    <label for="pais">&bull; Pa&iacute;s:</label><br />
-
-    <input name="pais" id="pais"/>
-    </div>
-    
-	<div class="lar-02 margem-01">
-    <label for="email">&bull; E-mail:</label><br />
-
-    <input type="email" name="email" id="email" maxlength="150" />
-    </div>
-    
-	<div class="lar-02">
-    <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
-
-    <input name="login" class="lar-02"/>
-    </div>
-    
-	<div class="lar-02 margem-01">
-    <label for="senha">&bull; Senha:</label><br />
-
-    <input type="passoword" name="senha" id="senha"/>
-    </div>
-    
-	<div class="lar-02">
-    <label for="confirmarSenha">&bull; Confirmar Senha:</label><br />
-
-    <input type="passoword" name="confirmarSenha" id="confirmarSenha"/>
-	</div>
-    
-    <button>Finalizar Cadastro</button>
-</form>
-
-</div>
+<?php /*  Call merged included template "usuario/formlogincadasto.tpl" */
+$_tpl_stack[] = $_smarty_tpl;
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("usuario/formlogincadasto.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1854252e527f4657a99-39052618');
+content_52e6ee4aab15f5_53302577($_smarty_tpl);
+$_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "usuario/formlogincadasto.tpl" */?>
 
 
-		</div>
+            
 		</div>
 	</div>
     
@@ -186,4 +124,105 @@ Usuario/Logout">Sair</a></li>
 	</div>
 </body>
 </html>
-<?php }} ?>
+<?php }} ?><?php /* Smarty version Smarty-3.1.8, created on 2014-01-28 00:39:54
+         compiled from "view\usuario\formlogincadasto.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52e6ee4aab15f5_53302577')) {function content_52e6ee4aab15f5_53302577($_smarty_tpl) {?><div class="box01">
+
+    <h4>Login</h4>
+
+    <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Login">
+        <input type="hidden" name="postback" value="true" />
+
+        <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
+        <input type="text" name="login" id="login" />
+
+        <br /><br />
+
+        <label for="senha">&bull; Senha:</label><br />
+        <input type="password" name="senha" id="senha" />
+
+        <br /><br />
+
+        <a href="">Esqueci minha senha</a>
+
+        <button>Acesse sua conta</button>
+    </form>
+</div>
+
+<div class="line"></div>
+
+<div class="box02">
+
+    <h4>Cadastre-se</h4>
+
+    <form name="formUsuario" id="formUsuario" method="post" action="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Cadastro">
+
+        <input type="hidden" name="postback" value="true" />
+
+        <div class="lar-01">
+            <label for="nome">&bull; Nome:</label><br />
+
+            <input type="text" name="nome" id="nome" maxlength="1000" />
+        </div>
+
+        <div class="lar-02 margem-01">
+            <label for="dataNascimento">&bull; Sexo:</label><br />
+
+            <div class="radius margem-03"><input type="radio" name="sexo" value="1" checked text=""> Masculino</div>
+            <div class="radius margem-04"><input type="radio" name="sexo" value="2"> Feminino</div>
+        </div>
+
+        <div class="lar-02">
+            <label for="dataNascimento">&bull; Data Nascimento:</label><br />
+
+            <input name="dataNascimento" id="dataNascimento"/>
+        </div>
+
+        <div class="lar-02">
+            <label for="cidade">&bull; Cidade:</label><br />
+
+            <input name="cidade" id="cidade" />
+        </div>
+
+        <div class="lar-05 margem-02">
+            <label for="uf">&bull; UF:</label><br />
+
+            <input name="uf" id="uf" maxlength="4"/>
+        </div>
+
+        <div class="lar-03">
+            <label for="pais">&bull; Pa&iacute;s:</label><br />
+
+            <input name="pais" id="pais"/>
+        </div>
+
+        <div class="lar-02 margem-01">
+            <label for="email">&bull; E-mail:</label><br />
+
+            <input type="email" name="email" id="email" maxlength="150" />
+        </div>
+
+        <div class="lar-02">
+            <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
+
+            <input name="login"/>
+        </div>
+
+        <div class="lar-02 margem-01">
+            <label for="senha">&bull; Senha:</label><br />
+
+            <input type="passoword" name="senha" id="senha"/>
+        </div>
+
+        <div class="lar-02">
+            <label for="confirmarSenha">&bull; Confirmar Senha:</label><br />
+
+            <input type="passoword" name="confirmarSenha" id="confirmarSenha"/>
+        </div>
+
+        <button>Finalizar Cadastro</button>
+    </form>
+
+</div><?php }} ?>

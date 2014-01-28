@@ -54,11 +54,11 @@
         </div>
     </div>
     
-	<div class="container">
+	<div class="container over">
 		<div id="body">
-        <div class="container">
+
 			{block name=body}{/block}
-		</div>
+            
 		</div>
 	</div>
     
