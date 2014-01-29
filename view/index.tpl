@@ -12,7 +12,7 @@
 
 	{block name=head}{/block}
 </head>
-<body>    
+<body>    <!---class="bg-home"--->
 	<div class="container">
         {if $message neq ""}
             <div id="mensagem" class="resultado {$message.tipo}">{$message.msg}<span id="closeMsg">Sair</span></div>

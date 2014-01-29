@@ -7,7 +7,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	padding: 0;
-	color: rgb(240, 108, 109);
+	color: #444444;
 }
 
 ul, ol, dl {
@@ -33,6 +33,25 @@ h3{
 h4{
 	font-size: 27px;
 	margin: 0 0 30px 0;
+}
+
+h5{
+	font-size: 18px;
+}
+
+h6{
+	font-size: 17px;
+	margin: 0;
+	float:left;
+}
+
+p{
+	color: #444444;
+	font-size: 17px;
+	font-weight:normal;
+	line-height: 25px;
+	margin-bottom: 10px;
+	text-indent: 15px;
 }
 
 a img {
@@ -209,6 +228,15 @@ button{
 	height: 775px;
 }
 
+.bg-home{
+	background-image: url(img/bg-inicio.png);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	background-position: bottom;
+	height: 775px;
+}
+
 
 
 /*******BOX / CONTAINERS / CONTENT******/
@@ -239,6 +267,21 @@ button{
 	min-height: 100px;
 	float: left;
 	margin: 0 0 0 10px;
+}
+
+.box05{
+	width: 580px;
+	min-height: 100px;
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+.box06{
+	width: 580px;
+	min-height: 100px;
+	float: left;
+	margin: 0 0 0 15px;
+	background-color: red;
 }
 
 .container {

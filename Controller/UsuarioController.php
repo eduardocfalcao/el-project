@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace Controller;
 
@@ -195,4 +195,29 @@ class UsuarioController extends PageController {
             $this->redirect("Usuario/Login");
         }
     }
+
+	 public function Premio()
+	 {
+	 }
+	 
+	 public function Parceiros()
+	 {
+	 }
+
+	 public function Edital()
+	 {
+	 }
+	 
+	 public function Participacao()
+	 {
+	 }
+	 
+	 public function ComoSeInscrever()
+	 {
+	 }
+	 
+	 public function Contato()
+	 {
+	 }
+
 } 
