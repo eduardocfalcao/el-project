@@ -56,6 +56,7 @@ class UsuarioController extends PageController {
         {
             $instituicao->setNome($_POST["nomeInstituicao"]);
             $instituicao->setEmail($_POST["email"]);
+            $instituicao->setCnpj($_POST["cnpj"]);
             $instituicao->setTelefone($_POST["telefone"]);
             $instituicao->setTelefoneAlternativo($_POST["telefoneOpcional"]);
             $instituicao->setSite($_POST["site"]);

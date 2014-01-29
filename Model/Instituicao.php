@@ -16,6 +16,9 @@ class Instituicao {
     /** @Column(type="string", length=150) **/
     private $email;
 
+    /** @Column(type="string", length=30) */
+    private $cnpj;
+
     /** @Column(type="string", length=100) **/
     private $telefone;
 
@@ -65,6 +68,16 @@ class Instituicao {
     public function getEmail()
     {
         return $this->email;
+    }
+
+    public function setCnpj($value)
+    {
+        $this->cnpj = $value;
+    }
+
+    public function getCnpj()
+    {
+        return $this->cnpj;
     }
 
     public function setTelefone($value)

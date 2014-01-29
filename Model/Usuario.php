@@ -40,6 +40,12 @@ class Usuario {
     /** @Column(type="integer") **/
     private $perfil;
 
+    /**
+     * @OneToOne(targetEntity="Instituicao")
+     * @JoinColumn(name="instituicao_id", referencedColumnName="id")
+     */
+    private $instituicao;
+
     public function getId() { return $this->id; }
 
     public function getNome() {	return $this->nome; }
@@ -71,6 +77,9 @@ class Usuario {
 
     public function getPerfil() {return $this->perfil; }
     public function setPerfil($valor){ $this->perfil = $valor; }
+
+    public function getInstituicao() { return $this->instituicao; }
+    public function setInstituicao($valor){ $this->instituicao = $valor; }
 
     public function IsAdmin()
     {
