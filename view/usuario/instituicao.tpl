@@ -9,7 +9,7 @@
         <input type="hidden" name="postback" value="true" />
 
         <div class="lar-01">
-            <label for="nome">&bull; Nome da Institui&ccedil;&atilde;o</label><br />
+            <label for="nomeInstituicao">&bull; Nome da Institui&ccedil;&atilde;o</label><br />
 
             <input type="text" name="nomeInstituicao" id="nomeInstituicao" maxlength="1000" value="{$instituicao->getNome()}" />
         </div>

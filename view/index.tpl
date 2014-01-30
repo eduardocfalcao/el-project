@@ -42,7 +42,7 @@
             <div id="menu">
                 <ul>
                     <li><a href="#">inicio</a></li>
-                    <li><a href="#">premio</a></li>
+                    <li><a href="{$url}Home/Premio">premio</a></li>
                     <li><a href="#">parceiros</a></li>
                     <li><a href="#">edital</a></li>
                     <li><a href="#">participacao</a></li>

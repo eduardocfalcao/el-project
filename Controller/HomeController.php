@@ -15,4 +15,28 @@ class HomeController extends PageController {
     {
 
     }
+
+    public function Premio()
+    {
+    }
+
+    public function Parceiros()
+    {
+    }
+
+    public function Edital()
+    {
+    }
+
+    public function Participacao()
+    {
+    }
+
+    public function ComoSeInscrever()
+    {
+    }
+
+    public function Contato()
+    {
+    }
 } 

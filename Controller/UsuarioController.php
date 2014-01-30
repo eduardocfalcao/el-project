@@ -1,7 +1,6 @@
-﻿<?php
+<?php
 
 namespace Controller;
-
 
 use Framework\LoginService;
 
@@ -27,7 +26,7 @@ class UsuarioController extends PageController {
             $usuario->setPais($_POST["pais"]);
             $usuario->setLogin($_POST["login"]);
             $usuario->setSenha($_POST["senha"]);
-			$usuario->setPerfil(1);
+            $usuario->setPerfil(1);
 
             $this->em->persist($usuario);
             $this->em->flush();
@@ -78,6 +77,39 @@ class UsuarioController extends PageController {
         }
 
         $this->set("instituicao",$instituicao);
+    }
+
+    public function Responsavel()
+    {
+        $usuario = $this->getLoggedUser();
+        $instituicao = $usuario->getInstituicao();
+
+        if($instituicao != null)
+        {
+            $responsavel = $instituicao->getResponsavel();
+            if($responsavel == null) $responsavel = new \Model\Responsavel();
+
+            if($this->isPostBack())
+            {
+                $responsavel->setNome($_POST["nome"]);
+                $responsavel->setCargo($_POST["cargo"]);
+                $responsavel->setCpf($_POST["cpf"]);
+                $responsavel->setRf($_POST["rg"]);
+                $responsavel->setOutrasInformacoes($_POST["outrasInformacoes"]);
+
+                $responsavel->setInstituicao($instituicao);
+
+                $this->em->persist($responsavel);
+                $this->em->flush();
+
+                $this->SetViewMessage("Os dados foram salvos.", "sucesso");
+            }
+            $this->set("responsavel", $responsavel);
+        }
+        else
+        {
+            //redirecionar para uma tela dizendo que o conteudo ainda nao esta liberado
+        }
     }
 
     public function Projeto()
@@ -195,29 +227,4 @@ class UsuarioController extends PageController {
             $this->redirect("Usuario/Login");
         }
     }
-
-	 public function Premio()
-	 {
-	 }
-	 
-	 public function Parceiros()
-	 {
-	 }
-
-	 public function Edital()
-	 {
-	 }
-	 
-	 public function Participacao()
-	 {
-	 }
-	 
-	 public function ComoSeInscrever()
-	 {
-	 }
-	 
-	 public function Contato()
-	 {
-	 }
-
 } 
