@@ -1,6 +1,107 @@
-{extends 'index.tpl'}
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-30 13:46:41
+         compiled from "view\home\premio.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2217952ea38e657d832-71823307%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'aed063dde2e48cd97bea53f01fe30942ad65bd19' => 
+    array (
+      0 => 'view\\home\\premio.tpl',
+      1 => 1391085999,
+      2 => 'file',
+    ),
+    '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
+    array (
+      0 => 'view\\index.tpl',
+      1 => 1391082332,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2217952ea38e657d832-71823307',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_52ea38e66a8313_08384436',
+  'variables' => 
+  array (
+    'url' => 0,
+    'message' => 0,
+    'usuarioLogado' => 0,
+    'userInfo' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_52ea38e66a8313_08384436')) {function content_52ea38e66a8313_08384436($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
+    <title>Site bla bla bla </title>
 
-{block name=body}
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+css/style.css" type="text/css" media="screen" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+	<script src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+js/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+	
+</head>
+<body>    <!---class="bg-home"--->
+	<div class="container">
+        <?php if ($_smarty_tpl->tpl_vars['message']->value!=''){?>
+            <div id="mensagem" class="resultado <?php echo $_smarty_tpl->tpl_vars['message']->value['tipo'];?>
+"><?php echo $_smarty_tpl->tpl_vars['message']->value['msg'];?>
+<span id="closeMsg">Sair</span></div>
+        <?php }else{ ?>
+            <div id="mensagem" class="resultado"><span id="closeMsg">Sair</span></div>
+        <?php }?>
+        <div id="header">
+            <div class="arealogin">
+                <div class="login">
+                    <ul>
+                        <?php if ($_smarty_tpl->tpl_vars['usuarioLogado']->value==false){?>
+                            <li><a href ="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Cadastro">Cadastre-se</a> <strong>|</strong> </li>
+
+                            <li><a href ="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Login">Login</a>
+                        <?php }else{ ?>
+                            <li>Bem vindo <strong><?php echo $_smarty_tpl->tpl_vars['userInfo']->value['nome'];?>
+</strong> <strong>|</strong></li>
+                            <li><a href ="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/MinhaConta">Minha Conta</a> <strong>|</strong></li>
+                            <li><a href ="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Logout">Sair</a></li>
+                        <?php }?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+
+            <div id="menu">
+                <ul>
+                    <li><a href="#">inicio</a></li>
+                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Home/Premio">premio</a></li>
+                    <li><a href="#">parceiros</a></li>
+                    <li><a href="#">edital</a></li>
+                    <li><a href="#">participacao</a></li>
+                    <li><a href="#">como se escrever</a></li>
+                    <li><a href="#">contato</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    
+	<div class="container over">
+		<div id="body">
+
+			
    <div class="container">
    		<h4>Pr&ecirc;mio</h4>
         
@@ -78,22 +179,36 @@
         
         <div class="box06">
         
-        <img src="{$url}img/premio-01.png" style="display: block;margin: 15px auto 0 auto; width: 580px;">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+img/premio-01.png" style="display: block;margin: 15px auto 0 auto; width: 580px;">
         
         <h6 style="margin: 10px 0; text-align:center;">Crianças em oficina do CPF no Complexo do Alemão (RJ) em 2013.</h6>
         
-        <img src="{$url}img/premio-02.png" style="display: block;margin: 85px auto 0 auto; width: 580px;">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+img/premio-02.png" style="display: block;margin: 85px auto 0 auto; width: 580px;">
         
         <h6 style="margin: 10px 0; text-align:center;">Crianças em passeio fotográfico promovido pelo CPF no Santa Marta em 2012.</h6>
         
-        <img src="{$url}img/premio-03.png" style="display: block;margin: 85px auto 0 auto; width: 580px;">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+img/premio-03.png" style="display: block;margin: 85px auto 0 auto; width: 580px;">
         
         <h6 style="margin: 10px 0; text-align:center;">Menina construindo o Mapa Afetivo do Morro da Babilônia (RJ) durante oficina realizada em 2012.</h6>
         
-        <img src="{$url}img/premio-04.png" style="display: block;margin: 85px auto 0 auto; width: 580px;">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+img/premio-04.png" style="display: block;margin: 85px auto 0 auto; width: 580px;">
         
         <h6 style="margin: 10px 0; text-align:center;">Logo do projeto Criança Pequena em Foco.</h6>
         
         </div>
    </div>
-{/block}
+
+            
+		</div>
+	</div>
+    
+    <div class="footer">
+
+	</div>
+</body>
+</html>
+<?php }} ?>

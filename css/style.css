@@ -40,9 +40,10 @@ h5{
 }
 
 h6{
-	font-size: 17px;
+	font-weight: normal;
+	font-size: 12px;
 	margin: 0;
-	float:left;
+	color: #444444;
 }
 
 p{
@@ -281,7 +282,6 @@ button{
 	min-height: 100px;
 	float: left;
 	margin: 0 0 0 15px;
-	background-color: red;
 }
 
 .container {
@@ -418,6 +418,14 @@ button{
 
 .botao01{
 	float:left;
+}
+
+.color01{
+	color: #f06c6d;
+}
+
+.box05 ul li{
+	list-style: none;
 }
 
 /******* ITENS ******/
