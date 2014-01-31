@@ -8,14 +8,16 @@
 
     <form name="formUsuario" id="formUsuario" method="post">
 
-        <div class="lar-03"><input type="hidden" name="postback" value="true" />
+        <div class="lar-03 margem-01">
+        
+        <input type="hidden" name="postback" value="true" />
 
         <label for="senhaAtual">Senha Atual:</label>
 
         <input value="" type="password" name="senhaAtual" id="senhaAtual" maxlength="1000">
         </div>
 
-		<div class="lar-03 margem-02">
+		<div class="lar-03 margem-01">
         <label for="novaSenha">Nova Senha:</label>
 
         <input value="" type="password" name="novaSenha" id="novaSenha" />
@@ -27,7 +29,7 @@
         <input value="" type="password" name="repetirSenha" id="repetirSenha" />
 		</div>
 
-        <button class="botao01">Alterar Senha</button>
+        <button>Alterar Senha</button>
     </form>
 
 

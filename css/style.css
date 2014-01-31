@@ -74,7 +74,7 @@ form label{
 	padding-bottom: 15px;
 }
 
-input, input[type='text'], input[type='password'], input[type='email']{
+input, input[type='text'], input[type='password'], input[type='email'], textarea{
 	height: 35px;
 	color: #f09494;
 	background-color: #ffecec;
@@ -82,58 +82,71 @@ input, input[type='text'], input[type='password'], input[type='email']{
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
-	padding: 0;
+	padding: 0 10px;
 	margin: 10px 0;
-	width: 100%;
+	width: 90%;                         /* para navegadores que não suportam calc() */
+	width: -webkit-calc(100% - 20px);  /* para Chrome */
+	width: -moz-calc(100% - 20px);     /* para Firefox */
+	width: calc(100% - 20px);          /* para suporte nativo */
+}
+
+textarea{
+	height: 130px;
+	padding: 10px;
+	width: 90%;                         /* para navegadores que não suportam calc() */
+	width: -webkit-calc(100% - 20px);  /* para Chrome */
+	width: -moz-calc(100% - 20px);     /* para Firefox */
+	width: calc(100% - 20px);          /* para suporte nativo */
+	
 }
 
 input[type='radio'] {
--webkit-box-shadow: inset 0 1px 2px white, 0 1px 2px rgba(0, 0, 0, .2);
--webkit-appearance: none;
--webkit-margin-start: 0;
--webkit-margin-end: 3px;
--webkit-transition: border 500ms;
-background: -webkit-linear-gradient(#fafafa, #dcdcdc);
-border-radius: 100%;
-border: 1px solid #ffcdcd;
-display: inline-block;
-height: 15px;
-margin-bottom: 0;
-position: relative;
-top: 3px;
-vertical-align: baseline;
-width: 15px;
+	-webkit-box-shadow: inset 0 1px 2px white, 0 1px 2px rgba(0, 0, 0, .2);
+	-webkit-appearance: none;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 3px;
+	-webkit-transition: border 500ms;
+	background: -webkit-linear-gradient(#fafafa, #dcdcdc);
+	border-radius: 100%;
+	border: 1px solid #ffcdcd;
+	display: inline-block;
+	height: 15px;
+	margin-bottom: 0;
+	position: relative;
+	top: 3px;
+	vertical-align: baseline;
+	width: 15px;
 }
 input[type='radio']:disabled {
-opacity: .75;
+	opacity: .75;
 }
 input[type='radio']:not(:disabled):not(:active):hover {
-background: -webkit-linear-gradient(#fff, #e6e6e6);
-text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	background: -webkit-linear-gradient(#fff, #e6e6e6);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
 }
 input[type='radio']:not(:disabled):active {
--webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
-background: -webkit-linear-gradient(#fff, #e6e6e6);
-border: 1px solid #ffcdcd;
-text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+	background: -webkit-linear-gradient(#fff, #e6e6e6);
+	border: 1px solid #ffcdcd;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
 }
 input[type='radio']:checked::before {
--webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5);
--webkit-margin-start: 4px;
-background: #f09494;
-border-radius: 10px;
-content: '';
-display: inline-block;
-font-size: 13px;
-font-weight: 400;
-height: 5px;
-left: 0;
-margin-top: 4px;
-opacity: 1;
-position: absolute;
-top: 0;
-vertical-align: top;
-width: 5px;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+	-webkit-margin-start: 4px;
+	background: #f09494;
+	border-radius: 10px;
+	content: '';
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 400;
+	height: 5px;
+	left: 0;
+	margin-top: 4px;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	vertical-align: top;
+	width: 5px;
 }
 html[dir='rtl'] input[type='radio']:checked::before {
 right: 0;
@@ -170,7 +183,7 @@ button{
 }
 
 .lar-03{
-	width: 255px;
+	width: 270px;
 	height: 105px;
 	float:left;
 }
@@ -187,22 +200,64 @@ button{
 	float:left;
 }
 
+.lar-06{
+	width: 173px;
+	height: 105px;
+	float:left;
+}
+
+.lar-07{
+	width: 420px;
+	height: 105px;
+	float:left;
+}
+
+.lar-08{
+	width: 141px;
+	height: 105px;
+	float:left;
+}
+
+.lar-09{
+	width: 73px;
+	height: 105px;
+	float:left;
+}
+
+.lar-10{
+	width: 197px;
+	height: 105px;
+	float:left;
+}
+
+.lar-11{
+	width: 420px;
+	height: 130px;
+	float:left;
+}
+
+.lar-12{
+	width: 124px;
+	height: 105px;
+	float:left;
+}
+
+.lar-13{
+	width: 50px;
+	height: 105px;
+	float:left;
+}
+
+.lar-14{
+	width: 270px;
+	height: 105px;
+	float:left;
+}
+
 .margem-01{
 	margin: 0 25px 0 0;
 }
 
-.margem-02{
-	margin: 0 20px 0 25px;
-}
-
-.margem-03{
-	margin: 10px 15px 0 0;
-	
-}
-
-.margem-04{
-	margin: 10px 0 0 0;
-}
 
 .radius{
 	color: #f09494;
@@ -432,19 +487,18 @@ button{
 
 
 .line{
-	background-image: url(img/line.png);
+	background-image: url(img/line-vertical.png);
 	background-repeat: repeat-y;
 	width: 3px;
-	height: 620px;
+	height: 500px;
 	float: left;
-	background-position-x: -3px;
 }
 
 .line02{
-	background-image: url(img/line.png);
+	background-image: url(img/line-horizontal.png);
 	background-repeat: repeat-x;
-	width: 100%;
-	height: 9px;
+	width: 300px;
+	height: 3px;
 	float: left;
 }
 

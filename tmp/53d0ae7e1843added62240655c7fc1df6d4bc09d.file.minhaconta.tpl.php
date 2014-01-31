@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-31 01:23:48
-         compiled from "view\usuario\alterarsenha.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3241052e6eda1e425f2-99491770%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-31 01:19:32
+         compiled from "view\usuario\minhaconta.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:484052eaec14873eb2-65191767%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '96f3e14006400fea89b4c60ba3af13e7e68001d1' => 
+    '53d0ae7e1843added62240655c7fc1df6d4bc09d' => 
     array (
-      0 => 'view\\usuario\\alterarsenha.tpl',
-      1 => 1391127826,
+      0 => 'view\\usuario\\minhaconta.tpl',
+      1 => 1390604786,
       2 => 'file',
     ),
     '57ebd120ac442f2b59812c145e1b013c6ef75667' => 
@@ -23,12 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3241052e6eda1e425f2-99491770',
+  'nocache_hash' => '484052eaec14873eb2-65191767',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_52e6eda20aebe8_23953168',
   'variables' => 
   array (
     'url' => 0,
@@ -37,8 +35,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'userInfo' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_52eaec14a126f7_68362540',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52e6eda20aebe8_23953168')) {function content_52e6eda20aebe8_23953168($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52eaec14a126f7_68362540')) {function content_52eaec14a126f7_68362540($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
@@ -140,34 +140,6 @@ Usuario/Logout"><strong>Sair</strong></a>
    
     <div class="box04">
         
-
-	<h4>ALTERAR SENHA</h4>
-
-    <form name="formUsuario" id="formUsuario" method="post">
-
-        <div class="lar-03 margem-01">
-        
-        <input type="hidden" name="postback" value="true" />
-
-        <label for="senhaAtual">Senha Atual:</label>
-
-        <input value="" type="password" name="senhaAtual" id="senhaAtual" maxlength="1000">
-        </div>
-
-		<div class="lar-03 margem-01">
-        <label for="novaSenha">Nova Senha:</label>
-
-        <input value="" type="password" name="novaSenha" id="novaSenha" />
-        </div>
-
-		<div class="lar-03">
-        <label for="repetirSenha">Repetir Senha:</label>
-
-        <input value="" type="password" name="repetirSenha" id="repetirSenha" />
-		</div>
-
-        <button>Alterar Senha</button>
-    </form>
 
 
 

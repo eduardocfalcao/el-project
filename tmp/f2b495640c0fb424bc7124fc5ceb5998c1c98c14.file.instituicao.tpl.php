@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-31 01:23:48
-         compiled from "view\usuario\alterarsenha.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3241052e6eda1e425f2-99491770%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-31 03:16:46
+         compiled from "view\usuario\instituicao.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2608752eaec17ddbdf2-00151740%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '96f3e14006400fea89b4c60ba3af13e7e68001d1' => 
+    'f2b495640c0fb424bc7124fc5ceb5998c1c98c14' => 
     array (
-      0 => 'view\\usuario\\alterarsenha.tpl',
-      1 => 1391127826,
+      0 => 'view\\usuario\\instituicao.tpl',
+      1 => 1391134603,
       2 => 'file',
     ),
     '57ebd120ac442f2b59812c145e1b013c6ef75667' => 
@@ -23,12 +23,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3241052e6eda1e425f2-99491770',
+  'nocache_hash' => '2608752eaec17ddbdf2-00151740',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_52e6eda20aebe8_23953168',
+  'unifunc' => 'content_52eaec1812e6b8_90359620',
   'variables' => 
   array (
     'url' => 0,
@@ -38,7 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52e6eda20aebe8_23953168')) {function content_52e6eda20aebe8_23953168($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52eaec1812e6b8_90359620')) {function content_52eaec1812e6b8_90359620($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
@@ -141,34 +141,110 @@ Usuario/Logout"><strong>Sair</strong></a>
     <div class="box04">
         
 
-	<h4>ALTERAR SENHA</h4>
+    <h4>Dados da Intui&ccedil;&atilde;o</h4>
 
-    <form name="formUsuario" id="formUsuario" method="post">
+    <form name="formInstuicao" id="formInstuicao" method="post">
 
-        <div class="lar-03 margem-01">
-        
         <input type="hidden" name="postback" value="true" />
 
-        <label for="senhaAtual">Senha Atual:</label>
+        <div class="lar-01">
+            <label for="nomeInstituicao">&bull; Nome da Institui&ccedil;&atilde;o</label><br />
 
-        <input value="" type="password" name="senhaAtual" id="senhaAtual" maxlength="1000">
+            <input type="text" name="nomeInstituicao" id="nomeInstituicao" maxlength="1000" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getNome();?>
+" />
         </div>
 
-		<div class="lar-03 margem-01">
-        <label for="novaSenha">Nova Senha:</label>
+        <div class="lar-07 margem-01">
+            <label for="cnpj">&bull; CNPJ</label><br />
 
-        <input value="" type="password" name="novaSenha" id="novaSenha" />
+            <input name="cnpj" id="cnpj" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getCnpj();?>
+">
         </div>
 
-		<div class="lar-03">
-        <label for="repetirSenha">Repetir Senha:</label>
+        <div class="lar-07">
+            <label for="email">&bull; E-mail:</label><br />
 
-        <input value="" type="password" name="repetirSenha" id="repetirSenha" />
-		</div>
+            <input name="email" id="email" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getEmail();?>
+"/>
+        </div>
 
-        <button>Alterar Senha</button>
+        <div class="lar-07 margem-01">
+            <label for="telefone">&bull; Telefone:</label><br />
+
+            <input name="telefone" id="telefone" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getTelefone();?>
+" />
+        </div>
+
+        <div class="lar-07">
+            <label for="telefoneOpcional"> Telefone (2):</label><br />
+
+            <input name="telefoneOpcional" id="telefoneOpcional" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getTelefoneAlternativo();?>
+" />
+        </div>
+
+        <div class="lar-07 margem-01">
+            <label for="site">Site</label><br />
+
+            <input name="site" id="site" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getSite();?>
+"/>
+        </div>
+
+        <div class="lar-07">
+            <label for="facebook">Facebook:</label><br />
+
+            <input name="facebook" id="facebook" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getFacebook();?>
+" />
+        </div>
+
+        <div class="lar-10 margem-01">
+            <label for="cidade">&bull; Cidade:</label><br />
+
+            <input name="cidade" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getCidade();?>
+" />
+        </div>
+
+        <div class="lar-13 margem-01">
+            <label for="uf">&bull; UF:</label><br />
+
+            <input name="uf" id="uf" maxlength="4" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getUf();?>
+"/>
+        </div>
+
+        <div class="lar-12 margem-01">
+            <label for="pais">&bull; Pa&iacute;s:</label><br />
+
+            <input name="pais" id="pais" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getPais();?>
+"/>
+        </div>
+
+        <div class="lar-12 margem-01">
+        
+             <label for="cep">&bull; CEP</label><br />
+    
+             <input name="cep" id="cep" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getCep();?>
+" />
+            
+        </div>
+
+        <div class="lar-14">
+           <label for="endereco">&bull; Endere&ccedil;o:</label><br />
+
+           <input name="endereco" id="endereco" value="<?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getEndereco();?>
+"/>
+        </div>
+
+        <div class="lar-11">
+            <label for="outrasInformacoes">Outras informa&ccedil;&otilde;es:</label><br />
+
+            <textarea name="outrasInformacoes" id="outrasInformacoes">
+               <?php echo $_smarty_tpl->tpl_vars['instituicao']->value->getOutrasInformacoes();?>
+
+            </textarea>
+        </div>
+
+
+        <button>Salvar</button>
     </form>
-
 
 
     </div>

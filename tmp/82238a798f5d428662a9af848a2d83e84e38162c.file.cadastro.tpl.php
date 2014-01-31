@@ -1,19 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-01-31 01:35:56
-         compiled from "view\usuario\alterardados.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:596652e58a4715d722-89696360%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2014-01-31 01:19:04
+         compiled from "view\usuario\cadastro.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3213352eaebf80fe011-41365450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'ffb0310c977c4c3b3ccbac6137e2ab4f1c5f5308' => 
+    '82238a798f5d428662a9af848a2d83e84e38162c' => 
     array (
-      0 => 'view\\usuario\\alterardados.tpl',
-      1 => 1391128539,
-      2 => 'file',
-    ),
-    '57ebd120ac442f2b59812c145e1b013c6ef75667' => 
-    array (
-      0 => 'view\\usuario\\minhacontatemplate.tpl',
-      1 => 1391038042,
+      0 => 'view\\usuario\\cadastro.tpl',
+      1 => 1390863362,
       2 => 'file',
     ),
     '48cbb389a45ae1cfebdc22a5dbe9cb135e0728fe' => 
@@ -22,13 +16,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       1 => 1391082332,
       2 => 'file',
     ),
+    'f92d8e95121bb43f61dd33e5c7e86ba9fb9bacf4' => 
+    array (
+      0 => 'view\\usuario\\formlogincadasto.tpl',
+      1 => 1391127514,
+      2 => 'file',
+    ),
   ),
-  'nocache_hash' => '596652e58a4715d722-89696360',
+  'nocache_hash' => '3213352eaebf80fe011-41365450',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_52e58a4733ded8_41264540',
   'variables' => 
   array (
     'url' => 0,
@@ -37,8 +35,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'userInfo' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_52eaebf82873a8_61841236',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52e58a4733ded8_41264540')) {function content_52e58a4733ded8_41264540($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_52eaebf82873a8_61841236')) {function content_52eaebf82873a8_61841236($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8851-1" />
@@ -109,41 +109,58 @@ Home/Premio">premio</a></li>
 
 			
 
-    <div class="box03">
-    <h4>MINHA CONTA</h4>
-    
-        <div class="menuMinhaConta">
-            <ul>
-                <li>
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-Usuario/Instituicao">&bull; Minha Inscri&ccedil;&atilde;o</a>
-                </li>
-                <li>
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-Usuario/AlterarDados">&bull; Alterar dados</a>
-                </li>
-                <li>
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-Usuario/AlterarSenha">&bull; Alterar senha</a>
-                </li>
-                <li class="sair">
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-Usuario/Logout"><strong>Sair</strong></a>
-                </li>
-            </ul>
+<?php /*  Call merged included template "usuario/formlogincadasto.tpl" */
+$_tpl_stack[] = $_smarty_tpl;
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("usuario/formlogincadasto.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '3213352eaebf80fe011-41365450');
+content_52eaebf825b990_51025799($_smarty_tpl);
+$_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "usuario/formlogincadasto.tpl" */?>
+
+
             
-        </div>
- 
-   </div>
-   
-   <div class="line"></div>
-   
-    <div class="box04">
-        
+		</div>
+	</div>
+    
+    <div class="footer">
 
-	<h4>ALTERAR DADOS</h4>
+	</div>
+</body>
+</html>
+<?php }} ?><?php /* Smarty version Smarty-3.1.8, created on 2014-01-31 01:19:04
+         compiled from "view\usuario\formlogincadasto.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_52eaebf825b990_51025799')) {function content_52eaebf825b990_51025799($_smarty_tpl) {?><div class="box01">
 
-    <form name="formUsuario" id="formUsuario" method="post">
+    <h4>Login</h4>
+
+    <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Login">
+        <input type="hidden" name="postback" value="true" />
+
+        <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
+        <input type="text" name="login" id="login" />
+
+        <br /><br />
+
+        <label for="senha">&bull; Senha:</label><br />
+        <input type="password" name="senha" id="senha"/>
+
+        <br /><br />
+
+        <a href="">Esqueci minha senha</a>
+
+        <button>Acesse sua conta</button>
+    </form>
+</div>
+
+<div class="line"></div>
+
+<div class="box02">
+
+    <h4>Cadastre-se</h4>
+
+    <form name="formUsuario" id="formUsuario" method="post" action="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+Usuario/Cadastro">
+
+        <input type="hidden" name="postback" value="true" />
 
         <div class="lar-02 margem-01">
             <label for="nome">&bull; Nome da Instituição:</label><br />
@@ -182,21 +199,7 @@ Usuario/Logout"><strong>Sair</strong></a>
             <input type="passoword" name="confirmarSenha" id="confirmarSenha"/>
         </div>
 
-        <button class="botao01">Atualizar</button>
+        <button>Finalizar Cadastro</button>
     </form>
 
-
-
-    </div>
-
-
-            
-		</div>
-	</div>
-    
-    <div class="footer">
-
-	</div>
-</body>
-</html>
-<?php }} ?>
+</div><?php }} ?>

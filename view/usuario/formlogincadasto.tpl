@@ -11,7 +11,7 @@
         <br /><br />
 
         <label for="senha">&bull; Senha:</label><br />
-        <input type="password" name="senha" id="senha" />
+        <input type="password" name="senha" id="senha"/>
 
         <br /><br />
 
@@ -31,51 +31,27 @@
 
         <input type="hidden" name="postback" value="true" />
 
-        <div class="lar-01">
-            <label for="nome">&bull; Nome:</label><br />
+        <div class="lar-02 margem-01">
+            <label for="nome">&bull; Nome da Instituição:</label><br />
 
             <input type="text" name="nome" id="nome" maxlength="1000" />
         </div>
 
-        <div class="lar-02 margem-01">
-            <label for="dataNascimento">&bull; Sexo:</label><br />
-
-            <div class="radius margem-03"><input type="radio" name="sexo" value="1" checked text=""> Masculino</div>
-            <div class="radius margem-04"><input type="radio" name="sexo" value="2"> Feminino</div>
-        </div>
-
         <div class="lar-02">
-            <label for="dataNascimento">&bull; Data Nascimento:</label><br />
+            <label for="login">&bull; CNPJ:</label><br />
 
-            <input name="dataNascimento" id="dataNascimento"/>
+            <input name="login" placeholder="00.000.000/0000-00"/>
         </div>
-
-        <div class="lar-02">
-            <label for="cidade">&bull; Cidade:</label><br />
-
-            <input name="cidade" id="cidade" />
-        </div>
-
-        <div class="lar-05 margem-02">
-            <label for="uf">&bull; UF:</label><br />
-
-            <input name="uf" id="uf" maxlength="4"/>
-        </div>
-
-        <div class="lar-03">
-            <label for="pais">&bull; Pa&iacute;s:</label><br />
-
-            <input name="pais" id="pais"/>
-        </div>
-
+        
         <div class="lar-02 margem-01">
             <label for="email">&bull; E-mail:</label><br />
 
-            <input type="email" name="email" id="email" maxlength="150" />
+            <input type="email" name="email" id="email" maxlength="150"/>
         </div>
+        
 
         <div class="lar-02">
-            <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
+            <label for="login">&bull; Usu&aacute;rio:</label><br />
 
             <input name="login"/>
         </div>
