@@ -1,10 +1,10 @@
 
 <div class="container">
-	<h4>Pr&ecirc;mio</h4>
+	<h4>Prêmio</h4>
     
     <div class="box05">
     
-    	<h5>O que &eacute; o pr&ecirc;mio:</h5>
+    	<h5>O que é o prêmio:</h5>
         
         <p>O 1º Prêmio Nacional de Projetos de Participação Infantil tem objetivo de fortalecer e disseminar práticas de participação infantil. Sendo realizado nacionalmente, através da premiação de práticas metodologicamente sérias, inovadoras, eficazes, criativas e com impacto relevante, pretendemos contribuir para difundir e estimular a efetivação do direito à participação infantil em múltiplos espaços sociais.
 </p>
@@ -14,37 +14,37 @@
         
         <br/><br/>
         
-        <h5>Quem prop&otilde;e:</h5>
+        <h5>Quem propõe:</h5>
         
         <p>O 1º Prêmio Nacional de Projetos de Participação Infantil ocorre no âmbito do Projeto Criança Pequena em Foco, apoiado pela Fundação Bernard van Leer, e realizado pelo CECIP – Centro de Criação da Imagem Popular. O prêmio conta ainda com o apoio do Instituto C&A. </p> 
 
 		<p>O Criança Pequena em Foco tem como objetivo incluir a participação das crianças no desenvolvimento das políticas públicas, considerando necessário múltiplas estratégias para atingir tal objetivo: </p> 
         
         <ul>
-            <li><span class="color01">&bull; </span> Ações de advocacy¹ junto ao poder público;</li><br/>
+            <li><span class="bolinha01">&bull; </span> Ações de advocacy¹ junto ao poder público;</li><br/>
 
-            <li><span class="color01">&bull; </span> Mobilização social em torno do tema através de em diálogo com organizações, atuação em redes e fóruns da área infância;</li><br/>
+            <li><span class="bolinha01">&bull; </span> Mobilização social em torno do tema através de em diálogo com organizações, atuação em redes e fóruns da área infância;</li><br/>
             
-            <li><span class="color01">&bull; </span> Capacitação de gestores públicos e de atores de outros setores relacionados à infância;</li><br/>
+            <li><span class="bolinha01">&bull; </span> Capacitação de gestores públicos e de atores de outros setores relacionados à infância;</li><br/>
             
-            <li><span class="color01">&bull; </span> Comunicação da ideia em diversos meios e mídias; </li><br/>
+            <li><span class="bolinha01">&bull; </span> Comunicação da ideia em diversos meios e mídias; </li><br/>
             
-            <li><span class="color01">&bull; </span> Realização de experiências-piloto que possam ser replicadas em escala pelo poder público; </li><br/>
+            <li><span class="bolinha01">&bull; </span> Realização de experiências-piloto que possam ser replicadas em escala pelo poder público; </li><br/>
             
-            <li><span class="color01">&bull; </span> Desenvolvimento e divulgação de metodologias participativas;</li><br/>
+            <li><span class="bolinha01">&bull; </span> Desenvolvimento e divulgação de metodologias participativas;</li><br/>
             
-            <li><span class="color01">&bull; </span> Pesquisas que aprofundem os conhecimentos em torno da ideia;</li><br/>
+            <li><span class="bolinha01">&bull; </span> Pesquisas que aprofundem os conhecimentos em torno da ideia;</li><br/>
             
-            <li><span class="color01">&bull; </span> Troca de experiências entre práticas em desenvolvimento; </li><br/>
+            <li><span class="bolinha01">&bull; </span> Troca de experiências entre práticas em desenvolvimento; </li><br/>
             
-            <li><span class="color01">&bull; </span> Incentivo às práticas já realizadas.</li><br/>
+            <li><span class="bolinha01">&bull; </span> Incentivo às práticas já realizadas.</li><br/>
             
         <ul>
         
         <p>Entre as atividades realizadas pelo projeto, no período de 2011 e 2013 estão: a parceria com secretarias da Prefeitura da cidade do Rio de Janeiro para inclusão da participação infantil em suas ações e a sistematização de metodologias para escuta das crianças produzindo o <a href="http://www.cecip.org.br/images/vamos_ouvir_criancas-ebook.pdf" target="_blank">Caderno de Metodologias participativas</a> do projeto Criança Pequena em Foco além da realização de uma experiência-piloto de participação infantil em parceria com a CET-Rio e a realização do 1º Seminário A Criança e Sua Participação na Cidade, em parceria com a Universidade Federal do Rio de Janeiro; produção de um vídeo-campanha sobre o tema; inclusão, em conjunto com outras instituições, da voz das crianças no Plano Municipal pela Primeira Infância (PMPI) do Rio de Janeiro.
 </p>
 
-		<h6><strong>1</strong>  Conjunto de ações que visam influenciar a formulação, aprovação e execução de políticas públicas junto ao poderes Legislativo, Executivo e Judiciário e à sociedade, por meio do trabalho em redes e a mobilização da mídia (retirado de: http://www.dialogosocial.com.br/advocacy-s351-1.html#.Ut6_JfRTtFk).</h6>
+		<h6><strong>1</strong>  Conjunto de ações que visam influenciar a formulação, aprovação e execução de políticas públicas junto ao poderes Legislativo, Executivo e Judiciário e à sociedade, por meio do trabalho em redes e a mobilização da mídia (retirado de: <a href="http://www.dialogosocial.com.br/advocacy-s351-1.html#.Ut6_JfRTtFk" target="_blank">dialogosocial</a>).</h6>
         
         <br/><br/>
         

@@ -405,7 +405,7 @@ button{
 }
 
 #menu ul{
-	margin: 0 -29px;
+	margin: 0 -27.5px;
 }
 
 #menu ul li{
@@ -421,7 +421,7 @@ button{
 	font-size: 22px;
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 0 29px;
+	padding: 0 27.5px;
 	line-height: 40px;
 }
 
@@ -475,8 +475,9 @@ button{
 	float:left;
 }
 
-.color01{
+.bolinha01{
 	color: #f06c6d;
+	padding-right: 10px;
 }
 
 .box05 ul li{

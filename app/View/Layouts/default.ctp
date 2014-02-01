@@ -10,6 +10,11 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('style');
+		echo $this->Html->css('style-acordion');
+		
+		echo $this->Html->script('jquery-1.11.0.min');
+		echo $this->Html->script('jquery.accordion');
+		echo $this->Html->script('jquery.easing.1.3');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -46,8 +51,8 @@
                     <li><?php echo $this->Html->link('Prêmio', array('controller' => 'Home','action' => 'Premio')); ?></li>
                     <li><?php echo $this->Html->link('Parceiros', array('controller' => 'Home','action' => 'Parceiros')); ?></li>
                     <li><?php echo $this->Html->link('Edital', array('controller' => 'Home','action' => 'Edital')); ?></li>
-                    <li><?php echo $this->Html->link('Particiacao', array('controller' => 'Home','action' => 'Participacao')); ?></li>
-                    <li><?php echo $this->Html->link('Como se Inscrever', array('controller' => 'Home','action' => 'ComoSeInscrever')); ?></li>
+                    <li><?php echo $this->Html->link('Participação', array('controller' => 'Home','action' => 'Participacao')); ?></li>
+                    <li><?php echo $this->Html->link('Como se Inscrever', array('controller' => 'Home','action' => 'Comoseinscrever')); ?></li>
                     <li><?php echo $this->Html->link('Contato', array('controller' => 'Home','action' => 'Contato')); ?></li>
                 </ul>
             </div>
