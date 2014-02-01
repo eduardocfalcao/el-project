@@ -1,68 +1,41 @@
-<?PHP
-	header("Content-Type: text/html; charset=ISO-8859-1",true);
-	
-	require_once('dependencias/smarty/Smarty.class.php');
-    require_once('dependencias/xajax_2/xajax.inc.php');
-	require_once("dependencias/wideimage/WideImage.php");
-	require_once 'Doctrine-2.2.1/lib/Doctrine/ORM/Tools/Setup.php';
-	require_once('Framework/EntityManagerProvider.php');
+<?php
+/**
+ * Requests collector.
+ *
+ *  This file collects requests if:
+ *	- no mod_rewrite is available or .htaccess files are not supported
+ *  - requires App.baseUrl to be uncommented in app/Config/core.php
+ *	- app/webroot is not set as a document root.
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         CakePHP(tm) v 0.2.9
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
 
-	$lib = "Doctrine-2.2.1/lib";
-	Doctrine\ORM\Tools\Setup::registerAutoloadDirectory($lib);
-	$classLoader = new \Doctrine\Common\ClassLoader('Controller','');
-	$classLoader->register();
-	$classLoader2 = new \Doctrine\Common\ClassLoader('Framework','');
-	$classLoader2->register();
-	
-	$emProvider = new EntityManagerProvider();
-	$emProvider->Init();
-	
-	$isAdminRoute = isset($_GET["admin"]) && $_GET["admin"] == 1 ?  true : false;
-	//$defaultAction = $isAdminRoute ? "IndexAdmin" : "Index";
-	
-    $action = isset($_GET["action"]) && $_GET["action"] != "" ? strtolower($_GET["action"]) : "Index";
-    $param = isset($_GET["param"]) && $_GET["param"] != "" ? (int)$_GET["param"] : NULL;
-	$param2 = isset($_GET["param2"]) && $_GET["param"] != "" ?  $_GET["param2"] : NULL;
-	
-	
-	$classDefault =  $isAdminRoute ? "Admin" : "Home";
-	$classNamespace = $isAdminRoute ? "\\Controller\\Admin\\" : "\\Controller\\";
-	
-	$className = isset($_GET["class"]) && $_GET["class"] != "" ? $_GET["class"] : $classDefault;
-    $controller = $classNamespace.$className."Controller";
-	
-	$xajax = new xajax();
-	$xajaxResponse = new xajaxResponse();
-    $smarty = new Smarty();
-	$uploader = new \Framework\ImageUploader();
-	
-    $page =  new $controller($xajax,$smarty);
-	$page->setXajaxResponse($xajaxResponse);
-	$page->setEntityManager($emProvider->getEntityManager());
-	$page->setView($action);
-	$page->setPath($className);
-	if($isAdminRoute)
-	{
-		$page->setUploader($uploader);
-	}
-	
-	$page->beforeCallAction();	
-    if($param != NULL)
-	{
-		if($param2 != NULL)
-			$page->$action($param,$param2);
-		else
-        	$page->$action($param);
-	}
-    else   
-	{
-        $page->$action();
-	}
-	$bool = strpos($action,"json") > 0;
-	if($bool == false)
-	{
-		$page->beforeShowAction();
-		$page->show();
-	}
-		
-?>
+/**
+ *  Get CakePHP's root directory
+ */
+define('APP_DIR', 'app');
+define('DS', DIRECTORY_SEPARATOR);
+define('ROOT', dirname(__FILE__));
+define('WEBROOT_DIR', 'webroot');
+define('WWW_ROOT', ROOT . DS . APP_DIR . DS . WEBROOT_DIR . DS);
+
+/**
+ * This only needs to be changed if the "cake" directory is located
+ * outside of the distributed structure.
+ * Full path to the directory containing "cake". Do not add trailing directory separator
+ */
+if (!defined('CAKE_CORE_INCLUDE_PATH')) {
+	define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+}
+
+require APP_DIR . DS . WEBROOT_DIR . DS . 'index.php';
