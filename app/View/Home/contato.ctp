@@ -1,35 +1,76 @@
 
-        <div class="container">
-          <div id="st-accordion" class="st-accordion">
-                
-                    <ul>
-                        
-                        <li>
-                            <a href="#">Education<span class="st-arrow">Open or Close</span></a>
-                            <div class="st-content">
-                                <p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
-                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <a href="#">Research<span class="st-arrow">Open or Close</span></a>
-                            <div class="st-content">
-                                <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?"</p>
-                                <p>He thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-                            </div>
-                        </li>
+<div class="container" style="overflow: hidden;margin-bottom: 40px;">
+<h4>Fale Conosco</h4>
 
-                    </ul>
+<div class="box05">
 
-            </div>
-        </div>
+<p>In id lacinia nisi. Quisque sagittis blandit purus sit amet luctus. Suspendisse id viverra lectus. Sed sit amet lacus ac libero fringilla faucibus vitae a leo. Suspendisse dictum turpis sit amet felis tempor, eget commodo felis iaculis. Phasellus interdum congue libero sit amet  sed.
+</p>
 
-        <script type="text/javascript">
-            $(function() {
-			
-				$('#st-accordion').accordion();
-				
-            });
-        </script>
+</div>
+
+<div class="box06">
+
+<h3 style="text-align: center; font-weight: normal;">Contacte-nos através do nosso formulário ou através do e-mail abaixo:</h3>
+<br/>
+<h3 style="text-align: center;margin-top:-20px;">participaçãoprojetosinfantil@premio.com</h3>
+
+</div>
+</div>
+
+
+<div class="container">
+
+<h4>Contato</h4>
+
+<form action="enviar_contato.php" method="post">
+
+<ul>     
+<div class="lar-15 margem-02">                 
+    <li>
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" />
+    </li>
+</div>	
+
+<div class="lar-15"> 
+    <li>
+        <label for="instituicao">Nome da Instítuição</label>
+        <input type="text" name="instituicao" id="instituicao" />
+    </li>
+</div>
+
+<div class="lar-15 margem-02"> 
+    <li>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+    </li>
+</div>
+<div class="lar-15"> 
+    <li>
+        <label for="subject">Assunto</label>
+        <input type="text" name="subject" id="subject" />
+    </li>
+</div>
+<div class="lar-00"> 
+    <li>
+        <label for="message">Mensagem</label>
+        <textarea name="message" id="message" rows="30" cols="30"></textarea>
+    </li>
+</div>
+<div class="lar-01">
+    <li>
+        <button type="submit" id="send_message" value="Enviar">Enviar Mensagem</button>
+    </li>
+</div>
+</ul>
+
+</form>
+
+
+
+
+
+
+
+</div>

@@ -64,6 +64,9 @@ a:link, a:visited, a:hover, a:active, a:focus {
 	color: rgb(240, 108, 109)
 }
 
+li{
+	list-style: none;
+}
 
 /*******FORM******/
 
@@ -170,6 +173,11 @@ button{
 
 /*************LARGURA FORM*************/
 
+.lar-00{
+	width: 100%;
+	float:left;
+}
+
 .lar-01{
 	width: 100%;
 	height: 105px;
@@ -254,8 +262,18 @@ button{
 	float:left;
 }
 
+.lar-15{
+	width: 574px;
+	height: 105px;
+	float:left;
+}
+
 .margem-01{
 	margin: 0 25px 0 0;
+}
+
+.margem-02{
+	margin: 0 40px 0 0;
 }
 
 
