@@ -20,55 +20,60 @@
         <button>Acesse sua conta</button>
     </form>
 </div>
-
 <div class="line"></div>
 
 <div class="box02">
 
     <h4>Cadastre-se</h4>
 
-    <form name="formUsuario" id="formUsuario" method="post" action="{$url}Usuario/Cadastro">
+    <?php echo $this->Form->create('Instituicao',
+								    array(
+										    'inputDefaults' => array
+										    (
+										        'label' => false,
+										        'div' => false
+										    ) 
+								    	)
+								   ); ?>
 
-        <input type="hidden" name="postback" value="true" />
 
         <div class="lar-02 margem-01">
             <label for="nome">&bull; Nome da Instituição:</label><br />
 
-            <input type="text" name="nome" id="nome" maxlength="1000" />
+            <?php echo $this->Form->input('nome'); ?>
         </div>
 
         <div class="lar-02">
             <label for="login">&bull; CNPJ:</label><br />
 
-            <input name="login" placeholder="00.000.000/0000-00"/>
+            <?php echo $this->Form->input('cnpj'); ?>
         </div>
         
         <div class="lar-02 margem-01">
             <label for="email">&bull; E-mail:</label><br />
 
-            <input type="email" name="email" id="email" maxlength="150"/>
+           <?php echo $this->Form->input('email'); ?>
         </div>
         
 
         <div class="lar-02">
             <label for="login">&bull; Usu&aacute;rio:</label><br />
 
-            <input name="login"/>
+            <?php echo $this->Form->input('login'); ?>
         </div>
 
         <div class="lar-02 margem-01">
             <label for="senha">&bull; Senha:</label><br />
 
-            <input type="passoword" name="senha" id="senha"/>
+            <?php echo $this->Form->input('senha', array('type' => 'password')); ?>
         </div>
 
         <div class="lar-02">
             <label for="confirmarSenha">&bull; Confirmar Senha:</label><br />
 
-            <input type="passoword" name="confirmarSenha" id="confirmarSenha"/>
+            <?php echo $this->Form->input('confirmarSenha', array('type' => 'password')); ?>
         </div>
 
-        <button>Finalizar Cadastro</button>
-    </form>
+       <?php echo $this->Form->end('Finalizar Cadastro'); ?>
 
 </div>
