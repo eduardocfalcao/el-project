@@ -30,11 +30,12 @@
                     <ul>
                         <?php if(isset($usuario) && $usuario != null){ ?>
                             <li>Bem vindo <strong>{$userInfo.nome}</strong> <strong>|</strong></li>
-                            <li> <?php echo $this->Html->link('Minha Conta', array('controller' => 'Instituicao','action' => 'MinhaConta')); ?>
-                            <strong>|</strong></li>
+                            <li> <?php echo $this->Html->link('Minha Conta', array('controller' => 'Instituicao','action' => 'MinhaConta')); ?></li>
+                            <li><strong>|</strong></li>
                             <li><?php echo $this->Html->link('Sair', array('controller' => 'Instituicao','action' => 'Logout')); ?>
                         <?php } else { ?>
-                        	<li><?php echo $this->Html->link('Cadastre-se', array('controller' => 'Instituicao','action' => 'Cadastro')); ?><strong>|</strong> </li>
+                        	<li><?php echo $this->Html->link('Cadastre-se', array('controller' => 'Instituicao','action' => 'Cadastro')); ?></li>
+                            <li><strong>|</strong> </li>
 
                             <li><?php echo $this->Html->link('Login', array('controller' => 'Instituicao','action' => 'Login')); ?></li>
                         <?php } ?>
