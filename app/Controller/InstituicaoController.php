@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
 class InstituicaoController extends AppController {
 
@@ -45,6 +46,40 @@ class InstituicaoController extends AppController {
 	public function minhaconta()
 	{
 		
+	}
+	
+	public function detalhes() 
+	{
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		$this->request->data = $instituicao;
+		
+		if ($this->request->is('post')) 
+		{
+			
+			
+		}
+	}
+	
+	public function alterarsenha()
+	{
+		if ($this->request->is('post')) 
+		{
+			$passwordHasher = new SimplePasswordHasher();
+			//pegar a senha do banco do usuario
+			if($this->request->data['Instituicao']['senhaAtual'] != $this->Auth->user('senha'))	
+			{
+				 $this->Session->setFlash(__('Senha atual incorreta.'));
+			}
+			else if($this->request->data['Instituicao']['senha'] != $this->request->data['Instituicao']['repetirSenha'])
+			{
+				 $this->Session->setFlash(__('As senhas não conferem.'));
+			}
+			else
+			{
+				$this->Instituicao->save($this->request->data);
+				$this->Session->setFlash(__('Senha alterada.'));
+			}
+		}
 	}
 	
 	public function logout()

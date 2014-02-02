@@ -21,7 +21,7 @@
 		echo $this->fetch('script');
 	?>
 </head>
-<body>
+<body class="<?php echo $this->fetch('background'); ?>">
 	<div class="container">
   
         <div id="header">

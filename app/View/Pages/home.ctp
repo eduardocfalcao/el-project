@@ -1,3 +1,5 @@
+<?php echo $this->assign('background',""); ?>
+
 
 <div class="container">
 	<?php echo $this->Html->image('logo.png', array('style' => 'display: block;margin: 0 auto; width: 400px;')); ?>

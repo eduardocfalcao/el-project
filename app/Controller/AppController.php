@@ -41,6 +41,9 @@ class AppController extends Controller {
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'responsavel'));
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'anexos'));
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'documentos'));
+		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'alterarsenha'));
+		
+		
 		
 		$usuario = null;
 		
@@ -77,7 +80,6 @@ class AppController extends Controller {
 						    'Auth' => array(
 						    	'Form' => array (
 				    				'userModel' => 'Instituicao',
-				    				'passwordHasher' => array( 'className' => 'Simple','hashType' => 'sha256')	
 				    			 ),
 						        'loginAction' => array(
 						            'controller' => 'instituicao',

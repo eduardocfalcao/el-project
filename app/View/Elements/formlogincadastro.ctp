@@ -2,16 +2,16 @@
 
     <h4>Login</h4>
 
-	<?php echo $this->Form->create('Instituicao',
-								    array(
-								    		'url' => array('controller' => 'Instituicao', 'action' => 'login'),
-										    'inputDefaults' => array
-										    (
-										        'label' => false,
-										        'div' => false
-										    ) 
-								    	)
-								   ); ?>
+<?php echo $this->Form->create('Instituicao',
+							    array(
+							    		'url' => array('controller' => 'Instituicao', 'action' => 'login'),
+									    'inputDefaults' => array
+									    (
+									        'label' => false,
+									        'div' => false
+									    ) 
+							    	)
+							   ); ?>
 
         <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
         <?php echo $this->Form->input('login'); ?>

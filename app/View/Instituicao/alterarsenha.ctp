@@ -1,36 +1,34 @@
-{extends 'usuario/minhacontatemplate.tpl'}
+<?php $this->extend('/layouts/minhacontatemplate'); ?>
 
+<h4>ALTERAR SENHA</h4>
 
+<?php echo $this->Form->create('Instituicao',
+							    array(
+							    		'url' => array('controller' => 'Instituicao', 'action' => 'alterarsenha'),
+									    'inputDefaults' => array
+									    (
+									        'label' => false,
+									        'div' => false
+									    ) 
+							    	)
+							   ); ?>
+    <div class="lar-03 margem-01">
 
-{block name=minhaContaBody}
+    <label for="senhaAtual">Senha Atual:</label>
 
-	<h4>ALTERAR SENHA</h4>
+   	<?php echo $this->Form->input('senhaAtual', array('type' => 'password')); ?>
+    </div>
 
-    <form name="formUsuario" id="formUsuario" method="post">
+	<div class="lar-03 margem-01">
+    <label for="novaSenha">Nova Senha:</label>
 
-        <div class="lar-03 margem-01">
-        
-        <input type="hidden" name="postback" value="true" />
+    <?php echo $this->Form->input('senha', array('type' => 'password')); ?>
+    </div>
 
-        <label for="senhaAtual">Senha Atual:</label>
+	<div class="lar-03">
+    <label for="repetirSenha">Repetir Senha:</label>
 
-        <input value="" type="password" name="senhaAtual" id="senhaAtual" maxlength="1000">
-        </div>
+    <?php echo $this->Form->input('repetirSenha', array('type' => 'password')); ?>
+	</div>
 
-		<div class="lar-03 margem-01">
-        <label for="novaSenha">Nova Senha:</label>
-
-        <input value="" type="password" name="novaSenha" id="novaSenha" />
-        </div>
-
-		<div class="lar-03">
-        <label for="repetirSenha">Repetir Senha:</label>
-
-        <input value="" type="password" name="repetirSenha" id="repetirSenha" />
-		</div>
-
-        <button>Alterar Senha</button>
-    </form>
-
-
-{/block}
+<?php echo $this->Form->end('Alterar Senha'); ?>
