@@ -13,7 +13,9 @@
 								    ) 
 						    	)
 						   ); ?>
-
+	
+	<?php echo $this->Form->hidden('id'); ?>
+	
     <div class="lar-01">
         <label for="nomeInstituicao">&bull; Nome da Institui&ccedil;&atilde;o</label><br />
 		

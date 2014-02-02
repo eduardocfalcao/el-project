@@ -48,15 +48,18 @@ class InstituicaoController extends AppController {
 		
 	}
 	
-	public function detalhes() 
+	public function detalhes($id = NULL) 
 	{
-		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
-		$this->request->data = $instituicao;
-		
 		if ($this->request->is('post')) 
+		{	
+			$this->Instituicao->id = $id;
+			$this->Instituicao->save($this->request->data);
+			$this->Session->setFlash(__('A instituição foi salva.'));
+		}
+		else
 		{
-			
-			
+			$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+			$this->request->data = $instituicao;
 		}
 	}
 	
