@@ -1,6 +1,5 @@
-{extends 'usuario/minhacontatemplate.tpl'}
-
-{block name=minhaContaBody}
+<?php $this->extend('/layouts/minhacontatemplate'); ?>
 
 
-{/block}
+tela principal
+

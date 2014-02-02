@@ -31,4 +31,67 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	
+	public function beforeFilter()
+	{
+		$this->Auth->allow();
+		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'minhaconta'));
+		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'detalhes'));
+		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'projeto'));
+		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'responsavel'));
+		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'anexos'));
+		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'documentos'));
+		
+		$usuario = null;
+		
+		if($this->Auth->loggedIn())
+		{
+			$usuario = $this->Auth->user();
+		}		
+		
+		$this->set('usuario', $usuario);
+	}
+	
+	 public function isLogged() {
+ 		
+		if($this->Auth->loggedIn() == false)
+		{
+			$this->redirect(array('controller' => 'instituicao',
+								  'action' => 'login'));
+		}
+    }
+    
+    public function isAdminLogged() 
+    {
+    	if($this->Auth->loggedIn())
+    	{
+			return $this->Auth->user('perfil') == 2;
+			//jogar execao de nao autorizado
+		}
+    }
+	
+	public $helpers = array('Html', 'Form', 'Session');
+	
+	public $components = array(
+							'Session',
+						    'Auth' => array(
+						    	'Form' => array (
+				    				'userModel' => 'Instituicao',
+				    				'passwordHasher' => array( 'className' => 'Simple','hashType' => 'sha256')	
+				    			 ),
+						        'loginAction' => array(
+						            'controller' => 'instituicao',
+						            'action' => 'login',
+						        ),
+						        'authError' => 'Did you really think you are allowed to see that?',
+						        'authenticate' => array(
+						         	'Form' => array(
+							            'fields' => array('username' => 'login','password' => 'senha' ),
+							            'passwordHasher' => array(
+						                    'className' => 'SimplePasswordHasher'
+						            	)
+					            	)
+					        	)
+						    )
+						);
 }

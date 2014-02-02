@@ -2,23 +2,30 @@
 
     <h4>Login</h4>
 
-    <form method="post" action="{$url}Usuario/Login">
-        <input type="hidden" name="postback" value="true" />
+	<?php echo $this->Form->create('Instituicao',
+								    array(
+								    		'url' => array('controller' => 'Instituicao', 'action' => 'login'),
+										    'inputDefaults' => array
+										    (
+										        'label' => false,
+										        'div' => false
+										    ) 
+								    	)
+								   ); ?>
 
         <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
-        <input type="text" name="login" id="login" />
+        <?php echo $this->Form->input('login'); ?>
 
         <br /><br />
 
         <label for="senha">&bull; Senha:</label><br />
-        <input type="password" name="senha" id="senha"/>
+        <?php echo $this->Form->input('senha', array('type' => 'password')); ?>
 
         <br /><br />
 
         <a href="">Esqueci minha senha</a>
 
-        <button>Acesse sua conta</button>
-    </form>
+        <?php echo $this->Form->end('Entrar'); ?>
 </div>
 <div class="line"></div>
 
@@ -28,6 +35,7 @@
 
     <?php echo $this->Form->create('Instituicao',
 								    array(
+								    		'url' => array('controller' => 'Instituicao', 'action' => 'Cadastro'),
 										    'inputDefaults' => array
 										    (
 										        'label' => false,
@@ -44,7 +52,7 @@
         </div>
 
         <div class="lar-02">
-            <label for="login">&bull; CNPJ:</label><br />
+            <label for="cnpj">&bull; CNPJ:</label><br />
 
             <?php echo $this->Form->input('cnpj'); ?>
         </div>

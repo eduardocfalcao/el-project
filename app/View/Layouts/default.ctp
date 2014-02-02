@@ -29,8 +29,8 @@
                 <div class="login">
                     <ul>
                         <?php if(isset($usuario) && $usuario != null){ ?>
-                            <li>Bem vindo <strong>{$userInfo.nome}</strong> <strong>|</strong></li>
-                            <li> <?php echo $this->Html->link('Minha Conta', array('controller' => 'Instituicao','action' => 'MinhaConta')); ?></li>
+                            <li>Bem vindo <strong><?php echo $usuario['login']; ?></strong> <strong>|</strong></li>
+                            <li> <?php echo $this->Html->link('Minha Conta', array('controller' => 'Instituicao','action' => 'minhaconta')); ?></li>
                             <li><strong>|</strong></li>
                             <li><?php echo $this->Html->link('Sair', array('controller' => 'Instituicao','action' => 'Logout')); ?>
                         <?php } else { ?>
@@ -48,7 +48,7 @@
 
             <div id="menu">
                 <ul>
-                    <li><?php echo $this->Html->link('Inicio', array('controller' => 'Home','action' => 'Index')); ?></li>
+                    <li><?php echo $this->Html->link('Inicio', array('controller' => 'Pages','action' => 'Home')); ?></li>
                     <li><?php echo $this->Html->link('Prêmio', array('controller' => 'Home','action' => 'Premio')); ?></li>
                     <li><?php echo $this->Html->link('Parceiros', array('controller' => 'Home','action' => 'Parceiros')); ?></li>
                     <li><?php echo $this->Html->link('Edital', array('controller' => 'Home','action' => 'Edital')); ?></li>
