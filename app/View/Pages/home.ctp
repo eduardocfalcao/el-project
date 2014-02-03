@@ -1,4 +1,4 @@
-<?php echo $this->assign('background',""); ?>
+<?php echo $this->assign('background',"bg-home"); ?>
 
 
 <div class="container">

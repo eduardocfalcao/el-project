@@ -1,3 +1,5 @@
+<?php echo $this->assign('background',"bg-participacao"); ?>
+
 
 <div class="container">
 <h4>Participação</h4>

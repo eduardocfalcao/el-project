@@ -1,3 +1,5 @@
+<?php echo $this->assign('background',"bg-contato"); ?>
+
 
 <div class="container" style="overflow: hidden;margin-bottom: 40px;">
 <h4>Fale Conosco</h4>
@@ -55,7 +57,7 @@
 <div class="lar-00"> 
     <li>
         <label for="message">Mensagem</label>
-        <textarea name="message" id="message" rows="30" cols="30"></textarea>
+        <textarea name="message" id="message" rows="30" cols="30" class="width-01"></textarea>
     </li>
 </div>
 <div class="lar-01">
@@ -66,11 +68,6 @@
 </ul>
 
 </form>
-
-
-
-
-
 
 
 </div>

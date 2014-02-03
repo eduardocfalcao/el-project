@@ -1,3 +1,5 @@
+<?php echo $this->assign('background',"bg-edital"); ?>
+
 
 <div class="container">
 <h4>Edital</h4>

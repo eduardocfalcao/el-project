@@ -102,6 +102,9 @@ textarea{
 	width: calc(100% - 20px);          /* para suporte nativo */
 	
 }
+textarea.width-01{
+ width:1165px
+}
 
 input[type='radio'] {
 	-webkit-box-shadow: inset 0 1px 2px white, 0 1px 2px rgba(0, 0, 0, .2);
@@ -158,7 +161,7 @@ input[type='radio']:active:checked::before {
 background: #f09494;
 }
 
-button{
+button, input[type='submit']{
 	background-image:  url(img/bg-bt01.png);
 	background-color: transparent !important;
 	border: none !important;
@@ -268,12 +271,22 @@ button{
 	float:left;
 }
 
+.lar-16{
+	width: 100%;
+	min-height: 105px;
+	float:left;
+}
+
 .margem-01{
 	margin: 0 25px 0 0;
 }
 
 .margem-02{
 	margin: 0 40px 0 0;
+}
+
+.margem-03{
+	margin: 0 60px 0 0;
 }
 
 
@@ -298,20 +311,50 @@ button{
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-size: cover;
-	background-position: bottom;
+	background-position: bottom left;
 	height: 775px;
 }
 
-.bg-home{
-	background-image: url(img/bg-inicio.png);
+.bg-parceiros{
+	background-image: url(img/bg-parceiros.png);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
-	background-size: cover;
-	background-position: bottom;
-	height: 775px;
+	background-position: left bottom;
 }
 
+.bg-premio{
+	background-image: url(img/bg-premio.png);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: left bottom;
+}
+.bg-edital{
+	background-image: url(img/bg-edital.png);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: left bottom;
+}
 
+.bg-inscrever{
+	background-image: url(img/bg-inscrever.png);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	background-position: left bottom;
+}
+
+.bg-participacao{
+	background-image: url(img/bg-participacao.png);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: left bottom;
+}
+
+.bg-contato{
+	background-image: url(img/bg-contato.png);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: left bottom;
+}
 
 /*******BOX / CONTAINERS / CONTENT******/
 
@@ -355,6 +398,31 @@ button{
 	min-height: 100px;
 	float: left;
 	margin: 0 0 0 15px;
+}
+
+.box07{
+	width: 889px;
+	min-height: 100px;
+	float: left;
+	margin: 0 22px 0 0;
+}
+
+.box08{
+	width: 253px;
+	min-height: 100px;
+	float: left;
+	margin: 0 0 0 22px;
+}
+
+.box09{
+	width: 420px;
+}
+
+.box10{
+	width: 355px;
+	min-height: 100px;
+	float: left;
+	text-align:center;
 }
 
 .container {
@@ -450,7 +518,11 @@ button{
 
 #menu ul li:hover{
 	display: block;
-	background-color: #ee5758;
+	/*background-color: #ee5758;*/
+	background-image: url(img/bg-menu.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
 }
 
 
@@ -495,7 +567,7 @@ button{
 
 .bolinha01{
 	color: #f06c6d;
-	padding-right: 10px;
+	padding-right: 15px;
 }
 
 .box05 ul li{

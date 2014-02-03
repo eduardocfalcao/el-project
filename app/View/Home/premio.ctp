@@ -1,3 +1,5 @@
+<?php echo $this->assign('background',"bg-premio"); ?>
+
 
 <div class="container">
 	<h4>Prêmio</h4>

@@ -16,14 +16,14 @@
 	
 	<?php echo $this->Form->hidden('id'); ?>
 	
-    <div class="lar-01">
+    <div class="lar-07 margem-01">
         <label for="nomeInstituicao">&bull; Nome da Institui&ccedil;&atilde;o</label><br />
 		
 		<?php echo $this->Form->input('nome'); ?>
 		
     </div>
 
-    <div class="lar-07 margem-01">
+    <div class="lar-07">
         <label for="cnpj">&bull; CNPJ</label><br />
 
        	<?php echo $this->Form->input('cnpj'); ?>
@@ -84,12 +84,15 @@
        <?php echo $this->Form->input('endereco'); ?>
     </div>
 
-    <div class="lar-11">
+    <div class="lar-16">
         <label for="outrasInformacoes">Outras informa&ccedil;&otilde;es:</label><br />
 
        	<?php echo $this->Form->input('outrasInformacoes',array('rows' => 5, 'cols' =>10)); ?>
     </div>
-
-
-<?php echo $this->Form->end('Salvar'); ?>
+	
+   
+    <?php echo $this->Form->end('Salvar'); ?>
+    
+ 	
+   
 
