@@ -33,6 +33,7 @@ h3{
 h4{
 	font-size: 27px;
 	margin: 0 0 30px 0;
+	text-transform: uppercase;
 }
 
 h5{
@@ -511,15 +512,62 @@ button, input[type='submit']{
 	line-height: 40px;
 }
 
-#menu ul li a:hover, a:active{
+#menu ul li a:hover{
 	color: #fff;
 	
 }
 
-#menu ul li:hover{
+#menu ul li.menu-item01:hover{
 	display: block;
-	/*background-color: #ee5758;*/
-	background-image: url(img/bg-menu.png);
+	background-image: url(img/bg-menu-item01.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#menu ul li.menu-item02:hover{
+	display: block;
+	background-image: url(img/bg-menu-item02.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#menu ul li.menu-item03:hover{
+	display: block;
+	background-image: url(img/bg-menu-item03.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#menu ul li.menu-item04:hover{
+	display: block;
+	background-image: url(img/bg-menu-item04.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#menu ul li.menu-item05:hover{
+	display: block;
+	background-image: url(img/bg-menu-item05.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#menu ul li.menu-item06:hover{
+	display: block;
+	background-image: url(img/bg-menu-item06.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#menu ul li.menu-item07:hover{
+	display: block;
+	background-image: url(img/bg-menu-item07.png);
 	background-position: center;
 	background-repeat:no-repeat;
 	background-size: cover;

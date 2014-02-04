@@ -48,13 +48,13 @@
 
             <div id="menu">
                 <ul>
-                    <li><?php echo $this->Html->link('Inicio', array('controller' => 'Pages','action' => 'Home')); ?></li>
-                    <li><?php echo $this->Html->link('Prêmio', array('controller' => 'Home','action' => 'Premio')); ?></li>
-                    <li><?php echo $this->Html->link('Parceiros', array('controller' => 'Home','action' => 'Parceiros')); ?></li>
-                    <li><?php echo $this->Html->link('Edital', array('controller' => 'Home','action' => 'Edital')); ?></li>
-                    <li><?php echo $this->Html->link('Participação', array('controller' => 'Home','action' => 'Participacao')); ?></li>
-                    <li><?php echo $this->Html->link('Como se Inscrever', array('controller' => 'Home','action' => 'Comoseinscrever')); ?></li>
-                    <li><?php echo $this->Html->link('Contato', array('controller' => 'Home','action' => 'Contato')); ?></li>
+                    <li class="menu-item01"><?php echo $this->Html->link('Início', array('controller' => 'Pages','action' => 'Home')); ?></li>
+                    <li class="menu-item02"><?php echo $this->Html->link('Prêmio', array('controller' => 'Home','action' => 'Premio')); ?></li>
+                    <li class="menu-item03"><?php echo $this->Html->link('Parceiros', array('controller' => 'Home','action' => 'Parceiros')); ?></li>
+                    <li class="menu-item04"><?php echo $this->Html->link('Edital', array('controller' => 'Home','action' => 'Edital')); ?></li>
+                    <li class="menu-item05"><?php echo $this->Html->link('Texto de Apoio', array('controller' => 'Home','action' => 'Textodeapoio')); ?></li>
+                    <li class="menu-item06"><?php echo $this->Html->link('Inscrição', array('controller' => 'Home','action' => 'Inscricao')); ?></li>
+                    <li class="menu-item07"><?php echo $this->Html->link('Contato', array('controller' => 'Home','action' => 'Contato')); ?></li>
                 </ul>
             </div>
 

@@ -17,11 +17,11 @@ class HomeController extends Controller {
     {
     }
 
-    public function Participacao()
+    public function Textodeapoio ()
     {
     }
 
-    public function ComoSeInscrever()
+    public function Inscricao()
     {
     }
 

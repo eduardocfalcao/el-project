@@ -1,7 +1,7 @@
 <?php echo $this->assign('background',"bg-inscrever"); ?>
 
 <div class="container">
-<h4>Como se inscrever</h4>
+<h4>Inscrição</h4>
     
 
 <p><strong>1.</strong>	Antes de começar, leia o edital (disponível em: <a href="/el-project/Home/edital" target="_blank">Edital</a>) para ver se o seu projeto se encaixa na proposta da premiação. </p>
@@ -19,7 +19,7 @@
 
 <div class="box05" style="margin:0 auto; text-align:center">
 <br/><br/>
-<h5>Se você ainda não tem uma conta, cadastre-se <br/> e logue no botão abaixo:</h5>
+<h5>Se você ainda não tem uma conta, cadastre-se e<br/> faça o login no botão abaixo:</h5>
 <br/>
 <a href="/el-project/Instituicao/Cadastro" style="margin:0 auto;"><button style="float:none">CADASTRE-SE</button></a>
 <br/><br/><br/><br/><br/><br/>

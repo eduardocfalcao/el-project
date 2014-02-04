@@ -2,12 +2,12 @@
 
 
 <div class="container">
-<h4>Participação</h4>
+<h4>Texto de Apoio</h4>
     
 <h5>Considerações sobre a perspectiva da Participação Infantil</h5>
 
 <br/>
-<h5>Equipe do Projeto Criança Pequena em Foco </h5>
+<h6 style="margin: -15px 0 55px 0;">Equipe do Projeto Criança Pequena em Foco¹</h6>
 
 <p>O presente documento tem como objetivo apresentar uma breve discussão sobre o tema da participação infantil, servindo de subsídio para a construção dos projetos que vão concorrer ao 1º PRÊMIO NACIONAL DE PROJETOS COM PARTICIPAÇÃO INFANTIL. </p>
 
@@ -104,7 +104,7 @@ A participação infantil poderia deixar de ser apenas uma aposta, para ser inco
 <br/>
 
 <div class="box05">
-<h6><strong>Glossário</strong>
+<h6><strong>Notas</strong>
 <br/><br/>
 ¹ Este documentos foi formulado pela atual equipe do Projeto Criança Pequena Foco (Claudia Ceccon, Claudius Ceccon, Mariana Koury, Moana Van de Beuque, Nazareth Salutto), com contribuição de textos de integrantes que já compuseram a equipe (Anna Rosa Amancio, Beatriz Corsino, Marina Dantas Jardim).
 <br/>
