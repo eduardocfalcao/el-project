@@ -4,6 +4,7 @@ App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
 class InstituicaoController extends AppController {
 
+	public $uses = array('Instituicao','Projeto','Reponsavel');
 
 	public function Cadastro()
 	{
@@ -50,7 +51,7 @@ class InstituicaoController extends AppController {
 	
 	public function detalhes($id = NULL) 
 	{
-		if ($this->request->is('post')) 
+		if ($this->request->is('put')) 
 		{	
 			$this->Instituicao->id = $id;
 			$this->Instituicao->save($this->request->data);
@@ -61,7 +62,7 @@ class InstituicaoController extends AppController {
 			$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 			$this->request->data = $instituicao;
 		}
-	}
+	}	
 	
 	public function alterarsenha()
 	{

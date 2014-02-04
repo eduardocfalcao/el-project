@@ -17,6 +17,19 @@ class Instituicao extends AppModel
 		return TRUE;
 	}
 
+
+	public $hasOne = array(
+		'Responsavel' => array(
+			'className' => 'Responsavel',
+			'foreignKey' => 'instituicao_id',
+	        'conditions' => array(),
+      	),
+      	'Projeto' => array(
+			'className' => 'Projeto',
+			'foreignKey' => 'instituicao_id',
+	        'conditions' => array(),
+      	)
+   	);
 }
 
 ?>
