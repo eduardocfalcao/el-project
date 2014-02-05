@@ -11,15 +11,25 @@
 
 		echo $this->Html->css('style');
 		echo $this->Html->css('style-acordion');
+		echo $this->Html->css('validationEngine.jquery');
 		
 		echo $this->Html->script('jquery-1.11.0.min');
 		echo $this->Html->script('jquery.accordion');
 		echo $this->Html->script('jquery.easing.1.3');
+		echo $this->Html->script('jquery.validationEngine-pt_BR');
+		echo $this->Html->script('jquery.validationEngine');
+		echo $this->Html->script('jquery.maskedinput.min');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('form').validationEngine();
+		});
+	</script>
 </head>
 <body class="<?php echo $this->fetch('background'); ?>">
 	<div class="container">

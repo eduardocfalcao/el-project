@@ -48,40 +48,44 @@
         <div class="lar-02 margem-01">
             <label for="nome">&bull; Nome da Instituição:</label><br />
 
-            <?php echo $this->Form->input('nome'); ?>
+            <?php echo $this->Form->input('nome', array("class" => "validate[required]")); ?>
         </div>
 
         <div class="lar-02">
             <label for="cnpj">&bull; CNPJ:</label><br />
 
-            <?php echo $this->Form->input('cnpj'); ?>
+            <?php echo $this->Form->input('cnpj', array("class" => "field-cnpj validate[required]")); ?>
         </div>
         
         <div class="lar-02 margem-01">
             <label for="email">&bull; E-mail:</label><br />
 
-           <?php echo $this->Form->input('email'); ?>
+           <?php echo $this->Form->input('email', array("class" => "validate[required]")); ?>
         </div>
         
 
         <div class="lar-02">
             <label for="login">&bull; Usu&aacute;rio:</label><br />
 
-            <?php echo $this->Form->input('login'); ?>
+            <?php echo $this->Form->input('login', array("class" => "validate[required]")); ?>
         </div>
 
         <div class="lar-02 margem-01">
             <label for="senha">&bull; Senha:</label><br />
 
-            <?php echo $this->Form->input('senha', array('type' => 'password')); ?>
+            <?php echo $this->Form->input('senha', array('type' => 'password', "class" => "validate[required]")); ?>
         </div>
 
         <div class="lar-02">
             <label for="confirmarSenha">&bull; Confirmar Senha:</label><br />
 
-            <?php echo $this->Form->input('confirmarSenha', array('type' => 'password')); ?>
+            <?php echo $this->Form->input('confirmarSenha', array('type' => 'password', "class" => "validate[required]")); ?>
         </div>
 
        <?php echo $this->Form->end('Finalizar Cadastro'); ?>
 
 </div>
+
+<script type="text/javascript">
+	$('.field-cnpj').mask('99.999.999/9999-99');
+</script>
