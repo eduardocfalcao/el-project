@@ -1,4 +1,4 @@
-<?php $this->extend('/layouts/minhacontatemplate'); ?>
+<?php $this->extend('/Layouts/minhacontatemplate'); ?>
 
 
 <h4>Dados da Intui&ccedil;&atilde;o</h4>
@@ -19,20 +19,20 @@
     <div class="lar-07 margem-01">
         <label for="nomeInstituicao">&bull; Nome da Institui&ccedil;&atilde;o</label><br />
 		
-		<?php echo $this->Form->input('nome'); ?>
+		<?php echo $this->Form->input('nome', array("class" => "validate[required]")); ?>
 		
     </div>
 
     <div class="lar-07">
         <label for="cnpj">&bull; CNPJ</label><br />
 
-       	<?php echo $this->Form->input('cnpj'); ?>
+       	<?php echo $this->Form->input('cnpj', array("class" => "field-cnpj validate[required]")); ?>
     </div>
 
     <div class="lar-07 margem-01">
         <label for="telefone">&bull; Telefone:</label><br />
 
-       	<?php echo $this->Form->input('telefone'); ?>
+       	<?php echo $this->Form->input('telefone', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-07">
@@ -56,32 +56,32 @@
     <div class="lar-10 margem-01">
         <label for="cidade">&bull; Cidade:</label><br />
 
-        <?php echo $this->Form->input('cidade'); ?>
+        <?php echo $this->Form->input('cidade', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-13 margem-01">
         <label for="uf">&bull; UF:</label><br />
 
-       	<?php echo $this->Form->input('uf'); ?>
+       	<?php echo $this->Form->input('uf', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-12 margem-01">
         <label for="pais">&bull; Pa&iacute;s:</label><br />
 
-        	<?php echo $this->Form->input('pais'); ?>
+        	<?php echo $this->Form->input('pais', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-12 margem-01">
     
          <label for="cep">&bull; CEP</label><br />
 
-         <?php echo $this->Form->input('cep'); ?>
+         <?php echo $this->Form->input('cep', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-14">
        <label for="endereco">&bull; Endere&ccedil;o:</label><br />
 
-       <?php echo $this->Form->input('endereco'); ?>
+       <?php echo $this->Form->input('endereco', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-16">
@@ -91,7 +91,10 @@
     </div>
 	
    
-<?php echo $this->Form->end('Salvar'); ?>
+<?php 
+	echo $this->Form->end('Salvar'); 
+	echo $this->Html->script('cnpj', array('block' => 'script')); 
+?>
     
  	
    

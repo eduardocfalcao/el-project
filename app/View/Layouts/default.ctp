@@ -11,10 +11,15 @@
 
 		echo $this->Html->css('style');
 		echo $this->Html->css('style-acordion');
+		echo $this->Html->css('validationEngine.jquery');
 		
 		echo $this->Html->script('jquery-1.11.0.min');
 		echo $this->Html->script('jquery.accordion');
 		echo $this->Html->script('jquery.easing.1.3');
+		echo $this->Html->script('jquery.validationEngine-pt_BR');
+		echo $this->Html->script('jquery.validationEngine');
+		echo $this->Html->script('jquery.maskedinput.min');
+		echo $this->Html->script('main');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
