@@ -8,7 +8,7 @@
     
     <h5 style="font-size: 22px; margin: 0 0 25px 0;">REALIZAÇÃO</h5>
 	
-	<?php echo $this->Html->image('cecip.png', array('style' => 'display: block;margin: 0 25px 0 0; float:left;')); ?>
+	<?php echo $this->Html->image('logocecip.png', array('style' => 'display: block;margin: 0 25px 0 0; float:left;')); ?>
 	
 	<p><strong>O CECIP</strong> - Centro de Criação de Imagem Popular foi criado em 1986 para contribuir na construção de uma sociedade democrática e fortalecer a cidadania. A primeira experiência realizada pela instituição foi a TV Maxambomba, uma “TV comunitária” que produzia e exibia conteúdos em Nova Iguaçu (RJ). Atualmente suas atividades abrangem a produção de conteúdos e metodologias que influenciem políticas públicas, a realização de projetos de articulação e mobilização social e a capacitação de agentes para transformação social, permitindo-lhes atuar em áreas relativas a direitos à saúde, à educação e a um ambiente saudável.
 	<br/></p>

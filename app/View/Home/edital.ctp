@@ -2,9 +2,17 @@
 
 
 <div class="container">
+
+<div class="box13">
+
+<h4 style="margin: 0 0 10px 0;">Acesse também</h4>
+<a href="http://premioparticipacaoinfantil.org.br/files/Edital_Premio.pdf" target="_blank"><button style="margin: 0 10px;">Edital PDF</button></a>
+
+</div>
+
 <h4>Edital</h4>
 
-<p style="	margin-bottom: 30px;text-indent: 0px;">Clique nas abas para abri-las</p>
+<p style="margin-bottom: 30px;text-indent: 0px;">Clique nas abas para abri-las</p>
 
 <div id="st-accordion" class="st-accordion">
                 
