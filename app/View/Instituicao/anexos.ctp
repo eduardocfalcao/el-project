@@ -1,4 +1,4 @@
-<?php $this->extend('/layouts/minhacontatemplate'); ?>
+<?php $this->extend('/Layouts/minhacontatemplate'); ?>
 
 
 <?php echo $this->Form->create('Anexo',
@@ -39,5 +39,3 @@
     
     
 <?php echo $this->Form->end("Enviar arquivos"); ?>
-
-<?php print_r($files); ?>

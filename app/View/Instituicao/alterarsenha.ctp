@@ -1,4 +1,4 @@
-<?php $this->extend('/layouts/minhacontatemplate'); ?>
+<?php $this->extend('/Layouts/minhacontatemplate'); ?>
 
 <h4>ALTERAR SENHA</h4>
 

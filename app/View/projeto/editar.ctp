@@ -1,4 +1,4 @@
-<?php $this->extend('/layouts/minhacontatemplate'); ?>
+<?php $this->extend('/Layouts/minhacontatemplate'); ?>
 
 
 <?php echo $this->Form->create('Projeto',
