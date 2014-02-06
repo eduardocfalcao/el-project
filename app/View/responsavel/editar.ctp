@@ -14,25 +14,25 @@
     <div class="lar-01">
         <label for="nome">&bull; Nome:</label><br />
 
-         <?php echo $this->Form->input('nome'); ?>
+         <?php echo $this->Form->input('nome', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-02">
         <label for="cargo">&bull; Cargo:</label><br />
 
-         <?php echo $this->Form->input('cargo'); ?>
+         <?php echo $this->Form->input('cargo', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-02 margem-01">
         <label for="cpf">&bull; CPF:</label><br />
 
-         <?php echo $this->Form->input('cpf'); ?>
+         <?php echo $this->Form->input('cpf', array("class" => "field-cpf validate[required]")); ?>
     </div>
 
     <div class="lar-02">
         <label for="rg">&bull; RG:</label><br />
 
-        <?php echo $this->Form->input('rg'); ?>
+        <?php echo $this->Form->input('rg', array("class" => "validate[required]")); ?>
     </div>
 
     <div class="lar-16">
@@ -41,4 +41,7 @@
        	<?php echo $this->Form->input('outrasInformacoes',array('rows' => 5, 'cols' =>10)); ?>
     </div>
 
-<?php echo $this->Form->end('Salvar'); ?>
+<?php 
+	echo $this->Form->end('Salvar');
+	echo $this->Html->script('cpf', array('block' => 'script')); 
+?>

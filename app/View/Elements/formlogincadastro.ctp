@@ -73,19 +73,17 @@
         <div class="lar-02 margem-01">
             <label for="senha">&bull; Senha:</label><br />
 
-            <?php echo $this->Form->input('senha', array('type' => 'password', "class" => "validate[required]")); ?>
+            <?php echo $this->Form->input('senha', array('type' => 'password', "class" => "validate[required]", "id" => "senha")); ?>
         </div>
 
         <div class="lar-02">
             <label for="confirmarSenha">&bull; Confirmar Senha:</label><br />
 
-            <?php echo $this->Form->input('confirmarSenha', array('type' => 'password', "class" => "validate[required]")); ?>
+            <?php echo $this->Form->input('confirmarSenha', array('type' => 'password', "class" => "validate[required,equals[senha]]]")); ?>
         </div>
 
        <?php echo $this->Form->end('Finalizar Cadastro'); ?>
 
 </div>
 
-<script type="text/javascript">
-	$('.field-cnpj').mask('99.999.999/9999-99');
-</script>
+<?php echo $this->Html->script('cnpj', array('block' => 'script')); ?>

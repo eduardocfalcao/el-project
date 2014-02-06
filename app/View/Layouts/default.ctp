@@ -19,17 +19,12 @@
 		echo $this->Html->script('jquery.validationEngine-pt_BR');
 		echo $this->Html->script('jquery.validationEngine');
 		echo $this->Html->script('jquery.maskedinput.min');
+		echo $this->Html->script('main');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-	
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('form').validationEngine();
-		});
-	</script>
 </head>
 <body class="<?php echo $this->fetch('background'); ?>">
 	<div class="container">
