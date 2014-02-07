@@ -43,8 +43,6 @@ class AppController extends Controller {
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'documentos'));
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'alterarsenha'));
 		
-		
-		
 		$usuario = null;
 		
 		if($this->Auth->loggedIn())
@@ -59,7 +57,7 @@ class AppController extends Controller {
  		
 		if($this->Auth->loggedIn() == false)
 		{
-			$this->redirect(array('controller' => 'instituicao',
+			$this->redirect(array('controller' => 'Instituicao',
 								  'action' => 'login'));
 		}
     }
@@ -82,7 +80,7 @@ class AppController extends Controller {
 				    				'userModel' => 'Instituicao',
 				    			 ),
 						        'loginAction' => array(
-						            'controller' => 'instituicao',
+						            'controller' => 'Instituicao',
 						            'action' => 'login',
 						        ),
 						        'authError' => 'Did you really think you are allowed to see that?',

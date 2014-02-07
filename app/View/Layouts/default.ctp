@@ -12,6 +12,7 @@
 		echo $this->Html->css('style');
 		echo $this->Html->css('style-acordion');
 		echo $this->Html->css('validationEngine.jquery');
+		echo $this->Html->css('zebra_datepicker');
 		
 		echo $this->Html->script('jquery-1.11.0.min');
 		echo $this->Html->script('jquery.accordion');
@@ -19,7 +20,9 @@
 		echo $this->Html->script('jquery.validationEngine-pt_BR');
 		echo $this->Html->script('jquery.validationEngine');
 		echo $this->Html->script('jquery.maskedinput.min');
+		echo $this->Html->script('zebra_datepicker');
 		echo $this->Html->script('main');
+		echo $this->Html->script('masks');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -38,7 +41,7 @@
                             <li>Bem vindo <strong><?php echo $usuario['login']; ?></strong> <strong>|</strong></li>
                             <li> <?php echo $this->Html->link('Minha Conta', array('controller' => 'Instituicao','action' => 'minhaconta')); ?></li>
                             <li><strong>|</strong></li>
-                            <li><?php echo $this->Html->link('Sair', array('controller' => 'Instituicao','action' => 'Logout')); ?>
+                            <li><?php echo $this->Html->link('Sair', array('controller' => 'Instituicao','action' => 'Logout')); ?></li>
                         <?php } else { ?>
                         	<li><?php echo $this->Html->link('Cadastre-se', array('controller' => 'Instituicao','action' => 'Cadastro')); ?></li>
                             <li><strong>|</strong> </li>

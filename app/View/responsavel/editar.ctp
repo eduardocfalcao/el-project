@@ -14,13 +14,13 @@
     <div class="lar-01">
         <label for="nome">&bull; Nome:</label><br />
 
-         <?php echo $this->Form->input('nome', array("class" => "validate[required]")); ?>
+         <?php echo $this->Form->input('nome', array("class" => "validate[required]", "maxlength" => "1000")); ?>
     </div>
 
     <div class="lar-02">
         <label for="cargo">&bull; Cargo:</label><br />
 
-         <?php echo $this->Form->input('cargo', array("class" => "validate[required]")); ?>
+         <?php echo $this->Form->input('cargo', array("class" => "validate[required]", "maxlength" => "1000")); ?>
     </div>
 
     <div class="lar-02 margem-01">
@@ -32,16 +32,15 @@
     <div class="lar-02">
         <label for="rg">&bull; RG:</label><br />
 
-        <?php echo $this->Form->input('rg', array("class" => "validate[required]")); ?>
+        <?php echo $this->Form->input('rg', array("class" => "field-rg validate[required]")); ?>
     </div>
 
     <div class="lar-16">
         <label for="outrasInformacoes">Outras informa&ccedil;&otilde;es:</label><br />
 
-       	<?php echo $this->Form->input('outrasInformacoes',array('rows' => 5, 'cols' =>10)); ?>
+       	<?php echo $this->Form->input('outrasInformacoes',array('rows' => 5, 'cols' =>10, "maxlength" => "5000")); ?>
     </div>
 
 <?php 
 	echo $this->Form->end('Salvar');
-	echo $this->Html->script('cpf', array('block' => 'script')); 
 ?>

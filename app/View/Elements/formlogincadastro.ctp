@@ -14,12 +14,13 @@
 							   ); ?>
 
         <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
-        <?php echo $this->Form->input('login'); ?>
+        <?php echo $this->Form->input('login', array("class" => "validate[required]", "maxlength" => "100")); ?>
 
         <br /><br />
 
         <label for="senha">&bull; Senha:</label><br />
-        <?php echo $this->Form->input('senha', array('type' => 'password')); ?>
+        <?php echo $this->Form->input('senha', array('type' => 'password',
+        											 "class" => "validate[required]", "maxlength" => "150")); ?>
 
         <br /><br />
 
@@ -48,7 +49,7 @@
         <div class="lar-02 margem-01">
             <label for="nome">&bull; Nome da Instituição:</label><br />
 
-            <?php echo $this->Form->input('nome', array("class" => "validate[required]")); ?>
+            <?php echo $this->Form->input('nome', array("class" => "validate[required]", "maxlength" => "1000")); ?>
         </div>
 
         <div class="lar-02">
@@ -60,26 +61,26 @@
         <div class="lar-02 margem-01">
             <label for="email">&bull; E-mail:</label><br />
 
-           <?php echo $this->Form->input('email', array("class" => "validate[required]")); ?>
+           <?php echo $this->Form->input('email', array("class" => "validate[required]", "maxlength" => "150")); ?>
         </div>
         
 
         <div class="lar-02">
             <label for="login">&bull; Usu&aacute;rio:</label><br />
 
-            <?php echo $this->Form->input('login', array("class" => "validate[required]")); ?>
+            <?php echo $this->Form->input('login', array("class" => "validate[required]", "maxlength" => "100")); ?>
         </div>
 
         <div class="lar-02 margem-01">
             <label for="senha">&bull; Senha:</label><br />
 
-            <?php echo $this->Form->input('senha', array('type' => 'password', "class" => "validate[required]", "id" => "senha")); ?>
+            <?php echo $this->Form->input('senha', array('type' => 'password', "class" => "validate[required]", "id" => "senha", "maxlength" => "150")); ?>
         </div>
 
         <div class="lar-02">
             <label for="confirmarSenha">&bull; Confirmar Senha:</label><br />
 
-            <?php echo $this->Form->input('confirmarSenha', array('type' => 'password', "class" => "validate[required,equals[senha]]]")); ?>
+            <?php echo $this->Form->input('confirmarSenha', array('type' => 'password', "class" => "validate[required,equals[senha]]]", "maxlength" => "150")); ?>
         </div>
 
        <?php echo $this->Form->end('Finalizar Cadastro'); ?>
