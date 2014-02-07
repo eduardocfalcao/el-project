@@ -2,12 +2,10 @@
 
 
 <div class="container">
-	<h4>Prêmio</h4>
+	<h4>O que é o prêmio:</h4>
     
     <div class="box05">
-    
-    	<h5>O que é o prêmio:</h5>
-        
+
         <p>O 1º Prêmio Nacional de Projetos de Participação Infantil tem objetivo de fortalecer e disseminar práticas de participação infantil. Sendo realizado nacionalmente, através da premiação de práticas metodologicamente sérias, inovadoras, eficazes, criativas e com impacto relevante, pretendemos contribuir para difundir e estimular a efetivação do direito à participação infantil em múltiplos espaços sociais.
 </p>
 		<p>O concurso pretende enriquecer o campo de discussões e práticas em torno da ideia da participação infantil no Brasil. Essa ideia muda a concepção tradicional que considera as crianças como seres passivos, sem opinião, sem  propostas ou vontade própria, que devem aguardar algum momento num futuro distante para se tornarem cidadãos e, só então, poderem participar ativamente da sociedade. Incluir a participação de crianças e adolescentes é percebê-los como pessoas completas, competentes, curiosas e criativas, capazes de agir no momento presente de suas vidas. O envolvimento dessas crianças no planejamento e execução de projetos em distintas escalas não só enriquece seu  desenho, como o torna mais aderente à realidade, o que constitui para essas crianças um importante processo de vivência na construção da sua cidadania. </p>

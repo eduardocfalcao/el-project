@@ -10,7 +10,7 @@
 
 </div>
 
-<h4>Edital</h4>
+<h4>Edital para projetos com Participação Infantil</h4>
 
 <p style="margin-bottom: 30px;text-indent: 0px;">Clique nas abas para abri-las</p>
 

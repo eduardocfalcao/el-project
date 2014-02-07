@@ -2,12 +2,9 @@
 
 
 <div class="container">
-<h4>Texto de Apoio</h4>
-    
-<h5>Considerações sobre a perspectiva da Participação Infantil</h5>
+<h4>Considerações sobre a Participação Infantil</h4>
 
-<br/>
-<h6 style="margin: -15px 0 55px 0;">Equipe do Projeto Criança Pequena em Foco¹</h6>
+<h6 style="margin:-25px 0 55px 0;">Equipe do Projeto Criança Pequena em Foco¹</h6>
 
 <p>O presente documento tem como objetivo apresentar uma breve discussão sobre o tema da participação infantil, servindo de subsídio para a construção dos projetos que vão concorrer ao 1º PRÊMIO NACIONAL DE PROJETOS COM PARTICIPAÇÃO INFANTIL. </p>
 

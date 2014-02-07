@@ -58,7 +58,7 @@
 <?php echo $this->Html->image('bg-inscrever.png', array('style' => 'display: block;margin: 0 auto;')); ?>
 
 
-<h3 style="text-align: center; font-weight: normal;">Contacte-nos através do nosso formulário ou através do e-mail abaixo:</h3>
+<h3 style="text-align: center; font-weight: normal;">Entre em contato por meio do formulário ao lado ou do e-mail abaixo:</h3>
 <br/>
 <h3 style="text-align: center;margin-top:-20px;font-size: 22px;">premioparticipacaoinfantil@gmail.com</h3>
 

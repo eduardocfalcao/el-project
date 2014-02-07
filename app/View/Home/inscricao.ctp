@@ -8,7 +8,7 @@
 
 <p><strong>2.</strong>	Cadastre-se com informações básicas no site, criando um login e senha para que você possa inscrever o seu projeto. </p>
 
-<p><strong>3.</strong>	Recomendamos uma leitura sobre as perspectivas de participação infantil. Disponível em: <a href="/el-project/Home/participacao" target="_blank">Participação</a></p>
+<p><strong>3.</strong>	Recomendamos uma leitura sobre as perspectivas de participação infantil. Disponível em: <a href="/el-project/Home/consideracoes" target="_blank">Considerações</a></p>
 
 <p><strong>4.</strong>	 Após concluir o seu cadastro, você já pode começar a inserir os dados do seu projeto. Você poderá interromper, salvar e continuar a se inscrever a qualquer momento, editando e acrescentando conteúdos, avançando e retornando nos tópicos do formulário, dentro do período de inscrições. Lembre-se de frequentemente salvar a sua inscrição, clicando no botão <strong>SALVAR</strong>. </p>
 
