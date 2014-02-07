@@ -20,6 +20,7 @@
 		echo $this->Html->script('jquery.validationEngine');
 		echo $this->Html->script('jquery.maskedinput.min');
 		echo $this->Html->script('main');
+		echo $this->Html->script('masks');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
