@@ -34,10 +34,10 @@
         <label>&bull; Período de realização do projeto:</label><br />
 		
 		<label for="dataInicio">&bull; Início:</label><br />
-        <?php echo $this->Form->input('periodoInicio', array("class" => "validate[required]")); ?>
+        <?php echo $this->Form->input('periodoInicio', array("class" => "validate[required] datepicker", "type" => "text")); ?>
         
          <label for="dataFim">&bull; Fim:</label><br />
-        <?php echo $this->Form->input('periodoFim', array("class" => "validate[required]")); ?>
+        <?php echo $this->Form->input('periodoFim', array("class" => "validate[required] datepicker", "type" => "text")); ?>
     </div>
 
     <div class="lar-02">
