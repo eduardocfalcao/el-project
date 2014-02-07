@@ -27,6 +27,7 @@
 	?>
 </head>
 <body class="<?php echo $this->fetch('background'); ?>">
+<div class="container-master">
 	<div class="container">
   
         <div id="header">
@@ -48,7 +49,7 @@
                 </div>
             </div>
         </div>
-        
+</div>
         <div class="container">
 
             <div id="menu">
