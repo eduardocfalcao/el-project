@@ -14,12 +14,13 @@
 							   ); ?>
 
         <label for="login">&bull; Nome de Usu&aacute;rio:</label><br />
-        <?php echo $this->Form->input('login'); ?>
+        <?php echo $this->Form->input('login', array("class" => "validate[required]")); ?>
 
         <br /><br />
 
         <label for="senha">&bull; Senha:</label><br />
-        <?php echo $this->Form->input('senha', array('type' => 'password')); ?>
+        <?php echo $this->Form->input('senha', array('type' => 'password',
+        											 "class" => "validate[required]")); ?>
 
         <br /><br />
 
