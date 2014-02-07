@@ -17,16 +17,16 @@ class InstituicaoController extends AppController {
 				if ($this->Instituicao->save($this->request->data))
 				{
 					$this->Instituicao->create();
-					$this->Session->setFlash(__('Instituição criada.'));
+					$this->Session->setFlash(__('Instituição criada. Use o seu login e sua senha para se cadastrar'),'default', array(), 'sucesso');
 				}
 				else
 				{
-					$this->Session->setFlash(__('Não foi possivel criar a instituição.'));
+					$this->Session->setFlash(__('Não foi possivel criar a instituição.'),'default', array(), 'erro');
 				}
 			} 
 			else 
 			{
-			    $this->Session->setFlash(__('As senhas não conferem.'));
+			    $this->Session->setFlash(__('As senhas não conferem.'),'default', array(), 'erro');
 			}
 		}		
 	}
@@ -35,24 +35,33 @@ class InstituicaoController extends AppController {
 	{
 		if ($this->request->is('post')) 
 		{
+			$passwordHasher = new SimplePasswordHasher();
+			$instituicao = $this->Instituicao->find('first', array(
+        							'conditions' => array('Instituicao.login' => $this->request->data["Instituicao"]["login"],
+        											      'Instituicao.senha' => $passwordHasher->hash($this->request->data["Instituicao"]["senha"]))
+    								));
+    								
+			//if($instituicao == null)
+				//$this->Session->setFlash(__('Usuário ou senha incorretos'));
 	        if ($this->Auth->login($this->data['Instituicao'])) 
 	        {
 	            return $this->redirect(array('action' => 'minhaconta'));
 	        } 
 	        else 
 	        {
-	            $this->Session->setFlash(__('Usuário ou senha incorretos'));
+	            $this->Session->setFlash(__('Usuário ou senha incorretos'),'default', array(), 'erro');
 	        }
 		}
 	}
 	
 	public function minhaconta()
 	{
-		
+		$this->isLogged();
 	}
 	
 	public function detalhes($id = NULL) 
 	{
+		$this->isLogged();
 		if ($this->request->is('put')) 
 		{	
 			$this->Instituicao->id = $id;
@@ -68,6 +77,7 @@ class InstituicaoController extends AppController {
 	
 	public function anexos()
 	{
+		$this->isLogged();
 		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 		
 		if ($this->request->is('put') || $this->request->is('post')) 
@@ -82,7 +92,7 @@ class InstituicaoController extends AppController {
 				$instituicao["Instituicao"][$key] = $file_name;
 				
 				$this->Instituicao->save($instituicao);
-				$this->Session->setFlash(__('Os arquivos foram enviados.'));
+				$this->Session->setFlash(__('Os arquivos foram enviados.'),'default', array(), 'sucesso');
 			}			
 		}
 		else
@@ -90,6 +100,39 @@ class InstituicaoController extends AppController {
 			$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 			$this->request->data = $instituicao;
 		}
+	}
+	
+	public function documentos()
+	{
+		$this->isLogged();
+		if ($this->request->is('put') || $this->request->is('post')) 
+		{	
+			$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+			foreach($this->request->data["Documentos"] as $key => $file)
+			{
+				if(($file['error']) || $file["size"] == 0 || $this->isValidFile($file) == false)
+				{
+					continue;
+				}
+					
+				$file_name = $this->upload($file, $key, $instituicao["Instituicao"]["id"]);
+				
+				$instituicao["Instituicao"][$key] = $file_name;
+			}		
+			
+			$this->Instituicao->save($instituicao);
+			$this->Session->setFlash(__('Os arquivos foram enviados.'),'default', array(), 'sucesso');	
+		}
+		else
+		{
+			$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+			$this->request->data = $instituicao;
+		}
+	}
+	
+	private function isValidFile()
+	{
+		return true; //verificar se e exe
 	}
 	
 	private function upload($arquivo, $key, $idInstituicao)
@@ -105,55 +148,44 @@ class InstituicaoController extends AppController {
 		
 		$nome = $idInstituicao."_".$key.".".$ext;
 		
-		//Ok, com diretório devidamente criado, vamos declarar o arquivo temporário  
 		$arquivo_tmp = new File($arquivo['tmp_name'],false);  
-	  
-		//pegar os dados dele  
 		$dados = $arquivo_tmp->read();  
-		  
-		//e fecha-lo  
 		$arquivo_tmp->close();  
-		  
-		//agora vamosc riar nosso arquivo  
-		
-		
+		 
 		$arquivo_nome = new File(WWW_ROOT."uploads".DS."anexos".DS.$nome,false,0644);  
 		  
-		//cria-lo  
 		$arquivo_nome->create();  
-		  
-		//escrever os dados armazenados  
 		$arquivo_nome->write($dados);  
-		  
-		//e feixar o arquivo  
 		$arquivo_nome->close();  
 		return $nome;	
 	}
 	
 	public function alterarsenha()
 	{
+		$this->isLogged();
 		if ($this->request->is('post')) 
 		{
 			$passwordHasher = new SimplePasswordHasher();
 			//pegar a senha do banco do usuario
 			if($this->request->data['Instituicao']['senhaAtual'] != $this->Auth->user('senha'))	
 			{
-				 $this->Session->setFlash(__('Senha atual incorreta.'));
+				 $this->Session->setFlash(__('Senha atual incorreta.'),'default', array(), 'erro');
 			}
 			else if($this->request->data['Instituicao']['senha'] != $this->request->data['Instituicao']['repetirSenha'])
 			{
-				 $this->Session->setFlash(__('As senhas não conferem.'));
+				 $this->Session->setFlash(__('As senhas não conferem.'),'default', array(), 'erro');
 			}
 			else
 			{
 				$this->Instituicao->save($this->request->data);
-				$this->Session->setFlash(__('Senha alterada.'));
+				$this->Session->setFlash(__('Senha alterada.'),'default', array(), 'sucesso');
 			}
 		}
 	}
 	
 	public function logout()
 	{
+		$this->isLogged();
 		$this->Auth->logout();
 		$this->redirect(array('controller' => 'instituicao',
 								  'action' => 'login'));

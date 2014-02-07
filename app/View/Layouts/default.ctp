@@ -40,7 +40,7 @@
                             <li>Bem vindo <strong><?php echo $usuario['login']; ?></strong> <strong>|</strong></li>
                             <li> <?php echo $this->Html->link('Minha Conta', array('controller' => 'Instituicao','action' => 'minhaconta')); ?></li>
                             <li><strong>|</strong></li>
-                            <li><?php echo $this->Html->link('Sair', array('controller' => 'Instituicao','action' => 'Logout')); ?>
+                            <li><?php echo $this->Html->link('Sair', array('controller' => 'Instituicao','action' => 'Logout')); ?></li>
                         <?php } else { ?>
                         	<li><?php echo $this->Html->link('Cadastre-se', array('controller' => 'Instituicao','action' => 'Cadastro')); ?></li>
                             <li><strong>|</strong> </li>

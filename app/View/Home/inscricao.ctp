@@ -21,7 +21,7 @@
 <br/><br/>
 <h5>Se você ainda não tem uma conta, cadastre-se e<br/> faça o login no botão abaixo:</h5>
 <br/>
-<a href="/el-project/Instituicao/Cadastro" style="margin:0 auto;"><button style="float:none">CADASTRE-SE</button></a>
+<?php echo $this->Html->link('CADASTRE-SE', array('controller' => 'Instituicao','action' => 'cadastro')); ?>
 <br/><br/><br/><br/><br/><br/>
 </div>
 
@@ -31,7 +31,7 @@
 <br/><br/>
 <h5>Se você já tem uma conta, faça o login e<br/> comece o formulário de seu projeto:</h5>
 <br/>
-<a href="/el-project/Instituicao/minhaconta" style="margin:0 auto;"><button style="float:none">FORMULÁRIO</button></a>
+<?php echo $this->Html->link('FORMULÁRIO', array('controller' => 'Instituicao','action' => 'minhaconta')); ?>
 <br/><br/><br/><br/><br/><br/>
 
 </div>
