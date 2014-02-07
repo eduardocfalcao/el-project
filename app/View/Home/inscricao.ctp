@@ -4,11 +4,11 @@
 <h4>Inscrição</h4>
     
 
-<p><strong>1.</strong>	Antes de começar, leia o edital (disponível em: <a href="/el-project/Home/edital" target="_blank">Edital</a>) para ver se o seu projeto se encaixa na proposta da premiação. </p>
+<p><strong>1.</strong>	Antes de começar, leia o edital (disponível em: <?php echo $this->Html->link('Edital', array('home' => 'Edital','action' => 'edital')); ?> para ver se o seu projeto se encaixa na proposta da premiação. </p>
 
 <p><strong>2.</strong>	Cadastre-se com informações básicas no site, criando um login e senha para que você possa inscrever o seu projeto. </p>
 
-<p><strong>3.</strong>	Recomendamos uma leitura sobre as perspectivas de participação infantil. Disponível em: <a href="/el-project/Home/consideracoes" target="_blank">Considerações</a></p>
+<p><strong>3.</strong>	Recomendamos uma leitura sobre as perspectivas de participação infantil. Disponível em: <?php echo $this->Html->link('Considerações', array('home' => 'Consideracoes','action' => 'Consideracoes')); ?></p>
 
 <p><strong>4.</strong>	 Após concluir o seu cadastro, você já pode começar a inserir os dados do seu projeto. Você poderá interromper, salvar e continuar a se inscrever a qualquer momento, editando e acrescentando conteúdos, avançando e retornando nos tópicos do formulário, dentro do período de inscrições. Lembre-se de frequentemente salvar a sua inscrição, clicando no botão <strong>SALVAR</strong>. </p>
 

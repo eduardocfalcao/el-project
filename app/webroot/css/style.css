@@ -551,7 +551,7 @@ button, input[type='submit']{
 	font-size: 22px;
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 0 33px;
+	padding: 0 30px;
 	line-height: 40px;
 }
 
@@ -565,7 +565,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-menu-item01.png);
 	background-position: center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: initial;
 }
 
 #menu ul li.menu-item02:hover{
@@ -573,7 +573,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-menu-item02.png);
 	background-position: center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: initial;
 }
 
 #menu ul li.menu-item03:hover{
@@ -581,7 +581,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-menu-item03.png);
 	background-position: center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: initial;
 }
 
 #menu ul li.menu-item04:hover{
@@ -589,7 +589,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-menu-item04.png);
 	background-position: center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: initial;
 }
 
 #menu ul li.menu-item05:hover{
@@ -597,7 +597,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-menu-item05.png);
 	background-position: center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: initial;
 }
 
 #menu ul li.menu-item06:hover{
@@ -605,7 +605,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-menu-item06.png);
 	background-position: center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: initial;
 }
 
 #menu ul li.menu-item07:hover{
@@ -613,7 +613,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-menu-item07.png);
 	background-position: center;
 	background-repeat:no-repeat;
-	background-size: cover;
+	background-size: initial;
 }
 
 
