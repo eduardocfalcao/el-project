@@ -27,6 +27,19 @@ class HomeController extends AppController {
 
     public function Contato()
     {
+    	
+    	if ($this->request->is('post'))
+    	{
+			$email = new CakeEmail();
+			$email->viewVars($this->request->data['Contato']);
+			$email->template('contato')
+			    ->emailFormat('html')
+			    ->to('eduardo.cfalcao@gmail.com')
+			    ->from('contato@premioparticipacaoinfantil.org.br')
+			    ->send();
+			    
+			    
+		}
     }
 	
 }
