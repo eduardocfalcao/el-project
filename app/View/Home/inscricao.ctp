@@ -1,4 +1,4 @@
-<?php echo $this->assign('background',"bg-inscrever"); ?>
+
 
 <div class="container">
 <h4>Inscrição</h4>

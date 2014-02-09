@@ -1,6 +1,3 @@
-<?php echo $this->assign('background',"bg-premio"); ?>
-
-
 <div class="container">
 	<h4>O que é o prêmio:</h4>
     

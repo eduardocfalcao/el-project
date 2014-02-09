@@ -4,7 +4,7 @@
     <div class="menuMinhaConta">
         <ul>
             <li>
-            	<?php echo $this->Html->link('Minha inscrição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>
+            	<?php echo $this->Html->link('Minha inscrição', array('controller' => 'Instituicao','action' => 'minhaconta')); ?>
             </li>
             <li>
             	<?php echo $this->Html->link('Alterar senha', array('controller' => 'Instituicao','action' => 'alterarsenha')); ?>

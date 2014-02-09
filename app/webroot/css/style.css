@@ -493,6 +493,10 @@ button, input[type='submit']{
 
 /******* HEADER ******/
 
+.bg-header{
+	background-image: url(img/bg-header.png);
+	background-repeat: repeat-x;
+}
 
 #mensagem{
     display: none;
@@ -575,6 +579,21 @@ button, input[type='submit']{
 	background-size: initial;
 }
 
+.menu-item01{
+	display: block;
+	background-image: url(img/bg-menu-item01.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: initial;
+	color: #fff;
+}
+
+.menu-item01 a{
+	color:#fff;
+}
+
+
+
 #menu ul li.menu-item02:hover{
 	display: block;
 	background-image: url(img/bg-menu-item02.png);
@@ -632,7 +651,7 @@ button, input[type='submit']{
 	height: 35px;
 	line-height: 35px;
 	list-style-type: none;
-	border-bottom: rgb(240, 108, 109) dotted 1px;
+	border-bottom: rgb(240, 108, 109) solid 1px;
 }
 
 .menuMinhaConta ul li a{
@@ -758,6 +777,14 @@ button, input[type='submit']{
 .footer {
 	background-color: transparent;
 	height: 100px;
+	background-image: url(img/bg-flores.png);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+	background-size: 100px;
+}
+
+.bg-none{
+	background:none !important;
 }
 
 

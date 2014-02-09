@@ -1,4 +1,4 @@
-<?php echo $this->assign('background',"bg-contato"); ?>
+
 
 
 <div class="container" style="overflow: hidden;margin-bottom: 40px;">

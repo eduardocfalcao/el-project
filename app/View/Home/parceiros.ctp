@@ -1,5 +1,3 @@
-<?php echo $this->assign('background',""); ?>
-
 
 <div class="container" style="overflow:hidden;">
 	<h4>Realização</h4>
