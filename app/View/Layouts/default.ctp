@@ -56,13 +56,13 @@
 
             <div id="menu">
                 <ul>
-                    <li class="menu-item01"><?php echo $this->Html->link('Início', array('controller' => 'Pages','action' => 'Home')); ?></li>
-                    <li class="menu-item02"><?php echo $this->Html->link('Prêmio', array('controller' => 'Home','action' => 'Premio')); ?></li>
-                    <li class="menu-item03"><?php echo $this->Html->link('Parceiros', array('controller' => 'Home','action' => 'Parceiros')); ?></li>
-                    <li class="menu-item04"><?php echo $this->Html->link('Edital', array('controller' => 'Home','action' => 'Edital')); ?></li>
-                    <li class="menu-item05"><?php echo $this->Html->link('Considerçaões', array('controller' => 'Home','action' => 'Consideracoes')); ?></li>
-                    <li class="menu-item06"><?php echo $this->Html->link('Inscrição', array('controller' => 'Home','action' => 'Inscricao')); ?></li>
-                    <li class="menu-item07"><?php echo $this->Html->link('Contato', array('controller' => 'Home','action' => 'Contato')); ?></li>
+                    <li class="menu-item01"><?php echo $this->Html->link('Início', array('controller' => 'Pages','action' => 'home')); ?></li>
+                    <li class="menu-item02"><?php echo $this->Html->link('Prêmio', array('controller' => 'Home','action' => 'premio')); ?></li>
+                    <li class="menu-item03"><?php echo $this->Html->link('Parceiros', array('controller' => 'Home','action' => 'parceiros')); ?></li>
+                    <li class="menu-item04"><?php echo $this->Html->link('Edital', array('controller' => 'Home','action' => 'edital')); ?></li>
+                    <li class="menu-item05"><?php echo $this->Html->link('Considerçaões', array('controller' => 'Home','action' => 'consideracoes')); ?></li>
+                    <li class="menu-item06"><?php echo $this->Html->link('Inscrição', array('controller' => 'Home','action' => 'inscricao')); ?></li>
+                    <li class="menu-item07"><?php echo $this->Html->link('Contato', array('controller' => 'Home','action' => 'contato')); ?></li>
                 </ul>
             </div>
 

@@ -4,28 +4,28 @@ App::uses('AppController', 'Controller');
 
 class HomeController extends AppController {
 	
-	public function Premio()
+	public function premio()
 	{
 		
 	}
 	
-    public function Parceiros()
+    public function parceiros()
     {
     }
 
-    public function Edital()
+    public function edital()
     {
     }
 
-    public function Consideracoes ()
+    public function consideracoes ()
     {
     }
 
-    public function Inscricao()
+    public function inscricao()
     {
     }
 
-    public function Contato()
+    public function contato()
     {
     	
     	if ($this->request->is('post'))

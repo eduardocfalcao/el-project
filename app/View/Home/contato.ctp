@@ -8,7 +8,7 @@
 
 		<?php echo $this->Form->create('Contato',
 								    array(
-								    		'url' => array('controller' => 'Instituicao', 'action' => 'detalhes'),
+								    		'url' => array('controller' => 'Home', 'action' => 'contato'),
 										    'inputDefaults' => array
 										    (
 										        'label' => false,
@@ -46,8 +46,8 @@
 			</div>
 			<div class="lar-18"> 
 			    <li>
-			        <label for="message">• Mensagem</label>
-			        <?php echo $this->Form->input('nomeInstituicao', array('rows' => 5, 'cols' =>10,
+			        <label for="mensagem">• Mensagem</label>
+			        <?php echo $this->Form->input('mensagem', array('rows' => 5, 'cols' =>10,
 			        							  "class" => "validate[required]", "maxlength" => "5000")); ?>
 			    </li>
 			</div>
