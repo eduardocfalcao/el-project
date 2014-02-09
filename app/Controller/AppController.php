@@ -32,8 +32,30 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	
-	public function beforeFilter()
-	{
+	public $helpers = array('Html', 'Form', 'Session');
+	
+	public $components = array(
+							'Session',
+						    'Auth' => array(
+						        'loginAction' => array(
+						            'controller' => 'Instituicao',
+						            'action' => 'login',
+						        ),
+						        'authError' => 'Did you really think you are allowed to see that?',
+						        'authenticate' => array(
+						         	'Form' => array(
+						         		'userModel' => 'Instituicao',
+							            'fields' => array('username' => 'login','password' => 'senha' ),
+							            'passwordHasher' => array(
+						                    'className' => 'SimplePasswordHasher'
+						            	)
+					            	)
+					        	)
+						    )
+						);
+	
+	 public function beforeFilter() {
+        parent::beforeFilter();
 		$this->Auth->allow();
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'minhaconta'));
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'detalhes'));
@@ -71,27 +93,5 @@ class AppController extends Controller {
 		}
     }
 	
-	public $helpers = array('Html', 'Form', 'Session');
 	
-	public $components = array(
-							'Session',
-						    'Auth' => array(
-						    	'Form' => array (
-				    				'userModel' => 'Instituicao',
-				    			 ),
-						        'loginAction' => array(
-						            'controller' => 'Instituicao',
-						            'action' => 'login',
-						        ),
-						        'authError' => 'Did you really think you are allowed to see that?',
-						        'authenticate' => array(
-						         	'Form' => array(
-							            'fields' => array('username' => 'login','password' => 'senha' ),
-							            'passwordHasher' => array(
-						                    'className' => 'SimplePasswordHasher'
-						            	)
-					            	)
-					        	)
-						    )
-						);
 }

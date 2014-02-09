@@ -12,12 +12,14 @@ class InstituicaoController extends AppController {
 	{
 		if ($this->request->is('post')) 
 	 	{
-	 		if ($this->data['Instituicao']['senha'] == $this->data['Instituicao']['confirmarSenha']) 
+	 		if ($this->request->data['Instituicao']['senha'] == $this->request->data['Instituicao']['confirmarSenha']) 
 	 		{
+	 			$passwordHasher = new SimplePasswordHasher();
+				$this->request->data['Instituicao']['senha'] = $passwordHasher->hash($this->request->data['Instituicao']['senha']); 
 				if ($this->Instituicao->save($this->request->data))
 				{
 					$this->Instituicao->create();
-					$this->Session->setFlash(__('Instituição criada. Use o seu login e sua senha para se cadastrar'),'default', array('class' => 'sucesso'));
+					$this->Session->setFlash(__('A instituição foi criada. Use o seu login e sua senha para se logar'),'default', array('class' => 'sucesso'));
 				}
 				else
 				{
@@ -37,20 +39,23 @@ class InstituicaoController extends AppController {
 		{
 			$passwordHasher = new SimplePasswordHasher();
 			$instituicao = $this->Instituicao->find('first', array(
-        							'conditions' => array('Instituicao.login' => $this->request->data["Instituicao"]["login"],
-        											      'Instituicao.senha' => $passwordHasher->hash($this->request->data["Instituicao"]["senha"]))
+        							'conditions' => array('Instituicao.login' => $this->request->data["Instituicao"]["login"])
     								));
     								
-			//if($instituicao == null)
-				//$this->Session->setFlash(__('Usuário ou senha incorretos'));
-	        if ($this->Auth->login($this->data['Instituicao'])) 
-	        {
-	            return $this->redirect(array('action' => 'minhaconta'));
-	        } 
-	        else 
-	        {
-	            $this->Session->setFlash(__('Usuário ou senha incorretos'),'default',array('class' => 'erro'));
-	        }
+			if($instituicao != null && $instituicao['Instituicao']['senha'] == $passwordHasher->hash($this->request->data["Instituicao"]["senha"]))
+			{
+				 if ($this->Auth->login($this->data['Instituicao'])) 
+		        {
+		            return $this->redirect(array('action' => 'minhaconta'));
+		        } 
+		        else 
+		        {
+		            $this->Session->setFlash(__('Usuário ou senha incorretos'),'default',array('class' => 'erro'));
+		        }
+			}
+			else
+				$this->Session->setFlash(__('Usuário ou senha incorretos'),'default',array('class' => 'erro'));
+	        
 		}
 	}
 	
@@ -64,8 +69,11 @@ class InstituicaoController extends AppController {
 		$this->isLogged();
 		if ($this->request->is('put')) 
 		{	
-			$this->Instituicao->id = $id;
-			$this->Instituicao->save($this->request->data);
+			$this->Instituicao->read(null, $id);
+			
+			$this->Instituicao->set($this->request->data["Instituicao"]);
+			
+			$this->Instituicao->save();
 			$this->Session->setFlash(__('A instituição foi salva.'),'default', array('class' => 'sucesso'));
 		}
 		else
@@ -177,8 +185,10 @@ class InstituicaoController extends AppController {
 			}
 			else
 			{
+				$passwordHasher = new SimplePasswordHasher();
+				$this->request->data['Instituicao']['senha'] = $passwordHasher->hash($this->request->data['Instituicao']['senha']); 
 				$this->Instituicao->save($this->request->data);
-				$this->Session->setFlash(__('Senha alterada.'),'default', array('class' => 'sucesso'));
+				$this->Session->setFlash(__('A senha foi alterada.'),'default', array('class' => 'sucesso'));
 			}
 		}
 	}
