@@ -1,4 +1,4 @@
-</?php echo $this->assign('background',"bg-edital"); ?>
+<?php echo $this->assign('background',"bg-edital"); ?>
 
 
 <div class="container">
