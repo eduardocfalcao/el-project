@@ -52,7 +52,6 @@ p{
 	font-weight:normal;
 	line-height: 25px;
 	margin-bottom: 10px;
-	text-indent: 15px;
 }
 
 a img {
@@ -343,7 +342,7 @@ button, input[type='submit']{
 	background-image: url(img/bg-edital.png);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
-	background-position: left bottom;
+	background-position: right bottom;
 }
 
 .bg-inscrever{
@@ -380,7 +379,7 @@ button, input[type='submit']{
 	width: 710px;
 	min-height: 100px;
 	float: left;
-	margin: 0 0 0 15px;
+	padding: 0 0 0 15px;
 }
 
 .box03{
@@ -453,6 +452,7 @@ button, input[type='submit']{
 	min-height: 100px;
 	float: right;
 	text-align: center;
+	width:460px;
 }
 
 .box14 {
@@ -665,23 +665,33 @@ button, input[type='submit']{
 	list-style: none;
 }
 
+
+/******* BREADCRUMB ******/
+
+.breadcrumb-01{
+	width:705px;
+	height: 45px;
+	margin-bottom: 30px;
+	background-image: url(img/breadcrumb01.jpg) no-repeat;
+}
+
+
+
+
+
 /******* ITENS ******/
 
 
-.line{
-	background-image: url(img/line-vertical.png);
-	background-repeat: repeat-y;
-	width: 3px;
-	height: 500px;
-	float: left;
+.line01{
+	border-width: 0 0 0 1px;
+	border-style: solid;
+	border-color: rgb(240, 108, 109);
 }
 
 .line02{
-	background-image: url(img/line-horizontal.png);
-	background-repeat: repeat-x;
-	width: 300px;
-	height: 3px;
-	float: left;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: rgb(240, 108, 109);
 }
 
 

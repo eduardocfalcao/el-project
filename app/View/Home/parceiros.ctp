@@ -26,7 +26,7 @@
 
 <?php echo $this->Html->image('vanleer.png', array('style' => 'display: block;margin: 0 auto; width: 120px;')); ?>
 
-<p>A Fundação Bernard van Leer tem por missão fomentar ações que beneficiem crianças de até 8 anos de idade, especialmente as que estão crescendo em circunstâncias social e econômica  difíceis, através de programas de apoio implementados por parceiros locais em diversos países. <br/>
+<p>A Fundação Bernard van Leer tem por missão fomentar ações que beneficiem crianças de até 8 anos de idade, especialmente as que estão crescendo em circunstâncias sociais e econômicas difíceis, através de programas de apoio implementados por parceiros locais em diversos países. <br/>
 <a href="http://www.bernardvanleer.org/" target: _blank>VISITE O SITE</a></p>
 
 </div>
@@ -45,7 +45,7 @@
 
 <?php echo $this->Html->image('rnpi.png', array('style' => 'display: block;margin: 0 auto; width: 135px;')); ?>
 
-<p>O prêmio conta ainda com o apoio da Rede Nacional Primeira Infância (RNPI), formada por organizações de diversos setores que atuam na promoção e defesa dos direitos da primeira infância. 
+<p>A Rede Nacional Primeira Infância (RNPI) é formada por organizações de diversos setores que atuam na promoção e defesa dos direitos da primeira infância 
 <br/>
 <a href="http://primeirainfancia.org.br/" target: _blank>VISITE O SITE</a></p>
 
