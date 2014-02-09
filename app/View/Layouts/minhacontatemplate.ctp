@@ -20,5 +20,26 @@
 <div class="line"></div>
    
 <div class="box04">
-	<?php echo $this->fetch('content'); ?>
+	<div>
+		<ul>
+			<li>
+            	<?php echo $this->Html->link('Instituição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>
+            </li>
+            <li>
+            	<?php echo $this->Html->link('Responsável Legal', array('controller' => 'Responsavel','action' => 'editar')); ?>
+            </li>
+            <li>
+           		<?php echo $this->Html->link('Projeto', array('controller' => 'Projeto','action' => 'Editar')); ?>
+            </li>
+             <li class="sair">
+           		<?php echo $this->Html->link('Documentos', array('controller' => 'Instituicao','action' => 'documentos')); ?>
+            </li>
+             <li class="sair">
+           		<?php echo $this->Html->link('Anexos', array('controller' => 'Instituicao','action' => 'anexos')); ?>
+            </li>
+   		</ul>
+	</div>
+	<div>
+		<?php echo $this->fetch('content'); ?>	
+	</div>
 </div>
