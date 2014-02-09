@@ -1,18 +1,20 @@
-<?php echo $this->assign('background',"bg-edital"); ?>
+</?php echo $this->assign('background',"bg-edital"); ?>
 
 
 <div class="container">
 
 <div class="box13">
-
+<?php echo $this->Html->image('logo.png', array('style' => 'display: block; width: 300px;margin:0 auto 20px;')); ?>
 <h4 style="margin: 0 0 10px 0;">Acesse também</h4>
-<a href="http://premioparticipacaoinfantil.org.br/files/Edital_Premio.pdf" target="_blank"><button style="margin: 0 10px;">Edital PDF</button></a>
+<a href="http://premioparticipacaoinfantil.org.br/files/Edital_Premio.pdf" target="_blank"><button style="margin: 0 125px;">Edital PDF</button></a>
 
 </div>
 
+<div class="box11">
+
 <h4>Edital para projetos com Participação Infantil</h4>
 
-<p style="margin-bottom: 30px;text-indent: 0px;">Clique nas abas para abri-las</p>
+<p style="margin-bottom: 30px;text-indent: 0px;">Clique nas abas para abri-las.</p>
 
 <div id="st-accordion" class="st-accordion">
                 
@@ -67,7 +69,7 @@
 
 <div class="st-content">
 
-<p><strong>4.1</strong> O período de inscrições terá início às 00 horas do dia 6 de fevereiro de 2014 e se estenderá até as 23h59 do dia 31 de março de 2014.</p> 
+<p><strong>4.1</strong> O período de inscrições terá início às 00 horas do dia 10 de fevereiro de 2014 e se estenderá até as 23h59 do dia 31 de março de 2014.</p> 
 </div>
 </li>
 
@@ -190,7 +192,7 @@
 </li>
 </ul>
 </div>
-
+</div>
 
 
 

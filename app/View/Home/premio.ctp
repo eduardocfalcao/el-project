@@ -8,7 +8,7 @@
 
         <p>O 1º Prêmio Nacional de Projetos de Participação Infantil tem objetivo de fortalecer e disseminar práticas de participação infantil. Sendo realizado nacionalmente, através da premiação de práticas metodologicamente sérias, inovadoras, eficazes, criativas e com impacto relevante, pretendemos contribuir para difundir e estimular a efetivação do direito à participação infantil em múltiplos espaços sociais.
 </p>
-		<p>O concurso pretende enriquecer o campo de discussões e práticas em torno da ideia da participação infantil no Brasil. Essa ideia muda a concepção tradicional que considera as crianças como seres passivos, sem opinião, sem  propostas ou vontade própria, que devem aguardar algum momento num futuro distante para se tornarem cidadãos e, só então, poderem participar ativamente da sociedade. Incluir a participação de crianças e adolescentes é percebê-los como pessoas completas, competentes, curiosas e criativas, capazes de agir no momento presente de suas vidas. O envolvimento dessas crianças no planejamento e execução de projetos em distintas escalas não só enriquece seu  desenho, como o torna mais aderente à realidade, o que constitui para essas crianças um importante processo de vivência na construção da sua cidadania. </p>
+		<p>O concurso pretende enriquecer o campo de discussões e práticas em torno da ideia da participação infantil no Brasil. Essa ideia muda a concepção tradicional que considera as crianças como seres passivos, sem opinião, sem  propostas ou vontade própria, que devem aguardar algum momento num futuro distante para se tornarem cidadãos e, só então, poderem participar ativamente da sociedade. Incluir a participação de crianças é percebê-los como pessoas completas, competentes, curiosas e criativas, capazes de agir no momento presente de suas vidas. O envolvimento dessas crianças no planejamento e execução de projetos em distintas escalas não só enriquece seu  desenho, como o torna mais aderente à realidade, o que constitui para essas crianças um importante processo de vivência na construção da sua cidadania. </p>
         
         <p>Apesar de a participação infantil estar prevista como direito na Convenção sobre os Direitos da Criança da ONU (da qual o Brasil é signatário), no Estatuto das Crianças e dos Adolescentes - ECA, assim como em outros documentos públicos nacionais, sua implementação está longe da desejada. </p>
         
@@ -41,10 +41,12 @@
             
         <ul>
         
-        <p>Entre as atividades realizadas pelo projeto, no período de 2011 e 2013 estão: a parceria com secretarias da Prefeitura da cidade do Rio de Janeiro para inclusão da participação infantil em suas ações e a sistematização de metodologias para escuta das crianças produzindo o <a href="http://www.cecip.org.br/images/vamos_ouvir_criancas-ebook.pdf" target="_blank">Caderno de Metodologias participativas</a> do projeto Criança Pequena em Foco além da realização de uma experiência-piloto de participação infantil em parceria com a CET-Rio e a realização do 1º Seminário A Criança e Sua Participação na Cidade, em parceria com a Universidade Federal do Rio de Janeiro; produção de um vídeo-campanha sobre o tema; inclusão, em conjunto com outras instituições, da voz das crianças no Plano Municipal pela Primeira Infância (PMPI) do Rio de Janeiro.
+        <p>Entre as atividades realizadas pelo projeto, no período de 2011 e 2013 estão: parceria com a Prefeitura da cidade do Rio de Janeiro, através do Instituto Pereira Passos e Programa UPP Social, para articular a inclusão da participação infantil nas ações do município; a sistematização de metodologias para escuta das crianças, produzindo a publicação <a href="http://www.cecip.org.br/images/vamos_ouvir_criancas-ebook.pdf" target="_blank">Vamos Ouvir as Crianças?:Caderno de Metodologias Participativas</a> do projeto Criança Pequena em Foco; realização de uma experiência-piloto de participação infantil em parceria com a CET-Rio; a realização do 1º Seminário A Criança e Sua Participação na Cidade, em parceria com a Universidade Federal do Rio de Janeiro; produção de um vídeo-campanha sobre o tema; inclusão, em conjunto com outras instituições, da voz das crianças no Plano Municipal pela Primeira Infância (PMPI) do Rio de Janeiro
+        
 </p>
 
 		<h6><strong>1</strong>  Conjunto de ações que visam influenciar a formulação, aprovação e execução de políticas públicas junto ao poderes Legislativo, Executivo e Judiciário e à sociedade, por meio do trabalho em redes e a mobilização da mídia (retirado de: <a href="http://www.dialogosocial.com.br/advocacy-s351-1.html#.Ut6_JfRTtFk" target="_blank">dialogosocial</a>).</h6>
+       
         
         <br/><br/>
         
@@ -52,7 +54,7 @@
         
         <p>A premiação será realizada no <strong>dia 6 de junho (sexta-feira) de 2014</strong> no Rio de Janeiro em local e horário a ser definido.<br/><br/>
 
-        <strong>31/01</strong> - Início das inscrições <br/>
+        <strong>10/02</strong> – Início das inscrições <br/>
         <strong>31/03</strong> – Término das inscrições <br/>
         <strong>05/04</strong> – Resultado dos projetos classificados para a próxima fase.<br/>
         <strong>02/05</strong> – Resultado dos seis projetos finalistas. <br/>
@@ -66,10 +68,12 @@
         
         <strong>1º lugar</strong> R$ 10.500,00 (dez mil e quinhentos reais)<br/>
         <strong>2º lugar</strong> R$ 7.000,00 (sete mil reais)<br/>
-        <strong>3º lugar</strong> R$ 3.500,00 (três mil e quinhentos reais)<br/>
+        <strong>3º lugar</strong> R$ 3.500,00 (três mil e quinhentos reais)<br/><br/>
+        <strong>Serão concedidas 3 menções honrosas</strong>
         
         </p>
-
+		
+        <p>Os projetos serão escolhidos por um grupo de jurados formado por especialistas no campo da infância, representantes de instituições com importante atuação na área e por um comitê de crianças</p>
         
         
     </div>
@@ -82,7 +86,7 @@
 	    
 	    <?php echo $this->Html->image('premio-02.png', array('style' => 'display: block;margin: 85px auto 0 auto; width: 580px;')); ?>
 	    
-	    <h6 style="margin: 10px 0; text-align:center;">Crianças em passeio fotográfico promovido pelo CPF no Santa Marta em 2012.</h6>
+	    <h6 style="margin: 10px 0; text-align:center;">Crianças em passeio fotográfico promovido pelo CPF no Santa Marta (RJ) em 2012</h6>
 	    
 	    <?php echo $this->Html->image('premio-03.png', array('style' => 'display: block;margin: 85px auto 0 auto; width: 580px;')); ?>
 	    

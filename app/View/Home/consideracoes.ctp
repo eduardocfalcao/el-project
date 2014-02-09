@@ -164,5 +164,7 @@ overcoming obstacles to young people’s participation in development. In: Envir
 
 <p>UNICEF. The State of The World’s Children , 2003. Acesso em: <a href="http://www.unicef.org/sowc03/contents/pdf/SOWC03-eng.pdf" target="_blank">Unicef</a></p>
 
+<p>NASCIMENTO, A. Z. S. A criança e o arquiteto: quem aprende com quem?. Dissertação (Mestrado em Arquitetura e Urbanismo) - Programa de Pós-Graduação em Arquitetura e Urbanismo, Universidade de São Paulo. São Paulo, 2009.</p>
+
 
 </div>
