@@ -18,7 +18,7 @@ class ResponsavelController extends AppController {
 			if($id == null)
 				$this->Responsavel->create();
 			
-			$this->Session->setFlash('O Responsável foi salvo.','default', array(), 'sucesso');
+			$this->Session->setFlash('O Responsável foi salvo.','default', array('class' => 'sucesso'));
 		}
 		else
 		{

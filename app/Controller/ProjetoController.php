@@ -21,7 +21,7 @@ class ProjetoController extends AppController
 			if($id == null)
 				$this->Projeto->create();
 			
-			$this->Session->setFlash('O projeto foi salvo.','default', array(), 'sucesso');
+			$this->Session->setFlash('O projeto foi salvo.','default', array('class' => 'sucesso'));
 		}
 		else
 		{

@@ -30,7 +30,6 @@
 	?>
 </head>
 <body class="<?php echo $this->fetch('background'); ?>">
-<div class="container-master">
 	<div class="container">
   
         <div id="header">
@@ -52,7 +51,7 @@
                 </div>
             </div>
         </div>
-</div>
+        
         <div class="container">
 
             <div id="menu">
@@ -61,7 +60,7 @@
                     <li class="menu-item02"><?php echo $this->Html->link('Prêmio', array('controller' => 'Home','action' => 'Premio')); ?></li>
                     <li class="menu-item03"><?php echo $this->Html->link('Parceiros', array('controller' => 'Home','action' => 'Parceiros')); ?></li>
                     <li class="menu-item04"><?php echo $this->Html->link('Edital', array('controller' => 'Home','action' => 'Edital')); ?></li>
-                    <li class="menu-item05"><?php echo $this->Html->link('Considerações', array('controller' => 'Home','action' => 'Consideracoes')); ?></li>
+                    <li class="menu-item05"><?php echo $this->Html->link('Texto de Apoio', array('controller' => 'Home','action' => 'Textodeapoio')); ?></li>
                     <li class="menu-item06"><?php echo $this->Html->link('Inscrição', array('controller' => 'Home','action' => 'Inscricao')); ?></li>
                     <li class="menu-item07"><?php echo $this->Html->link('Contato', array('controller' => 'Home','action' => 'Contato')); ?></li>
                 </ul>
