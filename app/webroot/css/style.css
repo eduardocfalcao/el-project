@@ -316,6 +316,13 @@ button, input[type='submit']{
 
 /*************BACKGROUND IMG DAS PÁSGINAS*************/
 
+.bg-flores{
+	background-image: url(img/bg-flores.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	height: 775px;
+}
+
 .bg-home{
 	background-image: url(img/bg-inicio02.jpg);
 	background-repeat: no-repeat;
@@ -390,10 +397,10 @@ button, input[type='submit']{
 }
 
 .box04{
-	width: 865px;
+	width: 860px;
 	min-height: 100px;
 	float: left;
-	margin: 0 0 0 10px;
+	padding: 0 0 50px 15px;
 }
 
 .box05{
@@ -664,6 +671,56 @@ button, input[type='submit']{
 .box05 ul li{
 	list-style: none;
 }
+
+
+
+
+/******* Tabela de Inscrição ******/
+
+.inscricao{
+	margin: 30px 0;
+	display: block;
+	width: 860px;
+	line-height: 45px;
+	height:45px;
+	background-color: #ffebeb;
+	border: #ffc2c2 solid thin;
+}
+
+.inscricao ul{
+	display: block;
+}
+
+.inscricao ul li{
+	text-transform:uppercase;
+	float:left;
+	background-image: url(img/insc.png);
+	background-repeat:no-repeat;
+	background-position: center right;
+}
+
+.inscricao ul li:hover{
+	background-image: url(img/insc-hover.png);
+}
+
+.inscricao ul li.last:hover{
+	background-image: url(img/insc-hover.png);
+	background-position: center left;
+	padding: 0 3px 0 0;
+}
+.inscricao ul li a{
+	display:block;
+	height:45px;
+	width:auto;
+	padding:0 33px 0 30px;
+}
+
+.inscricao ul li a:hover{
+	color: #fff !important;
+
+}
+
+
 
 
 /******* BREADCRUMB ******/

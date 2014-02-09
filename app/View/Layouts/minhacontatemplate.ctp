@@ -17,25 +17,28 @@
     </div>
 
 </div>
-<div class="line"></div>
    
-<div class="box04">
-	<div>
+<div class="box04 line01">
+
+<h4>Formulário de Inscrição</h4>
+
+
+	<div class="inscricao">
 		<ul>
 			<li>
-            	<?php echo $this->Html->link('Instituição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>
+            	<?php echo $this->Html->link('‣ Instituição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>
             </li>
             <li>
-            	<?php echo $this->Html->link('Responsável Legal', array('controller' => 'Responsavel','action' => 'editar')); ?>
+            	<?php echo $this->Html->link('‣ Responsável Legal', array('controller' => 'Responsavel','action' => 'editar')); ?>
             </li>
             <li>
-           		<?php echo $this->Html->link('Projeto', array('controller' => 'Projeto','action' => 'Editar')); ?>
+           		<?php echo $this->Html->link('‣ Projeto', array('controller' => 'Projeto','action' => 'Editar')); ?>
             </li>
-             <li class="sair">
-           		<?php echo $this->Html->link('Documentos', array('controller' => 'Instituicao','action' => 'documentos')); ?>
+             <li>
+           		<?php echo $this->Html->link('‣ Documentos', array('controller' => 'Instituicao','action' => 'documentos')); ?>
             </li>
-             <li class="sair">
-           		<?php echo $this->Html->link('Anexos', array('controller' => 'Instituicao','action' => 'anexos')); ?>
+             <li class="last">
+           		<?php echo $this->Html->link('‣ Anexos', array('controller' => 'Instituicao','action' => 'anexos')); ?>
             </li>
    		</ul>
 	</div>
