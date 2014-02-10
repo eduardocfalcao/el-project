@@ -24,7 +24,7 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
 		</div>
 	<?php } else { ?>
 		<div>
-			<span>Finalizar Inscrição</span>
+			<span class="botao">Finalizar Inscrição</span> <!--botão inativo class: disable-->
 		</div>
 	<?php } ?>	
 </div>
@@ -36,7 +36,7 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
 		</div>
 	<?php } else { ?>
 		<div>
-			<span>Finalizar Inscrição</span>
+			<span class="botao">Finalizar Inscrição</span> <!--botão inativo class: disable-->
 		</div>
 	<?php } ?>
 	

@@ -175,6 +175,25 @@ button, input[type='submit']{
 	cursor: pointer;
 }
 
+.botao{
+	background-image:  url(img/bg-bt01.png);
+	background-repeat: no-repeat;
+	background-color: transparent !important;
+	border: none !important;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	width: 209px;
+	height: 35px;
+	float: right;
+	cursor: pointer;
+}
+
+.disable{
+	opacity: 0.3;
+	cursor:none;
+}
+
 /*************LARGURA FORM*************/
 
 .lar-00{
