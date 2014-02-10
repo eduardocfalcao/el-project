@@ -97,9 +97,8 @@
 <p>O que se almeja é que as crianças possam ser percebidas como cidadãs capazes de agirem no seu tempo presente, com seus direitos garantidos, contribuindo para a construção de um contexto social mais sensível à sua presença, às suas demandas, às suas opiniões. 
 A participação infantil poderia deixar de ser apenas uma aposta, para ser incorporada efetivamente na política e nas ações cotidianas, como via de mão dupla, favorecendo diálogos inter-relacionais colaborativos.</p>
 <br/>
-<div class="line02" style="width:100%;"></div>
-<br/>
 
+<div class="line02" style="height: 170px;padding: 15px 0;margin: 20px 0;">
 <div class="box05">
 <h6><strong>Notas</strong>
 <br/><br/>
@@ -120,9 +119,8 @@ de Janeiro para inclusão da participação infantil em suas ações; sistematiz
 &#8309; Para mais informações, acesse: <a href="http://www.bernardvanleer.org" target="_blank">Bernard Van Leer</a>
 </h6>
 </div>
+</div>
 
-
-<div class="line02" style="width:100%; margin: 20px 0 45px 0;"></div>
 
 
 <h5>Bibliografia consultada:</h5> 
