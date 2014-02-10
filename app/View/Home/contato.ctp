@@ -54,7 +54,7 @@
 		</ul>
 		   
 		<?php 
-			echo $this->Form->end('Salvar'); 
+			echo $this->Form->end('Enviar Mensagem'); 
 		?>
 
 	</div>
