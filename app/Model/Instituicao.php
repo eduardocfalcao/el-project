@@ -2,8 +2,8 @@
 
 App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
-class Instituicao extends AppModel
-{
+class Instituicao extends AppModel {
+	
 	public $useTable = "Instituicao";
 
 	public $hasOne = array(
@@ -18,6 +18,20 @@ class Instituicao extends AppModel
 	        'conditions' => array(),
       	)
    	);
+   	
+   	
+   	public function editarInscricao()
+   	{
+		if($this->data[$this->alias]['concluido'] == false)
+		{
+			return false;
+		}
+		else
+		{
+			$this->data[$this->alias]['concluido'] = false;
+			return true;
+		}
+	}	
 }
 
 ?>

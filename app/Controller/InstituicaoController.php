@@ -59,9 +59,21 @@ class InstituicaoController extends AppController {
 		}
 	}
 	
+	private $msg = "";
+	
 	public function minhaconta()
 	{
 		$this->isLogged();
+		
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		
+		$finalizado = $instituicao["Instituicao"]['concluido'];
+		
+		$podeFinalizar = $this->validaInscricao($instituicao) && $finalizado == false;
+		
+		$this->set("finalizado",$finalizado);
+		$this->set("validacao",$this->msg);
+		$this->set('podeFinalizar', $podeFinalizar);
 	}
 	
 	public function detalhes($id = NULL) 
@@ -199,6 +211,99 @@ class InstituicaoController extends AppController {
 		$this->Auth->logout();
 		$this->redirect(array('controller' => 'instituicao',
 								  'action' => 'login'));
+	}
+	
+	public function concluir()
+	{
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		$msg = "";
+		if($instituicao->concluirInscricao($msg))
+		{
+			$this->Session->setFlash(__('A inscrição foi finalizada.'). $msg,'default', array('class' => 'sucesso'));
+		}
+		else
+		{
+			$this->Session->setFlash(__('Não foi possível concluir. Motivo:'). $msg,'default', array('class' => 'sucesso'));
+			$this->redirect(array('controller' => 'instituicao',
+								  'action' => 'minhaconta'));
+		}
+		
+	}
+	
+	public function editar()
+	{
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		$msg = "";
+		if($instituicao->editarInscricao())
+		{
+			$this->Session->setFlash(__('A inscrição está em edição.'),'default', array('class' => 'sucesso'));
+		}
+		else
+		{
+			$this->Session->setFlash(__('A inscrição já está no modo de edição'),'default', array('class' => 'aviso'));
+			$this->redirect(array('controller' => 'instituicao',
+								  'action' => 'minhaconta'));
+		}
+	}
+	
+	public function validaInscricao($instituicao)
+	{
+		if(empty($instituicao["Instituicao"]['outrasInformacoes']))
+		{
+			$this->msg = "O formulário da instituicão ainda não foi preenchido.";
+			return false;
+		}
+		else if(empty($instituicao['Responsavel']))
+		{
+			$this->msg = "O formulário dao responsável legal ainda não foi preenchido.";
+			return false;
+		}
+		else if(empty($instituicao['Projeto']))
+		{
+			$this->msg = "O formulário do projeto ainda não foi preenchido.";
+			return false;
+		}
+		else
+		{
+			foreach($this->documentos as $key => $value)
+			{
+				if(empty($instituicao["Instituicao"][$key]))	
+				{
+					$this->msg = "No formulário de documentos, está faltando o seguinte documento: ".$value.".";	
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+	
+	private $documentos = array(
+		"documentoEstatuto"       		=> "Cópia do ato constitutivo ou estatuto da instituição em vigor",
+		"documentoAssembleia"     		=> "Cópia da ata da última assembleia da entidade",
+		"documentoContratoSocial"      	=> "Cópia do Contrato Social",
+		"documentoComprovanteEndereco" 	=> "Cópia do comprovante de endereço da instituição",
+		"documentoResponsavelRg" 		=> "Cópia do RG do responsável legal",
+		"documentoResponsavelCpf" 		=> "Cópia do CPF do responsável legal",
+		"documentoDeclaracao" 			=> "Declaração de envio dos documentos.",
+		"documentoCnpj" 				=> "Cópia do CNPJ"
+	);
+	
+	private function concluirInscricao($instituicao)
+	{
+		if($instituicao["Instituicao"]['concluido'] == true)
+		{
+			$this->msg = "A inscrição já foi concluída";
+			return false;
+		}
+		else if($this->validarInscricao())
+		{
+			$instituicao["Instituicao"]['concluido'] = true;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
 
