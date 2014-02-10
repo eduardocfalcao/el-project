@@ -4,7 +4,7 @@
 <h4>Inscrição</h4>
     
 
-<p><strong>1.</strong>	Antes de começar, leia o edital (disponível em: <?php echo $this->Html->link('Edital', array('home' => 'Edital','action' => 'edital')); ?> para ver se o seu projeto se encaixa na proposta da premiação. </p>
+<p><strong>1.</strong>	Antes de começar, leia o edital (disponível em: <?php echo $this->Html->link('Edital', array('home' => 'Edital','action' => 'edital')); ?>) para ver se o seu projeto se encaixa na proposta da premiação. </p>
 
 <p><strong>2.</strong>	Cadastre-se com informações básicas no site, criando um login e senha para que você possa inscrever o seu projeto. </p>
 

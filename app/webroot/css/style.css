@@ -217,7 +217,7 @@ button, input[type='submit']{
 }
 
 .lar-07{
-	width: 420px;
+	width: 415px;
 	height: 105px;
 	float:left;
 }
@@ -259,7 +259,7 @@ button, input[type='submit']{
 }
 
 .lar-14{
-	width: 270px;
+	width: 260px;
 	height: 105px;
 	float:left;
 }
@@ -400,7 +400,7 @@ button, input[type='submit']{
 	width: 860px;
 	min-height: 100px;
 	float: left;
-	padding: 0 0 50px 15px;
+	padding: 0 0 95px 15px;
 }
 
 .box05{
@@ -578,20 +578,6 @@ button, input[type='submit']{
 	background-repeat:no-repeat;
 	background-size: initial;
 }
-
-.menu-item01{
-	display: block;
-	background-image: url(img/bg-menu-item01.png);
-	background-position: center;
-	background-repeat:no-repeat;
-	background-size: initial;
-	color: #fff;
-}
-
-.menu-item01 a{
-	color:#fff;
-}
-
 
 
 #menu ul li.menu-item02:hover{
