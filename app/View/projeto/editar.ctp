@@ -11,7 +11,8 @@
 								    ) 
 						    	)
 						   ); ?>
-						   
+	<h4>Inscrição do Projeto</h4>	
+    
 	<div class="lar-07 margem-01">
         <label for="nome">&bull; Nome:</label><br />
 
@@ -39,14 +40,14 @@
         <?php echo $this->Form->input('periodoFim', array("class" => "validate[required] datepicker", "type" => "text")); ?>
     </div>
 
-    <div class="lar-07 margem-01">
-        <label for="outrasInformacoes">Município:</label><br />
+    <div class="lar-03 margem-01">
+        <label for="outrasInformacoes">&bull; Município:</label><br />
 
        	<?php echo $this->Form->input('municipio', array("maxlength" => "255")); ?>
     </div>
     
-    <div class="lar-13 margem-01">
-        <label for="uf">Estado:</label><br />
+    <div class="lar-04">
+        <label for="uf">&bull; Estado:</label><br />
 
        	<?php echo $this->Form->input('uf', array("maxlength" => "20")); ?>
     </div>

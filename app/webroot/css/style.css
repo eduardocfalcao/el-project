@@ -78,6 +78,7 @@ form label{
 
 input, input[type='text'], input[type='password'], input[type='email'], textarea{
 	height: 35px;
+	line-height: 35px;
 	color: #f09494;
 	background-color: #ffecec;
 	border: #ffcdcd 1px solid;
@@ -99,6 +100,7 @@ textarea{
 	width: -webkit-calc(100% - 20px);  /* para Chrome */
 	width: -moz-calc(100% - 20px);     /* para Firefox */
 	width: calc(100% - 20px);          /* para suporte nativo */
+	line-height: 20px;
 	
 }
 textarea.width-01{
@@ -182,61 +184,61 @@ button, input[type='submit']{
 
 .lar-01{
 	width: 100%;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-02{
 	width: 340px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-03{
 	width: 270px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-04{
 	width: 160px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-05{
 	width: 65px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-06{
 	width: 173px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-07{
 	width: 415px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-08{
 	width: 141px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-09{
 	width: 73px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
 .lar-10{
 	width: 197px;
-	height: 105px;
+	min-height: 105px;
 	float:left;
 }
 
@@ -717,7 +719,7 @@ button, input[type='submit']{
 	display:block;
 	height:45px;
 	width:auto;
-	padding:0 33px 0 30px;
+	padding:0 31px 0 31px;
 }
 
 .inscricao ul li a:hover{

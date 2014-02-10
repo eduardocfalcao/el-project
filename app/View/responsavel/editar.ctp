@@ -10,7 +10,8 @@
 								    ) 
 						    	)
 						   ); ?>
-
+	<h4>Responsável pela Instituição</h4>	
+    
     <div class="lar-07 margem-01">
         <label for="nome">&bull; Nome:</label><br />
 
@@ -36,7 +37,7 @@
     </div>
 
     <div class="lar-16">
-        <label for="outrasInformacoes">Outras informa&ccedil;&otilde;es:</label><br />
+        <label for="outrasInformacoes">&bull; Outras informa&ccedil;&otilde;es:</label><br />
 
        	<?php echo $this->Form->input('outrasInformacoes',array('rows' => 5, 'cols' =>10, "maxlength" => "5000")); ?>
     </div>

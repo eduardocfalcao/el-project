@@ -12,29 +12,31 @@
 								    ) 
 						    	)
 						   ); ?>
-	<h4>ANEXOS</h4>	   
+	<h4>Anexos</h4>	
+    
+    <h5 style="margin-top: -25px;color: #444; font-weight: normal;">Registros do Projeto: Fotos, links, vídeo, matérias na imprensa etc:</h5>  
+    <br/> 
 						   
 	<div class="lar-01">
-		<label for="anexo1"> Anexo 1:</label><br />
-
+		<label for="anexo1">&bull; Anexo 1:</label>
         <?php echo $this->Form->file('anexo1'); ?>
     </div>
     
    <div class="lar-01">
-        <label for="nome"> Anexo 2:</label><br />
+        <label for="nome">&bull; Anexo 2:</label>
 
         <?php echo $this->Form->file('anexo2'); ?>
    </div>
     
     <div class="lar-01">
-        <label for="nome"></label>Anexo 3:</label><br />
+        <label for="nome"></label>&bull; Anexo 3:</label>
 
-        <?php echo $this->Form->file('anexo3'); ?>
+        <?php echo $this->Form->file('anexo3'); ?> 
     </div>
     
     <div class="lar-01">
-    	<label>Anexo 4:</label><br />
-        <?php echo $this->Form->file('anexo4'); ?>
+    	<label>&bull; Anexo 4:</label>
+        <?php echo $this->Form->file('anexo4'); ?> 
     </div>
     
     

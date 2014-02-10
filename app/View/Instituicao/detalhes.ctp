@@ -36,19 +36,19 @@
     </div>
 
     <div class="lar-07">
-        <label for="telefoneOpcional"> Telefone (2):</label><br />
+        <label for="telefoneOpcional">&bull; Telefone (2):</label><br />
 
        	<?php echo $this->Form->input('telefoneAlternativo', array("class" => "field-telefone")); ?>
     </div>
 
     <div class="lar-07 margem-01">
-        <label for="site">Site</label><br />
+        <label for="site">&bull; Site</label><br />
 
        	<?php echo $this->Form->input('site',  array("maxlength" => "255")); ?>
     </div>
 
     <div class="lar-07">
-        <label for="facebook">Facebook:</label><br />
+        <label for="facebook">&bull; Facebook:</label><br />
 
        	<?php echo $this->Form->input('facebook',  array("maxlength" => "255")); ?>
     </div>
@@ -85,13 +85,13 @@
     </div>
 
     <div class="lar-16">
-        <label for="outrasInformacoes">Outras informa&ccedil;&otilde;es:</label><br />
+        <label for="outrasInformacoes">&bull; Outras informa&ccedil;&otilde;es:</label><br />
 
        	<?php echo $this->Form->input('outrasInformacoes',array('rows' => 5, 'cols' =>10, "maxlength" => "5000")); ?>
     </div>
     
       <div class="lar-16">
-        <label for="historico">Histórico:</label><br />
+        <label for="historico">&bull; Histórico:</label><br />
 
        	<?php echo $this->Form->input('historico',array('rows' => 5, 'cols' =>10, "class" => "validate[required]", "maxlength" => "1500")); ?>
     </div>
