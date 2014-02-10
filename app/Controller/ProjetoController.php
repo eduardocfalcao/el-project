@@ -29,6 +29,8 @@ class ProjetoController extends AppController
 			if(isset($instituicao["Projeto"]))
 			{
 				$projeto = $this->Projeto->findById($instituicao["Projeto"]["id"]);
+				$projeto["Projeto"]["periodoInicio"] =  date("d/m/Y", strtotime($projeto["Projeto"]["periodoInicio"]));
+				$projeto["Projeto"]["periodoFim"] =  date("d/m/Y",strtotime($projeto["Projeto"]["periodoFim"]));
 				$this->request->data = $projeto;
 			}
 		}
