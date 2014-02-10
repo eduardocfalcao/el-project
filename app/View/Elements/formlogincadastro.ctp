@@ -29,7 +29,7 @@
         <div style="margin-top: -36px;"><?php echo $this->Form->end('Entrar'); ?></div>
 </div>
 
-<div class="box02 line01">
+<div class="box02 line01" style="margin-bottom: 50px;">
 
     <h4>Cadastre-se</h4>
 
