@@ -12,8 +12,12 @@
 		echo $this->Html->css('style-acordion');
 		echo $this->Html->css('validationEngine.jquery');
 		echo $this->Html->css('zebra_datepicker');
+		echo $this->Html->css('jquery-ui');
 		
 		echo $this->Html->script('jquery-1.11.0.min');
+		echo $this->Html->script('jquery-ui.min');
+		echo $this->Html->script('i18n/jquery.ui.datepicker-pt-BR.min');
+		
 		echo $this->Html->script('jquery.accordion');
 		echo $this->Html->script('jquery.easing.1.3');
 		echo $this->Html->script('jquery.validationEngine-pt_BR');

@@ -2,7 +2,8 @@
 
 $(document).ready(function() {
 	$('form').validationEngine();
-	$('input.datepicker').Zebra_DatePicker({
+	$('input.datepicker').datepicker({
 		format: "d/m/Y"
-	});
+	},
+	$.datepicker.regional['pt-BR']);
 });
