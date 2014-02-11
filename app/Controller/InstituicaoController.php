@@ -80,6 +80,7 @@ class InstituicaoController extends AppController {
 	public function detalhes($id = NULL) 
 	{
 		$this->isLogged();
+		$this->verificarSePodeEditar();
 		if ($this->request->is('put')) 
 		{	
 			$this->Instituicao->read(null, $id);
@@ -99,6 +100,7 @@ class InstituicaoController extends AppController {
 	public function anexos()
 	{
 		$this->isLogged();
+		$this->verificarSePodeEditar();
 		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 		$this->set("instituicao",$instituicao);
 		
@@ -127,6 +129,7 @@ class InstituicaoController extends AppController {
 	public function documentos()
 	{
 		$this->isLogged();
+		$this->verificarSePodeEditar();
 		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 		
 		$this->set("instituicao",$instituicao);
@@ -252,13 +255,13 @@ class InstituicaoController extends AppController {
 			$this->Instituicao->save();
 			
 			$this->Session->setFlash(__('A inscrição está em edição.'),'default', array('class' => 'sucesso'));
-			$this->redirect(array('controller' => 'instituicao',
+			$this->redirect(array('controller' => 'Instituicao',
 								  'action' => 'minhaconta'));
 		}
 		else
 		{
 			$this->Session->setFlash(__('A inscrição já está no modo de edição'),'default', array('class' => 'aviso'));
-			$this->redirect(array('controller' => 'instituicao',
+			$this->redirect(array('controller' => 'Instituicao',
 								  'action' => 'minhaconta'));
 		}
 	}
@@ -350,6 +353,17 @@ class InstituicaoController extends AppController {
 	        'path' => $path
 	    );
 	    $this->set($params);
+	}
+	
+	private function verificarSePodeEditar()
+	{
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		if($instituicao["Instituicao"]["concluido"])
+		{
+			$this->Session->setFlash(__('A inscrição já está concluída e não é possível acessar a página.'),'default', array('class' => 'aviso'));
+			$this->redirect(array('controller' => 'Instituicao',
+								  'action' => 'minhaconta'));	
+		}
 	}
 }
 
