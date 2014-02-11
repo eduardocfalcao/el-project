@@ -7,6 +7,8 @@ class ResponsavelController extends AppController {
 	
 	public function editar($id = null)
 	{
+		$this->isLogged();
+		$this->verificarSePodeEditar();
 		if ($this->request->is('post') || $this->request->is('put')) 
 		{	
 			$this->Responsavel->id = $id;
@@ -30,6 +32,17 @@ class ResponsavelController extends AppController {
 			}
 		}
 		
+	}
+	
+	private function verificarSePodeEditar()
+	{
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		if($instituicao["Instituicao"]["concluido"])
+		{
+			$this->Session->setFlash(__('A inscrição já está concluída e não é possível acessar a página.'),'default', array('class' => 'aviso'));
+			$this->redirect(array('controller' => 'Instituicao',
+								  'action' => 'minhaconta'));	
+		}
 	}
 	
 	

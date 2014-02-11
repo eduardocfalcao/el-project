@@ -8,6 +8,8 @@ class ProjetoController extends AppController
 	
 	public function editar($id = NULL)
 	{
+		$this->isLogged();
+		$this->verificarSePodeEditar();
 		if ($this->request->is('post') || $this->request->is('put')) 
 		{	
 			$this->Projeto->id = $id;
@@ -49,6 +51,17 @@ class ProjetoController extends AppController
 		$data = strftime('%Y-%m-%d',$mk);
 		return $data;
 	}	
+	
+	private function verificarSePodeEditar()
+	{
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		if($instituicao["Instituicao"]["concluido"])
+		{
+			$this->Session->setFlash(__('A inscrição já está concluída e não é possível acessar a página.'),'default', array('class' => 'aviso'));
+			$this->redirect(array('controller' => 'Instituicao',
+								  'action' => 'minhaconta'));	
+		}
+	}
 		
 }
 
