@@ -99,6 +99,7 @@ class InstituicaoController extends AppController {
 	{
 		$this->isLogged();
 		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		$this->set("instituicao",$instituicao);
 		
 		if ($this->request->is('put') || $this->request->is('post')) 
 		{	
@@ -125,9 +126,12 @@ class InstituicaoController extends AppController {
 	public function documentos()
 	{
 		$this->isLogged();
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		
+		$this->set("instituicao",$instituicao);
+		
 		if ($this->request->is('put') || $this->request->is('post')) 
 		{	
-			$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 			foreach($this->request->data["Documentos"] as $key => $file)
 			{
 				if(($file['error']) || $file["size"] == 0 || $this->isValidFile($file) == false)
@@ -217,9 +221,15 @@ class InstituicaoController extends AppController {
 	{
 		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 		$msg = "";
-		if($instituicao->concluirInscricao($msg))
+		if($this->concluirInscricao($instituicao))
 		{
+			$this->Instituicao->read(null, $instituicao["Instituicao"]["id"]);
+			$this->Instituicao->set( array("concluido" => true));
+			
+			$this->Instituicao->save();
 			$this->Session->setFlash(__('A inscrição foi finalizada.'). $msg,'default', array('class' => 'sucesso'));
+			$this->redirect(array('controller' => 'instituicao',
+								  'action' => 'minhaconta'));
 		}
 		else
 		{
@@ -234,9 +244,15 @@ class InstituicaoController extends AppController {
 	{
 		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
 		$msg = "";
-		if($instituicao->editarInscricao())
+		if($this->editarInscricao($instituicao))
 		{
+			$this->Instituicao->read(null, $instituicao["Instituicao"]["id"]);
+			$this->Instituicao->set( array("concluido" => false));
+			$this->Instituicao->save();
+			
 			$this->Session->setFlash(__('A inscrição está em edição.'),'default', array('class' => 'sucesso'));
+			$this->redirect(array('controller' => 'instituicao',
+								  'action' => 'minhaconta'));
 		}
 		else
 		{
@@ -280,7 +296,6 @@ class InstituicaoController extends AppController {
 	private $documentos = array(
 		"documentoEstatuto"       		=> "Cópia do ato constitutivo ou estatuto da instituição em vigor",
 		"documentoAssembleia"     		=> "Cópia da ata da última assembleia da entidade",
-		"documentoContratoSocial"      	=> "Cópia do Contrato Social",
 		"documentoComprovanteEndereco" 	=> "Cópia do comprovante de endereço da instituição",
 		"documentoResponsavelRg" 		=> "Cópia do RG do responsável legal",
 		"documentoResponsavelCpf" 		=> "Cópia do CPF do responsável legal",
@@ -295,7 +310,7 @@ class InstituicaoController extends AppController {
 			$this->msg = "A inscrição já foi concluída";
 			return false;
 		}
-		else if($this->validarInscricao())
+		else if($this->validaInscricao($instituicao))
 		{
 			$instituicao["Instituicao"]['concluido'] = true;
 			return true;
@@ -304,6 +319,36 @@ class InstituicaoController extends AppController {
 		{
 			return false;
 		}
+	}
+	
+	public function editarInscricao($instituicao)
+   	{
+		if($instituicao["Instituicao"]['concluido'] == false)
+		{
+			return false;
+		}
+		else
+		{
+			$instituicao["Instituicao"]['concluido'] = false;
+			return true;
+		}
+	}	
+	
+	public function download($file)
+	{ 
+	    $this->viewClass = 'Media';
+	    $path = WWW_ROOT.'uploads'.DS.'anexos'.DS;
+	    $extensoes =  explode(".", $file);
+		$ext = strtolower(end($extensoes));
+	    // in this example $path should hold the filename but a trailing slash
+	    $params = array(
+	        'id' => $file,
+	        'name' => $file,
+	        'download' => true,
+	        'extension' => $ext,
+	        'path' => $path
+	    );
+	    $this->set($params);
 	}
 }
 

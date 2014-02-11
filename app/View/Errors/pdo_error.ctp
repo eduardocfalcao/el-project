@@ -22,6 +22,6 @@
     <br/>
     Volte para a tela de cadastro.
     <br/><br/>
-    <a href="/el-project/Instituicao/Cadastro" style="margin:0 auto;"><button style="float:none">CADASTRE-SE</button></a>
+    <a href="/Instituicao/Cadastro" style="margin:0 auto;"><button style="float:none">CADASTRE-SE</button></a>
 </p>
 

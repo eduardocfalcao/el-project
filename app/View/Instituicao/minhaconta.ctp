@@ -20,11 +20,11 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
 <div>
 	<?php if($podeFinalizar){?>
 		<div>
-			<?php echo $this->Html->link("Finalizar Inscrição", array("controller" => "Instituicao", "action" => "concluirInscricao")); ?>
+			<?php echo $this->Html->link("Finalizar Inscrição", array("controller" => "Instituicao", "action" => "concluir"),array( "class"=> 'botao')); ?>
 		</div>
 	<?php } else { ?>
 		<div>
-			<span class="botao">Finalizar Inscrição</span> <!--botão inativo class: disable-->
+			<span class="botao disable">Finalizar Inscrição</span> <!--botão inativo class: disable-->
 		</div>
 	<?php } ?>	
 </div>
@@ -32,18 +32,18 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
 <div>
 	<?php if($finalizado == true){?>
 		<div>
-			<?php echo $this->Html->link("Editar Inscrição", array("controller" => "Instituicao", "action" => "editarInscricao")); ?>
+			<?php echo $this->Html->link("Editar Inscrição", array("controller" => "Instituicao", "action" => "editar"),array( "class"=> 'botao')); ?>
 		</div>
 	<?php } else { ?>
 		<div>
-			<span class="botao">Finalizar Inscrição</span> <!--botão inativo class: disable-->
+			<span class="botao disable">Editar Inscrição</span> <!--botão inativo class: disable-->
 		</div>
 	<?php } ?>
 	
 </div>
 
 <div>
-	<?php if(isset($validacao)){?>
+	<?php if(isset($validacao) && empty($validacao) == false){?>
 	<p>
 		A sua inscrição não pode ser finalizada pois possui a seguinte pendência:
 		<?php echo $validacao; ?>

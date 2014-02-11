@@ -18,20 +18,6 @@ class Instituicao extends AppModel {
 	        'conditions' => array(),
       	)
    	);
-   	
-   	
-   	public function editarInscricao()
-   	{
-		if($this->data[$this->alias]['concluido'] == false)
-		{
-			return false;
-		}
-		else
-		{
-			$this->data[$this->alias]['concluido'] = false;
-			return true;
-		}
-	}	
 }
 
 ?>

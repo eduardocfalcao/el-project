@@ -24,23 +24,44 @@
 
 
 	<div class="inscricao">
-		<ul>
-			<li>
-            	<?php echo $this->Html->link('‣ Instituição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>
-            </li>
-            <li>
-            	<?php echo $this->Html->link('‣ Responsável Legal', array('controller' => 'Responsavel','action' => 'editar')); ?>
-            </li>
-            <li>
-           		<?php echo $this->Html->link('‣ Projeto', array('controller' => 'Projeto','action' => 'Editar')); ?>
-            </li>
-             <li>
-           		<?php echo $this->Html->link('‣ Documentos', array('controller' => 'Instituicao','action' => 'documentos')); ?>
-            </li>
-             <li class="last">
-           		<?php echo $this->Html->link('‣ Anexos', array('controller' => 'Instituicao','action' => 'anexos')); ?>
-            </li>
-   		</ul>
+		
+		<?php if($finalizado == false){ ?>
+			<ul>
+				<li>
+	            	<?php echo $this->Html->link('‣ Instituição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>
+	            </li>
+	            <li>
+	            	<?php echo $this->Html->link('‣ Responsável Legal', array('controller' => 'Responsavel','action' => 'editar')); ?>
+	            </li>
+	            <li>
+	           		<?php echo $this->Html->link('‣ Projeto', array('controller' => 'Projeto','action' => 'Editar')); ?>
+	            </li>
+	             <li>
+	           		<?php echo $this->Html->link('‣ Documentos', array('controller' => 'Instituicao','action' => 'documentos')); ?>
+	            </li>
+	             <li class="last">
+	           		<?php echo $this->Html->link('‣ Anexos', array('controller' => 'Instituicao','action' => 'anexos')); ?>
+	            </li>
+   			</ul>
+   		<?php } else { ?>
+   			<ul>
+	   			<li>
+	            	<span class="disabled">‣ Instituição</span>
+	            </li>
+	            <li>
+	            	<span>‣ Responsável Legal</span>
+	            </li>
+	            <li>
+	            	<span>‣ Projeto</span>
+	            </li>
+	             <li>
+	             	<span>‣ Documentos</span>
+	            </li>
+	             <li class="last">
+	             	<span>‣ Anexos</span>
+	            </li>
+	        </ul>
+   		<?php } ?>
 	</div>
 	<div>
 		<?php echo $this->fetch('content'); ?>	
