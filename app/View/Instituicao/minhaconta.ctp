@@ -21,7 +21,7 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
 
     <div>
         <?php if($podeFinalizar){?>
-            <div>
+            <div style="float:left;">
                 <?php echo $this->Html->link("Finalizar Inscrição", array("controller" => "Instituicao", "action" => "concluir"),array( "class"=> 'botao')); ?>
             </div>
         <?php } else { ?>
@@ -46,10 +46,10 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
     
     <div>
         <?php if(isset($validacao) && empty($validacao) == false){?>
-        <p>
+        <div class="box-detalhe"><p>
             A sua inscrição não pode ser finalizada pois possui a seguinte pendência:
             <?php echo $validacao; ?>
-        </p>
+        </p></div>
         <?php } ?>
         
     </div>

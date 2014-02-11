@@ -37,6 +37,7 @@ class ResponsavelController extends AppController {
 	private function verificarSePodeEditar()
 	{
 		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		$this->set("finalizado",$instituicao["Instituicao"]["concluido"]);
 		if($instituicao["Instituicao"]["concluido"])
 		{
 			$this->Session->setFlash(__('A inscrição já está concluída e não é possível acessar a página.'),'default', array('class' => 'aviso'));

@@ -45,6 +45,7 @@
 		    								 $instituicao["Instituicao"]["documentoAssembleia"])); ?>
 		   <?php } ?>
    </div>
+
     
     <div class="lar-01">
         <label for="documentoContratoSocial">Cópia do Contrato Social:</label><br />

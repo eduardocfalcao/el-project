@@ -26,7 +26,7 @@
 	<div class="inscricao">
 		
 		<?php if($finalizado == false){ ?>
-			<ul>
+			<ul class="menuativo">
 				<li>
 	            	<?php echo $this->Html->link('‣ Instituição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>
 	            </li>
@@ -44,21 +44,21 @@
 	            </li>
    			</ul>
    		<?php } else { ?>
-   			<ul>
+   			<ul class="menuinativo">
 	   			<li>
-	            	<span class="disabled">‣ Instituição</span>
+	            	‣ Instituição
 	            </li>
 	            <li>
-	            	<span>‣ Responsável Legal</span>
+	            	‣ Responsável Legal
 	            </li>
 	            <li>
-	            	<span>‣ Projeto</span>
+	            	‣ Projeto
 	            </li>
 	             <li>
-	             	<span>‣ Documentos</span>
+	             	‣ Documentos
 	            </li>
-	             <li class="last">
-	             	<span>‣ Anexos</span>
+	             <li>
+	             	‣ Anexos
 	            </li>
 	        </ul>
    		<?php } ?>

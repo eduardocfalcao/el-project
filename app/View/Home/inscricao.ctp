@@ -10,11 +10,9 @@
 
 <p><strong>3.</strong>	Recomendamos uma leitura sobre as perspectivas de participação infantil. Disponível em: <?php echo $this->Html->link('Considerações', array('home' => 'Consideracoes','action' => 'Consideracoes')); ?></p>
 
-<p><strong>4.</strong>	 Após concluir o seu cadastro, você já pode começar a inserir os dados do seu projeto. Você poderá interromper, salvar e continuar a se inscrever a qualquer momento, editando e acrescentando conteúdos, avançando e retornando nos tópicos do formulário, dentro do período de inscrições. Lembre-se de frequentemente salvar a sua inscrição, clicando no botão <strong>SALVAR</strong>. </p>
+<p><strong>4.</strong> Após concluir o cadastro, você já pode dar início à sua inscrição, clicando em <strong>FORMULÁRIO</strong>.</p>
 
-<p><strong>5.</strong>	Ao preencher todos os campos solicitados e quando quiser enviar sua inscrição, clique em <strong>“ENVIAR”</strong>. Depois de enviada a inscrição, esta não poderá ser editada. </p>
 
-<p><strong>6.</strong>	Os resultados de cada etapa serão divulgados nesse site de acordo com as datas previstas no edital. </p>
 
 
 <div class="box05" style="margin:0 auto; text-align:center">
