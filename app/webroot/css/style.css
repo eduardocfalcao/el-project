@@ -185,8 +185,11 @@ button, input[type='submit']{
 	font-size: 18px;
 	width: 209px;
 	height: 35px;
-	float: right;
 	cursor: pointer;
+}
+
+.botao a{
+	color: #fff;
 }
 
 .disable{

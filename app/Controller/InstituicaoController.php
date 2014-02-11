@@ -19,6 +19,7 @@ class InstituicaoController extends AppController {
 				if ($this->Instituicao->save($this->request->data))
 				{
 					$this->Instituicao->create();
+					$this->request->data=null;
 					$this->Session->setFlash(__('A instituição foi criada. Use o seu login e sua senha para se logar'),'default', array('class' => 'sucesso'));
 				}
 				else
