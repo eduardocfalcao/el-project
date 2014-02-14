@@ -28,9 +28,18 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
             <div>
                 <span class="botao disable">Finalizar Inscrição</span> <!--botão inativo class: disable-->
             </div>
+           
         <?php } ?>	
     </div>
     
+    <?php if($finalizado){?>
+    	<div class="box-detalhe">
+     		<p>
+        		<strong>Fique atento.</strong> Em breve será possível gerar o comprovante da sua inscrição.
+   			</p>
+   		 </div>
+    <?php } ?>
+		
     
     <div>
         <?php if(isset($validacao) && empty($validacao) == false){?>
