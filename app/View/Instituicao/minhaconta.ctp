@@ -31,18 +31,6 @@ Caso você precise mudar alguma informação após finalizar a inscrição, voc�
         <?php } ?>	
     </div>
     
-    <div>
-        <?php if($finalizado == true){?>
-            <div>
-                <?php echo $this->Html->link("Editar Inscrição", array("controller" => "Instituicao", "action" => "editar"),array( "class"=> 'botao')); ?>
-            </div>
-        <?php } else { ?>
-            <div>
-                <span class="botao disable">Editar Inscrição</span> <!--botão inativo class: disable-->
-            </div>
-        <?php } ?>
-        
-    </div>
     
     <div>
         <?php if(isset($validacao) && empty($validacao) == false){?>
