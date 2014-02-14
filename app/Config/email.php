@@ -59,6 +59,20 @@ class EmailConfig {
 		//'charset' => 'utf-8',
 		//'headerCharset' => 'utf-8',
 	);
+	
+	public $contato = array(
+		'transport' => 'Smtp',
+		'host' => 'smtp.premioparticipacaoinfantil.org.br',
+		'port' => 587,
+		'timeout' => 30,
+		'username' => 'contato@premioparticipacaoinfantil.org.br',
+		'password' => 'contato1234',
+		'client' => null,
+		'log' => false,
+		//'charset' => 'utf-8',
+		//'headerCharset' => 'utf-8',
+	);
+
 
 	public $fast = array(
 		'from' => 'you@localhost',
@@ -90,5 +104,4 @@ class EmailConfig {
 		//'charset' => 'utf-8',
 		//'headerCharset' => 'utf-8',
 	);
-
 }
