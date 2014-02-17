@@ -227,7 +227,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-datepicker {
-	width: 17em;
+	width: auto;
 	padding: .2em .2em 0;
 	display: none;
 }
@@ -239,8 +239,9 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker .ui-datepicker-next {
 	position: absolute;
 	top: 2px;
-	width: 1.8em;
-	height: 1.8em;
+	width: 20px;
+	height: 35px;
+	overflow: hidden;
 }
 .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
@@ -1122,7 +1123,7 @@ body .ui-tooltip {
 .ui-icon-circle-triangle-e { background-position: -48px -192px; }
 .ui-icon-circle-triangle-s { background-position: -64px -192px; }
 .ui-icon-circle-triangle-w { background-position: -80px -192px; }
-.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-triangle-n { background-position: -80px -192px; }
 .ui-icon-circle-arrow-e { background-position: -112px -192px; }
 .ui-icon-circle-arrow-s { background-position: -128px -192px; }
 .ui-icon-circle-arrow-w { background-position: -144px -192px; }

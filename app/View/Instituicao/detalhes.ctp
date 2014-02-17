@@ -1,7 +1,7 @@
 <?php $this->extend('/Layouts/minhacontatemplate'); ?>
 
 
-<h4>Dados da Intui&ccedil;&atilde;o</h4>
+<h4>Dados da Instui&ccedil;&atilde;o</h4>
 
 <?php echo $this->Form->create('Instituicao',
 						    array(
@@ -17,14 +17,14 @@
 	<?php echo $this->Form->hidden('id'); ?>
 	
     <div class="lar-07 margem-01">
-        <label for="nomeInstituicao">&bull; Nome da Institui&ccedil;&atilde;o</label><br />
+        <label for="nomeInstituicao">&bull; Nome da Institui&ccedil;&atilde;o:</label><br />
 		
 		<?php echo $this->Form->input('nome', array("class" => "validate[required]", "maxlength" => "1000")); ?>
 		
     </div>
 
     <div class="lar-07">
-        <label for="cnpj">&bull; CNPJ</label><br />
+        <label for="cnpj">&bull; CNPJ:</label><br />
 
        	<?php echo $this->Form->input('cnpj', array("class" => "field-cnpj validate[required]")); ?>
     </div>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="lar-07 margem-01">
-        <label for="site">&bull; Site</label><br />
+        <label for="site">&bull; Site:</label><br />
 
        	<?php echo $this->Form->input('site',  array("maxlength" => "255")); ?>
     </div>
@@ -73,7 +73,7 @@
 
     <div class="lar-12 margem-01">
     
-         <label for="cep">&bull; CEP</label><br />
+         <label for="cep">&bull; CEP:</label><br />
 
          <?php echo $this->Form->input('cep', array("class" => "field-cep validate[required]")); ?>
     </div>

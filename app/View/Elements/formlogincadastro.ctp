@@ -26,7 +26,7 @@
 
         <!-- <a href="">Esqueci minha senha</a> -->
 
-        <div style="margin-top: -36px;"><?php echo $this->Form->end('Entrar'); ?></div>
+        <div><?php echo $this->Form->end('Entrar'); ?></div>
 </div>
 
 <div class="box02 line01" style="margin-bottom: 50px;">

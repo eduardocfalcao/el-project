@@ -32,13 +32,13 @@ class HomeController extends AppController {
     	
     	if ($this->request->is('post'))
     	{
-    		$para = "eduardo.cfalcao@gmail.com";
+    		$para = "premioparticipacaoinfantil@gmail.com";
 			$email = new CakeEmail();
 			$email->config('contato');
 			if($email->viewVars($this->request->data['Contato'])
 					->template('contato')
 				    ->emailFormat('html')
-				    ->to('contato@premioparticipacaoinfantil.org.br')
+				    ->to('premioparticipacaoinfantil@gmail.com')
 				    ->from('contato@premioparticipacaoinfantil.org.br')
 				    ->send())
 		    {

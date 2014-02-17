@@ -43,7 +43,7 @@
 
 <?php echo $this->Html->image('rnpi.png', array('style' => 'display: block;margin: 0 auto; width: 135px;')); ?>
 
-<p>A Rede Nacional Primeira Infância (RNPI) é formada por organizações de diversos setores que atuam na promoção e defesa dos direitos da primeira infância 
+<p>A Rede Nacional Primeira Infância (RNPI) é formada por organizações de diversos setores que atuam na promoção e defesa dos direitos da primeira infância. 
 <br/>
 <a href="http://primeirainfancia.org.br/" target="_blank"><strong>VISITE O SITE</strong></a></p>
 

@@ -3,6 +3,12 @@
 
 /*******BASE******/
 
+pre, xmp, plaintext, listing{
+	display:none;
+}
+
+
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
@@ -859,4 +865,6 @@ button, input[type='submit']{
 	line-height: 0px;
 }
 
-
+.cake-error{
+	display:none;
+}
