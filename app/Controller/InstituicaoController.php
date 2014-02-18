@@ -283,6 +283,17 @@ class InstituicaoController extends AppController {
 			$this->msg = "O formulário do projeto ainda não foi preenchido.";
 			return false;
 		}
+		else if(empty($instituicao['Projeto']) == false)
+		{
+			foreach($this->validacaoProjeto as $key => $value)
+			{
+				if(empty($instituicao["Projeto"][$key]))	
+				{
+					$this->msg = "No formulário de projeto, está faltando o preencher o seguinte campo obrigatório: ".$value.".";	
+					return false;
+				}
+			}
+		}
 		else
 		{
 			foreach($this->documentos as $key => $value)
@@ -296,6 +307,23 @@ class InstituicaoController extends AppController {
 			return true;
 		}
 	}
+	
+	private $validacaoProjeto = array(
+		"nome"       					=> "Nome",
+		"responsavel"     				=> "Responsável",
+		"equipe" 						=> "Equipe",
+		"periodoInicio" 				=> "Período de realização do projeto - Início",
+		"periodoFim" 					=> "Período de realização do projeto - Fim",
+		"objetivos" 					=> "Objetivos",
+		"justificativa" 				=> "Justificava",
+		"metodologia" 					=> "Metodologia",
+		"atividades" 					=> "Atividades",
+		"resultados" 					=> "Resultados",
+		"planoUtilizacaoRecurso" 		=> "Plano de reutilização do recurso, caso vença o prêmio",
+		"uf" 							=> "Estado",
+		"municipio" 					=> "Município",
+		"criancasEnvolvidas" 			=> "Crianças envolvidas"
+	);
 	
 	private $documentos = array(
 		"documentoEstatuto"       		=> "Cópia do ato constitutivo ou estatuto da instituição em vigor",
