@@ -575,7 +575,7 @@ button, input[type='submit']{
 .login ul li, span{
 	color: #f06c6d;
 	list-style: none;
-	padding: 0 10px;
+	padding: 0 8px;
 	margin-right: -10px;
     float: left;
 }
@@ -729,6 +729,60 @@ button, input[type='submit']{
 	list-style: none;
 }
 
+/******* windowHelp ******/
+
+.box-master{
+	width: 100%;
+	overflow: hidden;
+}
+
+.esq{
+	float:left;
+	width:50%;
+}
+.dir{
+	float:right;
+	width:50%;
+}
+
+.buttonHelp{
+	float:right;
+	height: 35px;
+	line-height: 35px;
+	color: #Fff;
+	background-color: #F06C6D;
+	border: #F06C6D 1px solid;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	padding: 0 10px;
+	margin: 10px 0;
+	text-transform: uppercase;
+	cursor:pointer;
+	font-weight: bold;
+}
+.buttonHelp:hover{
+	color: #FFF;
+	background-color: #FFCDCD;
+	border: #FFCDCD 1px solid;
+}
+
+.windowHelp p{
+	color: #444;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 25px;
+	margin: 0 0 05px 0;
+}
+
+.windowHelp h4 {
+	font-size: 17px;
+	text-transform: uppercase;
+	margin: 15px 0;
+}
+
+
+
 
 
 
@@ -746,7 +800,6 @@ button, input[type='submit']{
 
 .inscricao ul{
 	display: block;
-	margin: 0 05px;
 }
 
 .inscricao ul li{
@@ -761,15 +814,11 @@ button, input[type='submit']{
 	background-image: url(img/insc-hover.png);
 }
 
-.inscricao ul li.last:hover{
-	background-image: url(img/insc-hover.png);
-	background-position: center left;
-}
 .inscricao ul li a{
 	display:block;
 	height:45px;
 	width:auto;
-	padding: 0 29px;
+	padding: 0 30px 0 10px;
 }
 
 .inscricao ul li a:hover{

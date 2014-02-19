@@ -13,7 +13,6 @@
 		echo $this->Html->css('validationEngine.jquery');
 		echo $this->Html->css('zebra_datepicker');
 		echo $this->Html->css('jquery-ui');
-		echo $this->Html->css('tooltip');
 		echo $this->Html->css('kendo.common.min');
 		echo $this->Html->css('kendo.default.min');		
 		
@@ -32,7 +31,6 @@
 		echo $this->Html->script('zebra_datepicker');
 		echo $this->Html->script('main');
 		echo $this->Html->script('masks');
-		echo $this->Html->script('tooltip');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

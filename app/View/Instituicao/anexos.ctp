@@ -1,5 +1,28 @@
 <?php $this->extend('/Layouts/minhacontatemplate'); ?>
 
+<div class="windowHelp">
+         
+        <p>Os campos com asterisco (*) são de preenchimento obrigatório.</p> 
+        
+        <h4>Ajuda para a inclusão dos Anexos</h4>
+        
+        <p>
+        &bull; Anexos:<br/>
+        	Não ultrapasse o total de Mb.<br/><br/>
+
+       </p>
+</div>
+
+
+<div class="box-master">
+    <div class="esq">
+       <h4>Anexos</h4>
+    </div>
+    
+    <div class="dir">
+        <span class="buttonHelp">Central de Ajuda</span>
+    </div>
+</div>
 
 <?php echo $this->Form->create('Anexo',
 						    array(
@@ -12,12 +35,13 @@
 								    ) 
 						    	)
 						   ); ?>
-	<h4>Anexos</h4>	
+		
     
     <h5 style="margin-top: -25px;color: #444; font-weight: normal;">Registros do Projeto: Fotos, links, vídeo, matérias na imprensa etc:</h5>  
     <br/> 
 						   
-	<div class="lar-01">
+	<div class="lar-01" style="margin-bottom: 30px;">
+    <div class="lar-07">
 		<label for="anexo1">&bull; Anexo 1:</label>
         <?php echo $this->Form->file('anexo1'); ?>
        <?php if(!empty($instituicao["Instituicao"]["anexo1"])) {  
@@ -27,8 +51,10 @@
 			}	        								 
         ?>
     </div>
+    </div>
     
-   <div class="lar-01">
+   <div class="lar-01" style="margin-bottom: 30px;">
+   <div class="lar-07">
         <label for="nome">&bull; Anexo 2:</label>
 
         <?php echo $this->Form->file('anexo2'); ?>
@@ -39,9 +65,10 @@
         								 $instituicao["Instituicao"]["anexo2"])); 
 			}	        								 
         ?>
-   </div>
+   </div></div>
     
-    <div class="lar-01">
+    <div class="lar-01" style="margin-bottom: 30px;">
+    <div class="lar-07">
         <label for="nome"></label>&bull; Anexo 3:</label>
 
         <?php echo $this->Form->file('anexo3'); ?> 
@@ -52,9 +79,10 @@
         								 $instituicao["Instituicao"]["anexo3"])); 
 			}	        								 
         ?>
-    </div>
+    </div></div>
     
-    <div class="lar-01">
+    <div class="lar-01" style="margin-bottom: 30px;">
+    <div class="lar-07">
     	<label>&bull; Anexo 4:</label>
         <?php echo $this->Form->file('anexo4'); ?> 
         
@@ -64,7 +92,7 @@
         								 $instituicao["Instituicao"]["anexo4"])); 
 			}	        								 
         ?>
-    </div>
+    </div></div>
     
     
 <?php echo $this->Form->end("Enviar arquivos"); ?>
