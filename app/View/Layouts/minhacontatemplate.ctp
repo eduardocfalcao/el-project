@@ -9,6 +9,11 @@
             <li>
             	<?php echo $this->Html->link('Alterar senha', array('controller' => 'Instituicao','action' => 'alterarsenha')); ?>
             </li>
+            <?php if(isset($perfilUsuario) && $perfilUsuario == 2){ ?>
+		            <li>
+		           		<?php echo $this->Html->link('‣ Listar inscrições', array('controller' => 'Instituicao','action' => 'instituicoes')); ?>
+		            </li>
+		        <?php } ?>
             <li class="sair">
            		<?php echo $this->Html->link('Sair', array('controller' => 'Instituicao','action' => 'Logout')); ?>
             </li>

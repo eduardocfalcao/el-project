@@ -33,6 +33,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	
 	public $helpers = array('Html', 'Form', 'Session');
+	public $uses = array('Instituicao');
 	
 	public $components = array(
 							'Session',
@@ -66,13 +67,16 @@ class AppController extends Controller {
 		$this->Auth->deny(array('controller' => 'Instituicao', 'action' => 'alterarsenha'));
 		
 		$usuario = null;
-		
+		$perfil = null;
 		if($this->Auth->loggedIn())
 		{
 			$usuario = $this->Auth->user();
+			$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+			$perfil = $instituicao["Instituicao"]['perfil'];
 		}		
 		
 		$this->set('usuario', $usuario);
+		$this->set('perfilUsuario', $perfil);
 	}
 	
 	 public function isLogged() {
