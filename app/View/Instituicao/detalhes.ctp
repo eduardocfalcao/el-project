@@ -1,7 +1,19 @@
 <?php $this->extend('/Layouts/minhacontatemplate'); ?>
+ 
+ 
+ 
+<div class="windowHelp">
+              
+               
+</div>
 
+<div>
+	<h4>Dados da Instui&ccedil;&atilde;o</h4>
+</div>
 
-<h4>Dados da Instui&ccedil;&atilde;o</h4>
+<div>
+	<span class="k-button buttonHelp">?</span>
+</div>
 
 <?php echo $this->Form->create('Instituicao',
 						    array(
