@@ -19,7 +19,7 @@
 		echo $this->Html->script('jquery-1.11.0.min');
 		echo $this->Html->script('jquery-ui.min');
 		echo $this->Html->script('i18n/jquery.ui.datepicker-pt-BR.min');
-		echo $this->Html->script('kendo.culture.pt-BR.min');
+		echo $this->Html->script('Culture/kendo.culture.pt-BR.min');
 		echo $this->Html->script('kendo.all.min');
 		
 		

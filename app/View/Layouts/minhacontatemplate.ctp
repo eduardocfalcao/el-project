@@ -25,7 +25,7 @@
 
 	<div class="inscricao">
 		
-		<?php if($finalizado == false){ ?>
+		<?php if(isset($finalizado) && $finalizado == false){ ?>
 			<ul class="menuativo">
 				<li>
 	            	<?php echo $this->Html->link('‣ Instituição', array('controller' => 'Instituicao','action' => 'detalhes')); ?>

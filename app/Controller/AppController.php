@@ -88,8 +88,17 @@ class AppController extends Controller {
     {
     	if($this->Auth->loggedIn())
     	{
-			return $this->Auth->user('perfil') == 2;
-			//jogar execao de nao autorizado
+    		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+			if(isset($instituicao["Instituicao"]['perfil']) == false || $instituicao["Instituicao"]['perfil'] != 2)
+			{
+				$this->redirect(array('controller' => 'Instituicao',
+								  'action' => 'minhaconta'));
+			}
+		}
+		else
+		{
+			$this->redirect(array('controller' => 'Instituicao',
+								  'action' => 'login'));
 		}
     }
 	

@@ -60,6 +60,32 @@ class InstituicaoController extends AppController {
 		}
 	}
 	
+	public function instituicoes()
+	{
+		$this->isAdminLogged();
+		
+		$options = array(
+			'fields' => array('Instituicao.id', 'Instituicao.nome','Instituicao.email','Instituicao.telefone','Instituicao.concluido'),
+			'order' => array('Instituicao.nome' => 'ASC'),
+			'limit' => 10
+		);
+
+		$this->paginate = $options;
+
+		// Roda a consulta, já trazendo os resultados paginados
+		$instituicoes = $this->paginate('Instituicao');
+		
+		// Envia os dados pra view
+		$this->set('instituicoes', $instituicoes);
+	}
+	
+	public function visualizar($id)
+	{
+		$this->autoLayout = false;
+		$inst = $this->Instituicao->findById($id);
+		$this->set("instituicao",$inst );
+	}
+	
 	private $msg = "";
 	
 	public function minhaconta()
@@ -206,6 +232,8 @@ class InstituicaoController extends AppController {
 			else
 			{
 				$passwordHasher = new SimplePasswordHasher();
+				$inst = $this->Instituicao->findByLogin($this->Auth->user('login'));
+				$this->request->data['Instituicao']['id'] = $inst['Instituicao']['id'];
 				$this->request->data['Instituicao']['senha'] = $passwordHasher->hash($this->request->data['Instituicao']['senha']); 
 				$this->Instituicao->save($this->request->data);
 				$this->Session->setFlash(__('A senha foi alterada.'),'default', array('class' => 'sucesso'));
