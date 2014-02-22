@@ -351,6 +351,10 @@ button, input[type='submit']{
 	margin: 0 60px 0 0;
 }
 
+.margem-04{
+	margin: 0 30px 0 0;
+}
+
 
 .radius{
 	color: #f09494;
@@ -521,6 +525,14 @@ button, input[type='submit']{
 	display: inline-block;
 	margin-top: 50px;
 }
+
+.box15{
+	width: 275px;
+	min-height: 100px;
+	float: left;
+}
+
+
 
 .container-master{
 	background-color: rgba(255,255,255,0.6);
@@ -833,7 +845,6 @@ button, input[type='submit']{
 
 .inscricao ul.menuinativo {
 	display: block;
-	margin: 0 05px;
 }
 
 
@@ -843,7 +854,7 @@ button, input[type='submit']{
 	display:block;
 	height:45px;
 	width:auto;
-	padding: 0 29px;
+	padding: 0 30px 0 10px;
 	color: #FFB0B0;
 }
 
@@ -862,7 +873,15 @@ button, input[type='submit']{
 	background-image: url(img/breadcrumb01.jpg) no-repeat;
 }
 
+/******* PAGINATOR ******/
 
+.paginator span {
+	color: #F06C6D;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: inherit;
+}
 
 
 

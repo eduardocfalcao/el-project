@@ -65,6 +65,7 @@
 	<?PHP }?>
 </table>
 
+<div class="paginator">
 
 <?PHP
 
@@ -73,3 +74,5 @@
 	echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'desabilitado'));
 
 ?>
+
+</div>

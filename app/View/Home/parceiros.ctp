@@ -19,7 +19,7 @@
 
 <h4 style="margin-bottom: 50px;">Apoio</h4>
 
-<div class="box10 margem-03">
+<div class="box15 margem-04">
 
 
 <?php echo $this->Html->image('vanleer.png', array('style' => 'display: block;margin: 0 auto; width: 120px;')); ?>
@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="box10 margem-03">
+<div class="box15 margem-04">
 
 <?php echo $this->Html->image('icea.jpg', array('style' => 'display: block;margin: 0 auto; width: 165px;')); ?>
 
@@ -39,13 +39,23 @@
 
 </div>
 
-<div class="box10">
+<div class="box15 margem-04">
 
 <?php echo $this->Html->image('rnpi.png', array('style' => 'display: block;margin: 0 auto; width: 135px;')); ?>
 
 <p>A Rede Nacional Primeira Infância (RNPI) é formada por organizações de diversos setores que atuam na promoção e defesa dos direitos da primeira infância. 
 <br/>
 <a href="http://primeirainfancia.org.br/" target="_blank"><strong>VISITE O SITE</strong></a></p>
+
+</div>
+
+<div class="box15">
+
+<?php echo $this->Html->image('unicef.jpg', array('style' => 'display: block;margin: 60px auto; width: 275px;')); ?>
+
+<p>O Fundo das Nações Unidas para a Infância (UNICEF) foi criado em 1946, por decisão unânime da Assembléia Geral das Nações Unidas. Tem como missão proteger e garantir os direitos de todas as crianças e adolescentes no mundo.  No Brasil, está presente desde 1950, contribuindo com algumas das mais importantes transformações na área da infância e da adolescência no País.  
+<br/>
+<a href="http://www.unicef.org/brazil/pt/" target="_blank"><strong>VISITE O SITE</strong></a></p>
 
 </div>
  
