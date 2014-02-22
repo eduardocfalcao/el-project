@@ -3,6 +3,7 @@ App::uses('AppController', 'Controller');
 App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 App::uses('Folder', 'Utility');
 App::uses('File', 'Utility');
+App::uses('CakeEmail', 'Network/Email');
 
 class InstituicaoController extends AppController {
 
@@ -19,7 +20,7 @@ class InstituicaoController extends AppController {
 				if ($this->Instituicao->save($this->request->data))
 				{
 					$this->Instituicao->create();
-					$this->request->data=null;
+					$this->request->data = null;
 					$this->Session->setFlash(__('A instituição foi criada. Use o seu login e sua senha para se logar'),'default', array('class' => 'sucesso'));
 				}
 				else
@@ -32,6 +33,70 @@ class InstituicaoController extends AppController {
 			    $this->Session->setFlash(__('As senhas não conferem.'),'default',array('class' => 'erro'));
 			}
 		}		
+	}
+	
+	private function gerarSenha()
+	{
+		$caracteres = array("1","2","3","4","5","6","7","8","9","0",
+							"a","b","c","d","e","f","g","h","i","j",
+							"l","m","n","o","p","q","r","s","t",
+							"u","v","x","z","w","y","k","A","B","C",
+							"D","E","F","G","H","I","J","L","M","N",
+							"O","P","Q","R","S","T","U","V","X","Z",
+							"W","Y","K"
+							);
+							
+		$lenght = 12;
+		$password = "";
+		for($i =0;$i < $lenght;$i++)
+			$password .= $caracteres[rand(0,61)];
+
+		return $password;
+	}
+	
+	public function recuperarsenha()
+	{
+		if ($this->request->is('post')) 
+		{
+			if (empty($this->request->data['RecuperarSenha']['email']) == false) 
+			{
+				$passwordHasher = new SimplePasswordHasher();
+				$inst = $this->Instituicao->findByEmail($this->request->data['RecuperarSenha']['email']);
+				if($inst != null)
+				{
+					$novaSenha = $this->gerarSenha();
+					$email = new CakeEmail();
+					$email->config('contato');
+					
+					if($email->viewVars(array("senha" => $novaSenha))
+							->template('recuperarsenha')
+						    ->emailFormat('html')
+						    ->to($inst["Instituicao"]["email"])
+						    ->subject('Recuperação de senha')
+						    ->from('contato@premioparticipacaoinfantil.org.br')
+						    ->send())
+				    {
+				    	$this->request->data['Instituicao']['id'] = $inst['Instituicao']['id'];
+						$this->request->data['Instituicao']['senha'] = $passwordHasher->hash($novaSenha); 
+						$this->Instituicao->save($this->request->data);
+						$this->Session->setFlash(__('Sua senha foi alterada. Ela foi enviada ao seu e-mail. Altere a mesma assim que você entrar no sistema'),'default', array('class' => 'sucesso'));
+					}
+					else
+					{
+						$this->Session->setFlash(__('Não foi possível enviar a senha por e-mail e por isso ela não foi alterada'),'default',array('class' => 'erro'));
+					}
+				
+				}
+				else
+				{
+					$this->Session->setFlash(__('E-mail não encontrado.'), 'default',array('class' => 'erro'));
+				}
+			}
+			else
+			{
+				$this->Session->setFlash(__('Informe um enredeço de e-mail válido.'), 'default',array('class' => 'erro'));
+			}
+		}
 	}
 	
 	public function Login()
@@ -52,10 +117,15 @@ class InstituicaoController extends AppController {
 		        else 
 		        {
 		            $this->Session->setFlash(__('Usuário ou senha incorretos'),'default',array('class' => 'erro'));
+		            $this->request->data['Instituicao']['senha'] = "";
 		        }
 			}
 			else
+			{
 				$this->Session->setFlash(__('Usuário ou senha incorretos'),'default',array('class' => 'erro'));
+				$this->request->data['Instituicao']['senha'] = "";
+			}
+				
 	        
 		}
 	}
@@ -238,6 +308,7 @@ class InstituicaoController extends AppController {
 				$this->Instituicao->save($this->request->data);
 				$this->Session->setFlash(__('A senha foi alterada.'),'default', array('class' => 'sucesso'));
 			}
+			$this->request->data = null;
 		}
 	}
 	
