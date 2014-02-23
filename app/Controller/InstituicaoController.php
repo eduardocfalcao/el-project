@@ -1,4 +1,8 @@
 <?php
+
+include_once(APP.'class'.DS.'tcpdf'.DS.'tcpdf.php');
+include_once(APP."class".DS."PHPJasperXML.inc.php");
+
 App::uses('AppController', 'Controller');
 App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 App::uses('Folder', 'Utility');
@@ -365,6 +369,45 @@ class InstituicaoController extends AppController {
 		}
 	}
 	
+	public function relatorio()
+	{
+		$this->isLogged();
+		$instituicao = $this->Instituicao->findByLogin($this->Auth->user('login'));
+		
+		$this->gerarRelatorio($instituicao["Instituicao"]["id"]);
+	}
+	
+	public function relatorioAdmin($id)
+	{
+		$this->isAdminLogged();
+		$this->gerarRelatorio($id);
+	}
+	
+	private function gerarRelatorio($instituicaoId)
+	{
+		$PHPJasperXML = new PHPJasperXML();
+		//$PHPJasperXML->debugsql=true;
+		
+		
+		$PHPJasperXML->arrayParameter=array("id"=>$instituicaoId);
+		
+		$PHPJasperXML->load_xml_file(APP."relatorio".DS."instituicao.jrxml");
+		
+		$dataSource = ConnectionManager::getDataSource('default');
+		
+		$PHPJasperXML->transferDBtoArray($dataSource->config['host'], 
+										 $dataSource->config['login'],
+										 $dataSource->config['password'],
+										 $dataSource->config['database']);
+										 
+		$PHPJasperXML->outpage("D");
+	}
+	
+	public function downloadInscricao($instituicaoId)
+	{
+	
+	}
+	
 	public function validaInscricao($instituicao)
 	{
 		if(empty($instituicao["Instituicao"]['outrasInformacoes']))
@@ -403,8 +446,8 @@ class InstituicaoController extends AppController {
 					return false;
 				}
 			}
-			return true;
 		}
+		return true;
 	}
 	
 	private $validacaoProjeto = array(

@@ -1,31 +1,11 @@
 <?php
 
-
-include_once(APP.'class'.DS.'tcpdf'.DS.'tcpdf.php');
-include_once(APP."class".DS."PHPJasperXML.inc.php");
-
 App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
 App::uses('ConnectionManager', 'Model');
 
 
 class HomeController extends AppController {
-	
-	public function relatorio()
-	{
-		$PHPJasperXML = new PHPJasperXML();
-		//$PHPJasperXML->debugsql=true;
-		$PHPJasperXML->arrayParameter=array("id"=>8);
-		$PHPJasperXML->load_xml_file(APP."relatorio".DS."instituicao.jrxml");
-		
-		$dataSource = ConnectionManager::getDataSource('default');
-		
-		$PHPJasperXML->transferDBtoArray($dataSource->config['host'], 
-										 $dataSource->config['login'],
-										 $dataSource->config['password'],
-										 $dataSource->config['database']);
-		$PHPJasperXML->outpage("I");
-	}
 	
 	public function premio()
 	{

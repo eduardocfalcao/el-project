@@ -28,27 +28,26 @@
 <table>
 	<tr>
 		<th>
-			
-		</th>
-		<th>
 			<?PHP echo utf8_encode("Nome Instituição"); ?>
 		</th>
 		<th>
 			E-mail
 		</th>
 		<th>
-			Telefone
+			<?PHP echo utf8_encode("Inscrição Finalizada"); ?>
 		</th>
 		<th>
-			<?PHP echo utf8_encode("Inscrição Finalizada"); ?>
+			
+		</th>
+		<th>
+			
+		</th>
+		<th>
+			
 		</th>
 	</tr>
 	<?PHP foreach($instituicoes as $instituicao){ ?>
 		<tr>
-			<td>
-				<?PHP echo $this->Html->link('Detalhes', array('controller' => 'Instituicao','action' => 'visualizar', $instituicao["Instituicao"]["id"]), 
-											 array("class" => "k-button visualizarDetalhes")); ?>
-			</td>
 			<td>
 				<?PHP echo $instituicao["Instituicao"]["nome"]; ?>
 			</td>
@@ -56,10 +55,23 @@
 				<?PHP echo $instituicao["Instituicao"]["email"]; ?>
 			</td>
 			<td>
-				<?PHP echo $instituicao["Instituicao"]["telefone"]; ?>
+				<?PHP echo $instituicao["Instituicao"]["concluido"] ? "Sim" : utf8_encode("Não"); ?>
 			</td>
 			<td>
-				<?PHP echo $instituicao["Instituicao"]["concluido"] ? "Sim" : utf8_encode("Não"); ?>
+				<?PHP echo $this->Html->link('Detalhes', 
+											 array('controller' => 'Instituicao','action' => 'visualizar', $instituicao["Instituicao"]["id"]), 
+											 array("class" => "k-button visualizarDetalhes")); ?>
+			</td>
+			<td>
+				<?PHP echo $this->Html->link('Download PDF', 
+											 array('controller' => 'Instituicao','action' => 'relatorioAdmin', $instituicao["Instituicao"]["id"]), 
+											 array("class" => "k-button", "target" => "_blank")); ?>
+			</td>
+			<td>
+				<?PHP echo $this->Html->link( utf8_encode("Download inscrição"), 
+											 array('controller' => 'Instituicao','action' => 'downloadInscricao', $instituicao["Instituicao"]["id"]), 
+											 array("class" => "k-button", "target" => "_blank", 
+											 	   "alt" => "Será feito o download do pdf e de todos os anexos em um arquivo zip.")); ?>
 			</td>
 		</tr>
 	<?PHP }?>
