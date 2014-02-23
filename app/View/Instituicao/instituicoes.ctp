@@ -25,29 +25,37 @@
 
 <h4> <?PHP echo utf8_encode("Listagem de Instituições"); ?></h4>
 
-<table>
+<table class="list-inst">
 	<tr>
-		<th>
+		<th class="width300">
 			<?PHP echo utf8_encode("Nome Instituição"); ?>
 		</th>
-		<th>
+		<th class="width200">
 			E-mail
 		</th>
-		<th>
+		<th class="width100">
 			<?PHP echo utf8_encode("Inscrição Finalizada"); ?>
 		</th>
-		<th>
+		<th class="width60">
 			
 		</th>
-		<th>
+		<th class="width60">
 			
 		</th>
-		<th>
+		<th class="width60">
 			
 		</th>
 	</tr>
+	<?php $odd = false;?>
+	
 	<?PHP foreach($instituicoes as $instituicao){ ?>
-		<tr>
+		<?php if($odd){ ?>
+			<tr class="odd">
+		<?php } else {?>
+			<tr>
+		<?php }
+			$odd = !$odd;
+		?>
 			<td>
 				<?PHP echo $instituicao["Instituicao"]["nome"]; ?>
 			</td>
@@ -60,18 +68,18 @@
 			<td>
 				<?PHP echo $this->Html->link('Detalhes', 
 											 array('controller' => 'Instituicao','action' => 'visualizar', $instituicao["Instituicao"]["id"]), 
-											 array("class" => "k-button visualizarDetalhes")); ?>
+											 array("class" => "bottom-view visualizarDetalhes")); ?>
 			</td>
 			<td>
 				<?PHP echo $this->Html->link('Download PDF', 
 											 array('controller' => 'Instituicao','action' => 'relatorioAdmin', $instituicao["Instituicao"]["id"]), 
-											 array("class" => "k-button", "target" => "_blank")); ?>
+											 array("class" => "bottom-down", "target" => "_blank")); ?>
 			</td>
 			<td>
 				<?PHP echo $this->Html->link( utf8_encode("Download inscrição"), 
 											 array('controller' => 'Instituicao','action' => 'downloadInscricao', $instituicao["Instituicao"]["id"]), 
-											 array("class" => "k-button", "target" => "_blank", 
-											 	   "title" => utf8_encode("Será feito o download do pdf e de todos os anexos em um arquivo zip."))); ?>
+											 array("class" => "bottom-zip", "target" => "_blank", 
+											 	   "alt" => utf8_encode("Será feito o download do pdf e de todos os anexos em um arquivo zip."))); ?>
 			</td>
 		</tr>
 	<?PHP }?>
@@ -81,9 +89,11 @@
 
 <?PHP
 
-	echo $this->Paginator->prev('« Mais novas', null, null, array('class' => 'desabilitado'));
+	echo $this->Paginator->prev('Anterior', null, null, array('class' => 'desabilitado'));
+	echo "|";
 	echo $this->Paginator->numbers();
-	echo $this->Paginator->next('Mais antigas »', null, null, array('class' => 'desabilitado'));
+	echo "|";
+	echo $this->Paginator->next(utf8_encode('Próximo'), null, null, array('class' => 'desabilitado'));
 
 ?>
 

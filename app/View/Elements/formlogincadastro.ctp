@@ -25,7 +25,7 @@
         <br /><br />
 
         <!-- <a href="">Esqueci minha senha</a> -->
-		<div><?php echo $this->Html->link("Esqueci minha senha", array('controller' => 'Instituicao','action' => 'recuperarsenha'), array("class" => "botao")) ?> </div>
+		<div><?php echo $this->Html->link("Esqueci minha senha", array('controller' => 'Instituicao','action' => 'recuperarsenha'), array("class" => "link-esp")) ?> </div>
         <div><?php echo $this->Form->end('Entrar'); ?></div>
         
 </div>

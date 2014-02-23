@@ -8,20 +8,21 @@
 	<?PHP echo $instituicao["Instituicao"]["nome"]; ?>
 </p>
 
-<p>
+<h5>
 	E-mail:
-</p>
-
-<h5>
-	<?PHP echo $instituicao["Instituicao"]["email"]; ?>
 </h5>
+
 <p>
-	Telefone:
+	<?PHP echo $instituicao["Instituicao"]["email"]; ?>
 </p>
 
 <h5>
-	<?PHP echo $instituicao["Instituicao"]["telefone"]; ?>
+	Telefone:
 </h5>
+
+<p>
+	<?PHP echo $instituicao["Instituicao"]["telefone"]; ?>
+</p>
 
 <h5>
 	Telefone alternativo:
@@ -178,7 +179,9 @@
 	<?PHP echo "Data de início"; ?>
 </h5>
 <p>
-	<?PHP echo date("d/m/Y", strtotime($instituicao["Projeto"]["periodoInicio"])); ?>
+	<?PHP if(empty($instituicao["Projeto"]["periodoInicio"]) == false)
+			echo date("d/m/Y", strtotime($instituicao["Projeto"]["periodoInicio"])); 
+	?>
 </p>
 
 
@@ -186,7 +189,9 @@
 	<?PHP echo "Data de termíno"; ?>
 </h5>
 <p>
-	<?PHP echo date("d/m/Y", strtotime($instituicao["Projeto"]["periodoFim"])); ?>
+	<?PHP  if(empty($instituicao["Projeto"]["periodoFim"]) == false)
+			echo date("d/m/Y", strtotime($instituicao["Projeto"]["periodoFim"])); 
+	?>
 </p>
 
 

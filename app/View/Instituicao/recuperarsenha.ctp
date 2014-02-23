@@ -1,5 +1,7 @@
 
-<div class="container">
+<div class="container" style="height: 450px;">
+
+
 
 <h5 style="margin-top: 30px;">
 	Recuperar Senha

@@ -225,6 +225,73 @@ button, input[type='submit']{
 	display: inline-block;
 }
 
+.link-esp{
+	float: left;
+	margin-top: 15px;
+}
+
+
+
+/*************Listagem de Instituições*************/
+.width60{
+	width: 60px;
+}
+.width300{
+	width: 300px;
+
+}
+.width100{
+	width: 100px;
+
+}
+
+table.list-inst tr td, table.list-inst tr th{
+	text-align: center;
+	padding: 10px 0;
+}
+
+table.list-inst tr.odd{
+	background-color: #FFEBEB;
+}
+
+
+a.bottom-view, a.bottom-down, a.bottom-zip{
+	color: rgba(0, 0, 0, 0);
+	width: 40px;
+	height: 52px;
+	display: block;
+	margin: 0 auto;
+}
+
+.bottom-view{
+	background: url('img/pdf-view.png') no-repeat;
+	background-size: 40px;
+
+}
+.bottom-view:hover{
+	background:url('img/pdf-view-hover.png') no-repeat;
+	background-size: 40px;
+}
+.bottom-down{
+	background: url('img/pdf-down.png') no-repeat;
+	background-size: 40px;
+
+}
+.bottom-down:hover{
+	background:url('img/pdf-down-hover.png') no-repeat;
+	background-size: 40px;
+}
+.bottom-zip{
+	background: url('img/zip-down.png') no-repeat;
+	background-size: 40px;
+
+}
+.bottom-zip:hover{
+	background:url('img/zip-down-hover.png') no-repeat;
+	background-size: 40px;
+}
+
+
 /*************LARGURA FORM*************/
 
 .lar-00{
@@ -883,6 +950,14 @@ button, input[type='submit']{
 	float: inherit;
 }
 
+.paginator span.current{
+	color: #444;
+	font-weight: bold;
+}
+
+.paginator span.desabilitado{
+	color: #444;
+}
 
 
 /******* ITENS ******/
@@ -900,6 +975,41 @@ button, input[type='submit']{
 	border-color: rgb(240, 108, 109);
 }
 
+
+
+/******* Alertas ******/
+
+#flashMessage{
+	position:absolute;
+	top:15%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-100px;
+	padding:10px;
+	width:300px;
+	border:1px solid #d0d0d0;
+	text-align: center;
+}
+
+#flashMessage.sucesso{
+	background-color: #008c00;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#flashMessage.erro{
+	background-color: #F06C6D;
+	color: #FFF;
+	font-weight: bold;
+
+}
+
+#flashMessage.aviso{
+	background-color: #ff8000;
+	color: #FFF;
+	font-weight: bold;
+	
+}
 
 /******* FOOTER ******/
 
