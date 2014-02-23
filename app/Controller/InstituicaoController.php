@@ -250,6 +250,7 @@ class InstituicaoController extends AppController {
 			
 			$this->Instituicao->save($instituicao);
 			$this->Session->setFlash(__('Os arquivos foram enviados.'),'default', array('class' => 'sucesso'));	
+			$this->request->data = $instituicao;
 		}
 		else
 		{
@@ -383,7 +384,7 @@ class InstituicaoController extends AppController {
 		$this->gerarRelatorio($id);
 	}
 	
-	private function gerarRelatorio($instituicaoId)
+	private function gerarRelatorio($instituicaoId, $method = "D")
 	{
 		$PHPJasperXML = new PHPJasperXML();
 		//$PHPJasperXML->debugsql=true;
@@ -399,13 +400,57 @@ class InstituicaoController extends AppController {
 										 $dataSource->config['login'],
 										 $dataSource->config['password'],
 										 $dataSource->config['database']);
-										 
-		$PHPJasperXML->outpage("D");
+		$fileName = "instituicao_". $instituicaoId. ".pdf";
+		
+		if($method == "F")
+		{
+			$fileName = APP. "zips".DS."pdfs".DS.$fileName;	
+		}								 
+		$PHPJasperXML->outpage($method, $fileName);
+		return $fileName;
 	}
 	
 	public function downloadInscricao($instituicaoId)
 	{
+		$fileName = $this->gerarZip($instituicaoId);
+		
+		echo "<br />".$zipFileName;
+		$this->download($fileName, 'zips'.DS);
+	}
 	
+	private function gerarZip($instituicaoId)
+	{
+		$zip = new ZipArchive();
+		
+		$instituicao = $this->Instituicao->findById($instituicaoId);
+		$zipFileName = 'instituicao_'. $instituicaoId .'.zip';
+		$zipFilePath = APP."zips".DS. $zipFileName;
+		$dir = new Folder();
+		$pdfFilePath = $this->gerarRelatorio($instituicaoId, "F");
+ 		
+		if( $zip->open($zipFilePath, ZipArchive::OVERWRITE)  === true){
+		    echo "entrou no open";
+		    $zip->addFile($pdfFilePath, "instituicao_". $instituicaoId. ".pdf");
+		    
+		     $anexos = array("documentoEstatuto", "documentoAssembleia", "documentoComprovanteEndereco",
+								 "documentoResponsavelRg", "documentoResponsavelCpf","documentoDeclaracao",
+								 "documentoCnpj", "documentoContratoSocial","anexo1", "anexo2", "anexo3", "anexo4");
+		    
+		    foreach($anexos as $value){
+		    	if($this->anexoExiste($instituicao["Instituicao"][$value])){
+		    		$zip->addFile(WWW_ROOT."uploads".DS."anexos".DS.$instituicao["Instituicao"][$value], $instituicao["Instituicao"][$value]);
+		    	}
+			}
+		    $zip->close();
+		}
+		
+		return $zipFileName;
+	}
+	
+	private function anexoExiste($anexo)
+	{
+		$f = new File(WWW_ROOT."uploads".DS."anexos".DS.$anexo);
+		return $f->exists();
 	}
 	
 	public function validaInscricao($instituicao)
@@ -508,10 +553,11 @@ class InstituicaoController extends AppController {
 		}
 	}	
 	
-	public function download($file)
+	public function download($file, $path = null)
 	{ 
 	    $this->viewClass = 'Media';
-	    $path = WWW_ROOT.'uploads'.DS.'anexos'.DS;
+	    if($path == null)
+	    	$path = WWW_ROOT.'uploads'.DS.'anexos'.DS;
 	    $extensoes =  explode(".", $file);
 		$ext = strtolower(end($extensoes));
 	    // in this example $path should hold the filename but a trailing slash
@@ -522,6 +568,8 @@ class InstituicaoController extends AppController {
 	        'extension' => $ext,
 	        'path' => $path
 	    );
+	    
+	    print_r($params);
 	    $this->set($params);
 	}
 	

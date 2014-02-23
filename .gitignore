@@ -8,6 +8,9 @@
 /build
 /dist
 /tags
+/app/relatorio
+/app/zips
+/app/webroot/uploads
 
 # OS generated files #
 ######################

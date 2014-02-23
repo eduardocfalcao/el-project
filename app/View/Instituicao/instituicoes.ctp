@@ -71,7 +71,7 @@
 				<?PHP echo $this->Html->link( utf8_encode("Download inscrição"), 
 											 array('controller' => 'Instituicao','action' => 'downloadInscricao', $instituicao["Instituicao"]["id"]), 
 											 array("class" => "k-button", "target" => "_blank", 
-											 	   "alt" => "Será feito o download do pdf e de todos os anexos em um arquivo zip.")); ?>
+											 	   "title" => utf8_encode("Será feito o download do pdf e de todos os anexos em um arquivo zip."))); ?>
 			</td>
 		</tr>
 	<?PHP }?>
