@@ -389,8 +389,26 @@ class InstituicaoController extends AppController {
 		$PHPJasperXML = new PHPJasperXML();
 		//$PHPJasperXML->debugsql=true;
 		
+		$instituicao = $this->Instituicao->findById($instituicaoId);
 		
-		$PHPJasperXML->arrayParameter=array("id"=>$instituicaoId);
+		$params = array();
+		$params["id"] = $instituicaoId;
+		foreach($instituicao["Instituicao"] as $key => $value)
+		{
+			$params["instituicao_". $key] = $value;
+		}
+		
+		foreach($instituicao["Projeto"] as $key => $value)
+		{
+			$params["projeto_". $key] = $value;
+		}
+		
+		foreach($instituicao["Responsavel"] as $key => $value)
+		{
+			$params["responsavel_". $key] = $value;
+		}
+		
+		$PHPJasperXML->arrayParameter=$params;
 		
 		$PHPJasperXML->load_xml_file(APP."relatorio".DS."instituicao.jrxml");
 		

@@ -31,16 +31,8 @@ Assim que todas as páginas estiverem preenchidas, clique no botão <strong>Fina
            
         <?php } ?>	
     </div>
-    
-    <?php if($finalizado){?>
-    	<div class="box-detalhe">
-	    	<p>
-	    		<strong>Fique atento.</strong> Em breve será possível gerar o comprovante da sua inscrição.
-	    	</p>
-	    </div>
-	<?php } ?>
 	
-    <?php if($finalizado && false){?>
+    <?php if($finalizado){?>
     	<div class="box-detalhe">
 	    	<p>
 	    		Clique no botão abaixo para gerar um relatório com as informações de sua inscrição.	

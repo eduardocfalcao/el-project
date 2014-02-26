@@ -1,123 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="instituicao" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b9a48ca-b0cc-4c6f-ab88-32d72e76905b">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="1.5000000000000013"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
-	<queryString language="SQL">
-		<![CDATA[select * from Instituicao where id = $P{id}]]>
+	<property name="ireport.y" value="816"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select i.nome as instituicao_nome, i.email as instituicao_email, i.telefone as instituicao_telefone, i.telefoneAlternativo as instituicao_telefoneAlternativo, i.site as instituicao_site, i.historico as instituicao_historico, i.facebook as instituicao_facebook, i.cidade as instituicao_cidade, i.uf as instituicao_uf, i.endereco as instituicao_endereco, i.pais as instituicao_pais, i.cep as instituicao_cep, i.outrasInformacoes as instituicao_outrasInformacoes, i.cnpj as instituicao_cnpj,
+p.nome as projeto_nome, p.responsavel as projeto_responsavel,
+p.equipe as projeto_equipe, p.periodoInicio as projeto_periodoInicio, p.periodoFim  as projeto_periodoFim, p.objetivos  as projeto_objetivo,
+p.justificativa  as projeto_justificativa, p.metodologia  as projeto_metodologia, p.atividades as projeto_atividades,
+p.resultados as projeto_resultados, p.planoUtilizacaoRecurso as projeto_planoUtilizacaoRecurso, p.uf as projeto_uf,
+p.municipio as projeto_municipio, p.criancasEnvolvidas as projeto_criancasEnvolvidas,
+r.nome as responsavel_nome, r.cargo as responsavel_cargo,
+r.cpf as responsave_cpf, r.rg as responsavel_rg,
+r.outrasInformacoes as responsavel_outrasInformacoes
+from Instituicao i
+left join Projeto p on p.instituicao_id = i.id
+left join Responsavel r on r.instituicao_id = i.id
+where i.id = $P{id}]]>
 	</queryString>
-	<field name="id" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="nome" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="email" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="telefone" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="telefoneAlternativo" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="site" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="historico" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="facebook" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cidade" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="uf" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="endereco" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="pais" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cep" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="outrasInformacoes" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="cnpj" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="responsavel_id" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="login" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="senha" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="concluido" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="anexo1" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="anexo2" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="anexo3" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="anexo4" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoEstatuto" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoAssembleia" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoContratoSocial" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoComprovanteEndereco" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoResponsavelRg" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoResponsavelCpf" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoDeclaracao" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="documentoCnpj" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
+	<field name="instituicao_nome" class="java.lang.String"/>
+	<field name="instituicao_email" class="java.lang.String"/>
+	<field name="instituicao_telefone" class="java.lang.String"/>
+	<field name="instituicao_telefoneAlternativo" class="java.lang.String"/>
+	<field name="instituicao_site" class="java.lang.String"/>
+	<field name="instituicao_historico" class="java.lang.String"/>
+	<field name="instituicao_facebook" class="java.lang.String"/>
+	<field name="instituicao_cidade" class="java.lang.String"/>
+	<field name="instituicao_uf" class="java.lang.String"/>
+	<field name="instituicao_endereco" class="java.lang.String"/>
+	<field name="instituicao_pais" class="java.lang.String"/>
+	<field name="instituicao_cep" class="java.lang.String"/>
+	<field name="instituicao_outrasInformacoes" class="java.lang.String"/>
+	<field name="instituicao_cnpj" class="java.lang.String"/>
+	<field name="projeto_nome" class="java.lang.String"/>
+	<field name="projeto_responsavel" class="java.lang.String"/>
+	<field name="projeto_equipe" class="java.lang.String"/>
+	<field name="projeto_periodoInicio" class="java.sql.Date"/>
+	<field name="projeto_periodoFim" class="java.sql.Date"/>
+	<field name="projeto_objetivo" class="java.lang.String"/>
+	<field name="projeto_justificativa" class="java.lang.String"/>
+	<field name="projeto_metodologia" class="java.lang.String"/>
+	<field name="projeto_atividades" class="java.lang.String"/>
+	<field name="projeto_resultados" class="java.lang.String"/>
+	<field name="projeto_planoUtilizacaoRecurso" class="java.lang.String"/>
+	<field name="projeto_uf" class="java.lang.String"/>
+	<field name="projeto_municipio" class="java.lang.String"/>
+	<field name="projeto_criancasEnvolvidas" class="java.lang.String"/>
+	<field name="responsavel_nome" class="java.lang.String"/>
+	<field name="responsavel_cargo" class="java.lang.String"/>
+	<field name="responsave_cpf" class="java.lang.String"/>
+	<field name="responsavel_rg" class="java.lang.String"/>
+	<field name="responsavel_outrasInformacoes" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="48" splitType="Stretch">
 			<textField>
-				<reportElement x="137" y="35" width="100" height="20" uuid="000fadb3-90c0-4a2b-9d88-73bf14ca8599"/>
-				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				<reportElement x="0" y="0" width="555" height="48" forecolor="#F06C6D" uuid="a1f51a70-e0a3-49e0-ab84-89c513f67743"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{instituicao_nome}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="35" splitType="Stretch"/>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="241" height="20" uuid="43c68a29-1cb4-47b3-a41b-f800ceae3aa6"/>
+				<textFieldExpression><![CDATA[$P{instituicao_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="97" height="20" uuid="aa7dc6d1-76c8-4ee4-9681-386c2bcedea8"/>
+				<textFieldExpression><![CDATA[$P{instituicao_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="110" height="20" uuid="00b0d17a-edea-4bde-b7e1-49f1be225c45"/>
+				<textFieldExpression><![CDATA[$P{instituicao_telefoneAlternativo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="0" width="107" height="20" uuid="a5b55867-4fa9-4e60-927f-fa8cae0a0f67"/>
+				<textFieldExpression><![CDATA[$P{instituicao_cnpj}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="0" y="20" width="555" height="20" uuid="7c8a7d5a-584d-4143-ad0c-e216e61f51ae"/>
+				<textFieldExpression><![CDATA[$P{instituicao_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="40" width="148" height="20" uuid="fe79593c-f543-4b2d-8953-e4aaf5ea950f"/>
+				<textFieldExpression><![CDATA[$P{instituicao_cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="40" width="31" height="20" uuid="83513681-c434-499e-a6ba-28c574578e88"/>
+				<textFieldExpression><![CDATA[$P{instituicao_uf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="40" width="62" height="20" uuid="d3bd4b21-97ce-45a2-96cb-0c4816963490"/>
+				<textFieldExpression><![CDATA[$P{instituicao_cep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="40" width="112" height="20" uuid="b81c498e-b0a4-4610-9f06-6eda9fcd8735"/>
+				<textFieldExpression><![CDATA[$P{instituicao_pais}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="40" width="202" height="20" uuid="d5244ba5-d882-4674-a108-ab3759a1aefc"/>
+				<textFieldExpression><![CDATA[$P{instituicao_outrasInformacoes}]]></textFieldExpression>
+			</textField>
+		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch"/>
+		<band height="144" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="12" width="555" height="20" uuid="9ead1700-6d20-4e79-a563-52b3dcce984b"/>
+				<textFieldExpression><![CDATA[$P{projeto_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="32" width="555" height="20" uuid="d9c31592-89d1-4f84-b046-f30d5474218b"/>
+				<textFieldExpression><![CDATA[$P{projeto_responsavel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="52" width="555" height="20" uuid="a29e6d44-4fb4-4a82-9d88-5470a7845d29"/>
+				<textFieldExpression><![CDATA[$P{projeto_equipe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="72" width="141" height="20" uuid="924956c4-23f5-4acb-a142-77b27f3e4346"/>
+				<textFieldExpression><![CDATA[$P{projeto_periodoFim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="72" width="136" height="20" uuid="a905f019-7f12-4d21-b496-6211c79e57a1"/>
+				<textFieldExpression><![CDATA[$P{projeto_uf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="72" width="137" height="20" uuid="9ceadc4a-1e56-48eb-bb0a-77b45bd4e85a"/>
+				<textFieldExpression><![CDATA[$P{projeto_municipio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="72" width="141" height="20" uuid="f1ab158c-6ba3-4205-a192-1f3d0dc3b687"/>
+				<textFieldExpression><![CDATA[$P{projeto_periodoInicio}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="5" width="555" height="1" uuid="f0560967-a5f2-44ac-9063-3c49a7acfb2b"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="92" width="273" height="20" uuid="24969c25-81da-416d-937e-18dd1b0d1d9d"/>
+				<textFieldExpression><![CDATA[$P{responsavel_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="92" width="282" height="20" uuid="7d7f5a96-b9fa-4b25-8d94-0223987170c8"/>
+				<textFieldExpression><![CDATA[$P{responsavel_cargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="112" width="136" height="20" uuid="bb404d6b-838a-433d-b367-087d71bdc440"/>
+				<textFieldExpression><![CDATA[$P{responsave_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="112" width="137" height="20" uuid="a421f1b2-0671-4dc4-9072-314c086ad692"/>
+				<textFieldExpression><![CDATA[$P{responsavel_rg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="112" width="282" height="20" uuid="e5e09ff8-fc5e-4faf-82b1-7c4bb45ae071"/>
+				<textFieldExpression><![CDATA[$P{responsavel_outrasInformacoes}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="137" width="555" height="1" uuid="049e486d-7d9b-48c9-9219-5da1f765fb74"/>
+			</line>
+		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="434" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="72" uuid="94a12017-a6f5-4010-bfe8-8c4babed6ad1"/>
+				<textElement>
+					<font isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{projeto_objetivo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="72" width="555" height="71" uuid="b2feb72f-52d6-43cc-b2a8-829387f34ed6"/>
+				<textFieldExpression><![CDATA[$P{projeto_justificativa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="143" width="555" height="70" uuid="da635f48-9d55-4b9c-b633-dc8a4fb675ea"/>
+				<textFieldExpression><![CDATA[$P{projeto_metodologia}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="213" width="555" height="72" uuid="4627aaf0-e6bb-41aa-807f-c9712c716ecf"/>
+				<textFieldExpression><![CDATA[$P{projeto_atividades}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="285" width="555" height="71" uuid="05cec405-f7d2-4073-8815-b24baafcdfb9"/>
+				<textFieldExpression><![CDATA[$P{projeto_resultados}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="356" width="555" height="78" uuid="a0206f05-adf8-4322-b5cb-607038611a42"/>
+				<textFieldExpression><![CDATA[$P{projeto_planoUtilizacaoRecurso}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 	<columnFooter>
 		<band height="45" splitType="Stretch"/>
