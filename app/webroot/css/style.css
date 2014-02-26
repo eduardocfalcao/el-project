@@ -255,40 +255,40 @@ table.list-inst tr.odd{
 }
 
 
-a.bottom-view, a.bottom-down, a.bottom-zip{
+a.icones-pdf-view, a.icones-pdf-down, a.icones-pdf-zip{
 	color: rgba(0, 0, 0, 0);
-	width: 40px;
-	height: 52px;
+	width: 33px;
+	height: 33px;
 	display: block;
 	margin: 0 auto;
 }
 
-.bottom-view{
-	background: url('img/pdf-view.png') no-repeat;
-	background-size: 40px;
+.icones-pdf-view{
+	background:url('img/icones-pdf.png') no-repeat;
+	background-position: 0 0;
+}
 
+.icones-pdf-view:hover{
+	background:url('img/icones-pdf.png') no-repeat;
+	background-position: 0 100%;
 }
-.bottom-view:hover{
-	background:url('img/pdf-view-hover.png') no-repeat;
-	background-size: 40px;
+.icones-pdf-down{
+	background:url('img/icones-pdf.png') no-repeat;
+	background-position: 50% 0;
 }
-.bottom-down{
-	background: url('img/pdf-down.png') no-repeat;
-	background-size: 40px;
 
+.icones-pdf-down:hover{
+	background:url('img/icones-pdf.png') no-repeat;
+	background-position: 50% 100%;
 }
-.bottom-down:hover{
-	background:url('img/pdf-down-hover.png') no-repeat;
-	background-size: 40px;
+.icones-pdf-zip{
+	background:url('img/icones-pdf.png') no-repeat;
+	background-position: 100% 0;
 }
-.bottom-zip{
-	background: url('img/zip-down.png') no-repeat;
-	background-size: 40px;
 
-}
-.bottom-zip:hover{
-	background:url('img/zip-down-hover.png') no-repeat;
-	background-size: 40px;
+.icones-pdf-zip:hover{
+	background:url('img/icones-pdf.png') no-repeat;
+	background-position: 100% 100%;
 }
 
 

@@ -68,17 +68,17 @@
 			<td>
 				<?PHP echo $this->Html->link('Detalhes', 
 											 array('controller' => 'Instituicao','action' => 'visualizar', $instituicao["Instituicao"]["id"]), 
-											 array("class" => "bottom-view visualizarDetalhes")); ?>
+											 array("class" => "icones-pdf-view visualizarDetalhes")); ?>
 			</td>
 			<td>
 				<?PHP echo $this->Html->link('Download PDF', 
 											 array('controller' => 'Instituicao','action' => 'relatorioAdmin', $instituicao["Instituicao"]["id"]), 
-											 array("class" => "bottom-down", "target" => "_blank")); ?>
+											 array("class" => "icones-pdf-down", "target" => "_blank")); ?>
 			</td>
 			<td>
 				<?PHP echo $this->Html->link( utf8_encode("Download inscrição"), 
 											 array('controller' => 'Instituicao','action' => 'downloadInscricao', $instituicao["Instituicao"]["id"]), 
-											 array("class" => "bottom-zip", "target" => "_blank", 
+											 array("class" => "icones-pdf-zip", "target" => "_blank", 
 											 	   "alt" => utf8_encode("Será feito o download do pdf e de todos os anexos em um arquivo zip."))); ?>
 			</td>
 		</tr>
