@@ -146,7 +146,7 @@
     </div>		
     
     <div class="lar-16 margem-01">
-        <label for="planoUtilizacaoRecurso">&bull; Plano de reutilização do recurso, caso vença o prêmio: *</label><br />
+        <label for="planoUtilizacaoRecurso">&bull; Plano de utilização do recurso, caso vença o prêmio: *</label><br />
 
          <?php echo $this->Form->input('planoUtilizacaoRecurso', array('rows' => '5', 'cols' => '10', "class" => "", "maxlength" => "5000")); ?>
     </div>			

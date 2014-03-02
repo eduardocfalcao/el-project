@@ -52,7 +52,7 @@
         <strong>05/04</strong> – Resultado dos projetos classificados para a próxima fase<br/>
         <strong>02/05</strong> – Resultado dos seis projetos finalistas <br/>
         <strong>05/05 a 25/05</strong> – Visita aos seis projetos finalistas<br/>
-        <strong>06/06</strong> - Premiação no Rio de Janeiro
+        <strong>06/06</strong> – Premiação no Rio de Janeiro
 		
         
         <br/><br/>
