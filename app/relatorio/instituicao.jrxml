@@ -2,9 +2,12 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="instituicao" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b9a48ca-b0cc-4c6f-ab88-32d72e76905b">
 	<property name="ireport.zoom" value="1.5000000000000013"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="816"/>
+	<property name="ireport.y" value="1654"/>
 	<parameter name="id" class="java.lang.String">
 		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Program Files (x86)\\EasyPHP-12.1\\www\\el-project\\app\\relatorio\\"]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[select i.nome as instituicao_nome, i.email as instituicao_email, i.telefone as instituicao_telefone, i.telefoneAlternativo as instituicao_telefoneAlternativo, i.site as instituicao_site, i.historico as instituicao_historico, i.facebook as instituicao_facebook, i.cidade as instituicao_cidade, i.uf as instituicao_uf, i.endereco as instituicao_endereco, i.pais as instituicao_pais, i.cep as instituicao_cep, i.outrasInformacoes as instituicao_outrasInformacoes, i.cnpj as instituicao_cnpj,
@@ -54,160 +57,401 @@ where i.id = $P{id}]]>
 	<field name="responsave_cpf" class="java.lang.String"/>
 	<field name="responsavel_rg" class="java.lang.String"/>
 	<field name="responsavel_outrasInformacoes" class="java.lang.String"/>
+	<group name="página 2">
+		<groupExpression><![CDATA[$F{instituicao_nome}]]></groupExpression>
+	</group>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="48" splitType="Stretch">
-			<textField>
-				<reportElement x="0" y="0" width="555" height="48" forecolor="#F06C6D" uuid="a1f51a70-e0a3-49e0-ab84-89c513f67743"/>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="10" width="164" height="20" forecolor="#F06C6D" uuid="179f9189-2105-4eae-b5d2-f83e210dc5f7"/>
 				<textElement>
-					<font size="20"/>
+					<font size="14" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{instituicao_nome}]]></textFieldExpression>
-			</textField>
+				<text><![CDATA[Dados da Instituíção:]]></text>
+			</staticText>
 		</band>
 	</title>
 	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
 		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="99818413-2534-4875-be56-b3df9033fa65"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome da Instituíção:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="0" y="0" width="241" height="20" uuid="43c68a29-1cb4-47b3-a41b-f800ceae3aa6"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="b4948549-2eb9-4f0e-b5e1-b5a6f3215c1d"/>
+				<textFieldExpression><![CDATA[$P{instituicao_nome}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="172" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="3203d073-956d-45a4-a759-e7105e99eb8c"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail da Instituíção:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="de3c5973-0582-46ea-a02f-4c12254a0502"/>
 				<textFieldExpression><![CDATA[$P{instituicao_email}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="57" width="545" height="20" uuid="aae23ba9-1e5c-479b-9b17-3788de0f816b"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="348" y="0" width="97" height="20" uuid="aa7dc6d1-76c8-4ee4-9681-386c2bcedea8"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="77" width="545" height="20" uuid="4bb386a2-5e1d-428e-8315-62d8a8131c78"/>
 				<textFieldExpression><![CDATA[$P{instituicao_telefone}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="114" width="545" height="20" uuid="71bae00c-0f86-4421-9cd8-5a775e812db5"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone Alternativo:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="445" y="0" width="110" height="20" uuid="00b0d17a-edea-4bde-b7e1-49f1be225c45"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="134" width="545" height="20" uuid="df6b34b2-7284-4f83-8c5b-70f1d96f3f80"/>
 				<textFieldExpression><![CDATA[$P{instituicao_telefoneAlternativo}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="96" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="bf5b697f-e1cd-480e-aee3-33f6cc59b701"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Site:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="241" y="0" width="107" height="20" uuid="a5b55867-4fa9-4e60-927f-fa8cae0a0f67"/>
-				<textFieldExpression><![CDATA[$P{instituicao_cnpj}]]></textFieldExpression>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="a2a4a066-421e-4889-a530-b8be40bcdb0f"/>
+				<textFieldExpression><![CDATA[$P{instituicao_site}]]></textFieldExpression>
 			</textField>
-			<textField pattern="">
-				<reportElement x="0" y="20" width="555" height="20" uuid="7c8a7d5a-584d-4143-ad0c-e216e61f51ae"/>
-				<textFieldExpression><![CDATA[$P{instituicao_endereco}]]></textFieldExpression>
-			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="56" width="545" height="20" uuid="6d3a6ec0-83f4-4aae-9b87-9ea22b404d93"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facebook:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="0" y="40" width="148" height="20" uuid="fe79593c-f543-4b2d-8953-e4aaf5ea950f"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="76" width="545" height="20" uuid="33b40a9c-0707-4094-81ce-9a852ef1dcca"/>
+				<textFieldExpression><![CDATA[$P{instituicao_facebook}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="164" height="20" uuid="0ea2907d-fac2-4f99-a91b-64032a12f988"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="164" height="20" uuid="ab63e4fe-c05a-4a5a-ad98-7abd50c3a74f"/>
 				<textFieldExpression><![CDATA[$P{instituicao_cidade}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="197" y="2" width="81" height="20" uuid="d734c1a2-deb4-4f66-bd43-38b3057cf6ef"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UF:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="148" y="40" width="31" height="20" uuid="83513681-c434-499e-a6ba-28c574578e88"/>
+				<reportElement stretchType="RelativeToTallestObject" x="197" y="22" width="81" height="20" uuid="b5b227fe-cdf1-422d-9f19-52aee899c6a7"/>
 				<textFieldExpression><![CDATA[$P{instituicao_uf}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="307" y="2" width="100" height="20" uuid="345c27c8-c582-415b-a71c-10d2d2077ff9"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pais:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="179" y="40" width="62" height="20" uuid="d3bd4b21-97ce-45a2-96cb-0c4816963490"/>
-				<textFieldExpression><![CDATA[$P{instituicao_cep}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="241" y="40" width="112" height="20" uuid="b81c498e-b0a4-4610-9f06-6eda9fcd8735"/>
+				<reportElement stretchType="RelativeToTallestObject" x="307" y="22" width="100" height="20" uuid="c988eef0-6307-4662-8478-75759c5b5e58"/>
 				<textFieldExpression><![CDATA[$P{instituicao_pais}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="436" y="2" width="112" height="20" uuid="1b9ce7e3-35db-4e37-aeaa-ae7e635a406d"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CEP:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="353" y="40" width="202" height="20" uuid="d5244ba5-d882-4674-a108-ab3759a1aefc"/>
+				<reportElement stretchType="RelativeToTallestObject" x="436" y="22" width="112" height="20" uuid="267cbde3-b2dd-4c05-8406-0bbc28e16ab3"/>
+				<textFieldExpression><![CDATA[$P{instituicao_cep}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="60" width="545" height="20" uuid="2f32f093-46c0-46e2-a20a-6c2a17b29882"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Outras informações:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="80" width="545" height="20" uuid="c1612f10-4958-4faf-8cb7-f99cb89902a0"/>
 				<textFieldExpression><![CDATA[$P{instituicao_outrasInformacoes}]]></textFieldExpression>
 			</textField>
 		</band>
-	</pageHeader>
-	<columnHeader>
-		<band height="144" splitType="Stretch">
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="21" width="128" height="20" forecolor="#F06C6D" uuid="79b695cf-ec61-440c-8a30-3efbdde96298"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dados do Projeto:]]></text>
+			</staticText>
+		</band>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="c52a57f7-0d1e-46cc-ab1f-c7c81127fd16"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome do projeto:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="0" y="12" width="555" height="20" uuid="9ead1700-6d20-4e79-a563-52b3dcce984b"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="a9d90d50-e683-419c-b4a9-859efb7003d5"/>
 				<textFieldExpression><![CDATA[$P{projeto_nome}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="50">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="7f0b7f28-f5d5-4db3-b734-4023057b447e"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Responsável pelo projeto:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="0" y="32" width="555" height="20" uuid="d9c31592-89d1-4f84-b046-f30d5474218b"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="1f2921ae-22c9-49fe-9ed2-3fe7bd3d64ae"/>
 				<textFieldExpression><![CDATA[$P{projeto_responsavel}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="c5007efa-bd47-43df-a785-dec0802e17eb"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipe:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="0" y="52" width="555" height="20" uuid="a29e6d44-4fb4-4a82-9d88-5470a7845d29"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="87d0d2bb-c7cc-468e-8269-029d9c2d8bc6"/>
 				<textFieldExpression><![CDATA[$P{projeto_equipe}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="258" height="36" uuid="ac44f9ee-924e-42eb-ba1e-549ee012760e"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Período de realização do projeto:
+Início:]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="414" y="72" width="141" height="20" uuid="924956c4-23f5-4acb-a142-77b27f3e4346"/>
-				<textFieldExpression><![CDATA[$P{projeto_periodoFim}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="0" y="72" width="136" height="20" uuid="a905f019-7f12-4d21-b496-6211c79e57a1"/>
-				<textFieldExpression><![CDATA[$P{projeto_uf}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="136" y="72" width="137" height="20" uuid="9ceadc4a-1e56-48eb-bb0a-77b45bd4e85a"/>
-				<textFieldExpression><![CDATA[$P{projeto_municipio}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="273" y="72" width="141" height="20" uuid="f1ab158c-6ba3-4205-a192-1f3d0dc3b687"/>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="38" width="258" height="20" uuid="68b8b64d-61b2-45de-ade9-e55a8f6055fb"/>
 				<textFieldExpression><![CDATA[$P{projeto_periodoInicio}]]></textFieldExpression>
 			</textField>
-			<line>
-				<reportElement x="0" y="5" width="555" height="1" uuid="f0560967-a5f2-44ac-9063-3c49a7acfb2b"/>
-			</line>
-			<textField>
-				<reportElement x="0" y="92" width="273" height="20" uuid="24969c25-81da-416d-937e-18dd1b0d1d9d"/>
-				<textFieldExpression><![CDATA[$P{responsavel_nome}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="273" y="92" width="282" height="20" uuid="7d7f5a96-b9fa-4b25-8d94-0223987170c8"/>
-				<textFieldExpression><![CDATA[$P{responsavel_cargo}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="0" y="112" width="136" height="20" uuid="bb404d6b-838a-433d-b367-087d71bdc440"/>
-				<textFieldExpression><![CDATA[$P{responsave_cpf}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="136" y="112" width="137" height="20" uuid="a421f1b2-0671-4dc4-9072-314c086ad692"/>
-				<textFieldExpression><![CDATA[$P{responsavel_rg}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="273" y="112" width="282" height="20" uuid="e5e09ff8-fc5e-4faf-82b1-7c4bb45ae071"/>
-				<textFieldExpression><![CDATA[$P{responsavel_outrasInformacoes}]]></textFieldExpression>
-			</textField>
-			<line>
-				<reportElement x="0" y="137" width="555" height="1" uuid="049e486d-7d9b-48c9-9219-5da1f765fb74"/>
-			</line>
-		</band>
-	</columnHeader>
-	<detail>
-		<band height="434" splitType="Stretch">
-			<textField isStretchWithOverflow="true">
-				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="72" uuid="94a12017-a6f5-4010-bfe8-8c4babed6ad1"/>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="307" y="2" width="241" height="36" uuid="54babc11-1ea4-4c86-be45-6aa4a2200550"/>
 				<textElement>
-					<font isPdfEmbedded="false"/>
+					<font size="10" isBold="true"/>
 				</textElement>
+				<text><![CDATA[Período de realização do projeto:
+Fim:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="307" y="38" width="241" height="20" uuid="ed55181b-9682-4de6-81f9-ecfa624f2a28"/>
+				<textFieldExpression><![CDATA[$P{projeto_periodoFim}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="1c155955-9688-4c7f-9de1-f8ea6a8375fc"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Crianças envolvidas: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="81e1d9ab-b663-4306-9d5c-b904673e683e"/>
+				<textFieldExpression><![CDATA[$P{projeto_criancasEnvolvidas}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="1ed04520-cace-4afd-abf4-ebc549f893a2"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Objetivo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="13d96a16-f523-4feb-95ca-d33b061e3377"/>
 				<textFieldExpression><![CDATA[$P{projeto_objetivo}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="72" width="555" height="71" uuid="b2feb72f-52d6-43cc-b2a8-829387f34ed6"/>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="d0218b1c-2a20-4fe0-9c00-efc4ea039a20"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Justificativa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="6f7c1d2f-e833-42d2-a5fe-0f9ed09e197c"/>
 				<textFieldExpression><![CDATA[$P{projeto_justificativa}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="143" width="555" height="70" uuid="da635f48-9d55-4b9c-b633-dc8a4fb675ea"/>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="814d39c0-5038-411f-b7d3-c5fcb81ab990"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Metodologia: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="0e2f2305-2f32-4870-b5f8-a3a1c2bb9089"/>
 				<textFieldExpression><![CDATA[$P{projeto_metodologia}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="213" width="555" height="72" uuid="4627aaf0-e6bb-41aa-807f-c9712c716ecf"/>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="33465b34-8d40-4f66-a811-b73c0dd37d91"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Atividades:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="20b6d551-31e3-4dc5-bce7-301987460545"/>
 				<textFieldExpression><![CDATA[$P{projeto_atividades}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="285" width="555" height="71" uuid="05cec405-f7d2-4073-8815-b24baafcdfb9"/>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="7632c385-ac82-426c-968e-d706927ac06c"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resultados:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="041c215a-3575-4471-8c71-cefebf2f3722"/>
 				<textFieldExpression><![CDATA[$P{projeto_resultados}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="356" width="555" height="78" uuid="a0206f05-adf8-4322-b5cb-607038611a42"/>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="6771f0ad-19f9-405d-ae59-f341927476ce"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plano de utilização do recurso, caso vença o prêmio: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="4c70fa0a-bbed-4b4c-8f65-e9a36f2a86c3"/>
 				<textFieldExpression><![CDATA[$P{projeto_planoUtilizacaoRecurso}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="17" width="194" height="20" forecolor="#F06C6D" uuid="ddb25dcc-6e8d-47fd-9793-efcf676ae576"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Responsável pela Instituição]]></text>
+			</staticText>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="97c345b1-a4ac-4b44-9beb-c3bb1b632c75"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="3d65ee77-1f33-42b4-8578-fe7880b98548"/>
+				<textFieldExpression><![CDATA[$P{responsavel_nome}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="545" height="20" uuid="d795964e-0cca-42ea-ac07-9c2619598431"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cargo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="545" height="20" uuid="c360cf0e-a42e-4006-aacf-90053d7c6078"/>
+				<textFieldExpression><![CDATA[$P{responsavel_cargo}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="2" width="243" height="20" uuid="061c0e6f-cccb-4b8e-93ce-2b1221d7a8b0"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="22" width="243" height="20" uuid="494372e0-c192-4696-be3f-b36509739f7a"/>
+				<textFieldExpression><![CDATA[$P{responsave_cpf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="288" y="2" width="260" height="20" uuid="10f3136d-bd82-42d3-9625-6da1063e37a5"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RG:]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="288" y="22" width="260" height="20" uuid="9eb50baf-58f6-4035-8857-8735f0c6adf2"/>
+				<textFieldExpression><![CDATA[$P{responsavel_rg}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="168" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="0" width="203" height="20" uuid="edaec585-4f73-41e6-8a43-e876cdc17bc8"/>
+				<text><![CDATA[responsavel_outrasInformacoes]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" isPrintRepeatedValues="false" x="0" y="20" width="555" height="131" uuid="537b9ea9-5317-482a-905a-e7e9a032d1c9"/>
+				<textFieldExpression><![CDATA[$F{responsavel_outrasInformacoes}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="45" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</pageFooter>
 	<summary>
-		<band height="42" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</summary>
 </jasperReport>
