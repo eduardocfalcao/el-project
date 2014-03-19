@@ -473,7 +473,7 @@ class InstituicaoController extends AppController {
 	
 	public function validaInscricao($instituicao)
 	{
-		if(empty($instituicao["Instituicao"]['outrasInformacoes']))
+		if(empty($instituicao["Instituicao"]['telefone']))
 		{
 			$this->msg = "O formulário da instituicão ainda não foi preenchido.";
 			return false;
@@ -531,8 +531,6 @@ class InstituicaoController extends AppController {
 	);
 	
 	private $documentos = array(
-		"documentoEstatuto"       		=> "Cópia do ato constitutivo ou estatuto da instituição em vigor",
-		"documentoAssembleia"     		=> "Cópia da ata da última assembleia da entidade",
 		"documentoComprovanteEndereco" 	=> "Cópia do comprovante de endereço da instituição",
 		"documentoResponsavelRg" 		=> "Cópia do RG do responsável legal",
 		"documentoResponsavelCpf" 		=> "Cópia do CPF do responsável legal",
